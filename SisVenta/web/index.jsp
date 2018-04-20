@@ -20,17 +20,19 @@
 
         <title>JYpower</title>
     </head>
-    <body>
+    <body background="img/bg-powerful.jpg">
         <div class="w3-top">
             <div class="w3-bar w3-white w3-card" id="myNavbar">
-                <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+                <a href="#home" class="w3-bar-item w3-button w3-wide">YPower</a>
                 <!-- Right-sided navbar links -->
                 <div class="w3-right w3-hide-small">
                     <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
                     <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
                     <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
                     <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-                    <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+                    <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>CONTACTANOS</a>
+                    <a href="#usuario" class="w3-bar-item w3-button"><i class="fa fa-user"></i>USUARIO</a>
+                    <a href="registroU.jsp" class="w3-bar-item w3-button"><i class="fa fa-users"></i>REGISTRO</a>
                 </div>
             </div>
         </div>
@@ -43,30 +45,46 @@
             <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
             <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
             <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTANOS</a>
+            <a href="#usuario" onclick="w3_close()" class="w3-bar-item w3-button">USUARIO</a>
+            <a href="registroU.jsp" class="w3-bar-item w3-button">REGISTRO</a>
         </nav>
 
-
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/acces.jpg" alt="First slide">
+        <div class="container">            
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="img/b1.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/b4.jpg"  alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/b3.jpg" alt="Third slide">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="img/moni.jpg"  alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="img/tecla.jpg" alt="Third slide">
-                </div>
+                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
+
+        <footer class="w3-center w3-black w3-padding-64">
+            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+            <div class="w3-xlarge w3-section">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+            <p>Powered by Ypower</p>
+        </footer>
     </body>
 </html>
