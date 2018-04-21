@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SisVenta.conexion;
+package SisVenta.dao;
 
 /**
  *
  * @author Dxros
  */
-public class db_conexion {
+public class listaDeseoDao {
     
 }
