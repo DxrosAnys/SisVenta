@@ -3,12 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/PROWEB/SisVenta/SisVenta/web/index.jsp</file>
             <file>file:/D:/PROWEB/SisVenta/SisVenta/src/java/LoginVen/MySQLConexion.java</file>
             <file>file:/D:/PROWEB/SisVenta/SisVenta/src/java/SisVenta/conexion/db_conexion.java</file>
             <file>file:/D:/PROWEB/SisVenta/SisVenta/src/java/SisVenta/controlador/ServletSisVenta.java</file>
             <file>file:/D:/PROWEB/SisVenta/SisVenta/src/java/LoginVen/Pru.java</file>
             <file>file:/D:/PROWEB/SisVenta/SisVenta/web/registroU.jsp</file>
+=======
+            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/database/prueba.java</file>
+>>>>>>> 57b20033909b0b7f81961f04f72451e37860077b
         </group>
     </open-files>
 </project-private>

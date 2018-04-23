@@ -7,7 +7,11 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
+<<<<<<< HEAD
                     <file>${file.reference.mysql-connector-java-5.1.16-bin.jar}</file>
+=======
+                    <file>${file.reference.ojdbc6.jar}</file>
+>>>>>>> 57b20033909b0b7f81961f04f72451e37860077b
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
