@@ -40,7 +40,7 @@
                     <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>OFERTAS</a>
                     <a href="#usuario" class="w3-bar-item w3-button"><i class="fa fa-user"></i>NOVEDADES</a>                
                     <a href="nosotros.jsp" class="w3-bar-item w3-button"><i class="fa fa-users"></i>CONTACTANOS</a>
-                    <a href="RegistroC.jsp" class="w3-bar-item w3-button"><i class="fa fa-users"></i>REGISTRO</a>
+                    <a href="registroC.jsp" class="w3-bar-item w3-button"><i class="fa fa-users"></i>REGISTRO</a>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
             <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>OFERTAS</a>
             <a href="#usuario" class="w3-bar-item w3-button"><i class="fa fa-user"></i>NOVEDADES</a>
             <a href="#" class="w3-bar-item w3-button"><i class="fa fa-users"></i>CONTACTANOS</a>
-            <a href="RegistroC.jsp" class="w3-bar-item w3-button">REGISTRO</a>
+            <a href="registroC.jsp" class="w3-bar-item w3-button">REGISTRO</a>
         </nav>    
         <br>
         <h1 class="w3-text-white w3-center">WE ARE GAMING</h1>
@@ -121,7 +121,7 @@
         <div>
             <img src="img/POWER3.png" class="" ></div>
         <footer class="w3-center w3-black w3-padding-64">
-            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+            <a href="nosotros.jsp" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
             <div class="w3-xlarge w3-section">
                 <i class="fa fa-facebook-official w3-hover-opacity"></i>
                 <i class="fa fa-instagram w3-hover-opacity"></i>
