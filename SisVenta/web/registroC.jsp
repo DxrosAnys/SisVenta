@@ -7,7 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
+   <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -26,11 +26,11 @@
         <script src="js/jquery-1.10.2.min.js"></script>
         <script src="js/bootstrapValidator.js"></script>
         <title>Registro</title>
-    </head>      
+    </head>
     <body background="img/bg-powerful.jpg">                
         <div class="w3-top">
             <div class="w3-bar w3-white w3-card" id="myNavbar">
-                <a href="index.jsp" class="w3-bar-item w3-button w3-wide">YPower</a>
+                <a href="main.jsp" class="w3-bar-item w3-button w3-wide">YPower</a>
                 <!-- Right-sided navbar links -->
                 <div class="w3-right w3-hide-small">
                     <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
@@ -56,11 +56,10 @@
         </nav>  
         <p>--------------------------------------------------------------------------------</p>  
         <div class="container">                                  
-            <h3>REGISTRO DE CLIENTE</h3>
-            <form action="alumno" id="id_form"> 
-                <input type="hidden" name="metodo" value="registra">	
+            <h3 class="w3-text-white">REGISTRO DE CLIENTE</h3>
+            <form action="alumno" id="id_form">               
                 <div class="form-group">
-                    <label class="control-label " for="id_nombre">Nombres</label>
+                    <label class="control-label w3-text-white" for="id_nombre">Nombres</label>
                     <input class="form-control " type="text" id="id_nombre" name="nombre" placeholder="Ingrese el nombre">
                 </div>
                 <div class="form-group">
@@ -72,67 +71,74 @@
                     <input class="form-control " type="text" id="id_edad" name="edad" placeholder="Ingrese la edad">
                 </div>
                 <div class="form-group">
+                    <label class="control-label" for="id_numero">Numero</label>
+                    <input class="form-control " type="text" id="id_numero" name="numero" placeholder="Ingrese su numero telefonico">
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="id_correo">Correo electronico</label>
+                    <input class="form-control " type="text" id="id_correo" name="correo" placeholder="Ingrese correo">
+                </div>
+                <div class="form-group">
                     <button type="submit" class="btn btn-warning center-block" >Crear Usuario</button>
                 </div>
+            </form>
         </div>
-
-    </form>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#id_form').bootstrapValidator({
-                message: 'This value is not valid',
-                feedbackIcons: {
-                    valid: 'glyphicon glyphicon-ok',
-                    invalid: 'glyphicon glyphicon-remove',
-                    validating: 'glyphicon glyphicon-refresh'
-                },
-                fields: {
-                    nombre: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El nombre es un campo obligatorio'
-                            },
-                            regexp: {
-                                regexp: /^[A-Za-z ñÑ]+$/,
-
-                                message: 'Solo letras o espacios'
-
-                            }
-                        }
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#id_form').bootstrapValidator({
+                    message: 'This value is not valid',
+                    feedbackIcons: {
+                        valid: 'glyphicon glyphicon-ok',
+                        invalid: 'glyphicon glyphicon-remove',
+                        validating: 'glyphicon glyphicon-refresh'
                     },
-                    apellido: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El apellido es un campo obligatorio'
+                    fields: {
+                        nombre: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'El nombre es un campo obligatorio'
+                                },
+                                regexp: {
+                                    regexp: /^[A-Za-z ñÑ]+$/,
+
+                                    message: 'Solo letras o espacios'
+
+                                }
                             }
-                        }
-                    },
-                    edad: {
-                        validators: {
-                            notEmpty: {
-                                message: 'La edad es un campo obligatorio'
-                            },
-                            lessThan: {
-                                value: 45,
-                                inclusive: true,
-                                message: 'La edad es menor a 45'
-                            },
-                            greaterThan: {
-                                value: 18,
-                                inclusive: true,
-                                message: 'La edad es mayor a 18'
+                        },
+                        apellido: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'El apellido es un campo obligatorio'
+                                }
                             }
-                        }
-                    },
-                }
+                        },
+                        edad: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'La edad es un campo obligatorio'
+                                },
+                                lessThan: {
+                                    value: 45,
+                                    inclusive: true,
+                                    message: 'La edad es menor a 45'
+                                },
+                                greaterThan: {
+                                    value: 18,
+                                    inclusive: true,
+                                    message: 'La edad es mayor a 18'
+                                }
+                            }
+                        },
+                    }
+                });
+
+                // Validate the form manually
+                $('#validateBtn').click(function () {
+                    $('#id_form').bootstrapValidator('validate');
+                });
             });
+        </script>
 
-            // Validate the form manually
-            $('#validateBtn').click(function () {
-                $('#id_form').bootstrapValidator('validate');
-            });
-        });
-    </script>
-
-</body>
+    </body>
 </html>
