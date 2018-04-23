@@ -26,13 +26,6 @@
                 <a href="#home" class="w3-bar-item w3-button w3-wide">YPower</a>
                 <!-- Right-sided navbar links -->
                 <div class="w3-right w3-hide-small">
-                    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-                    <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-                    <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-                    <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-                    <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>CONTACTANOS</a>
-                    <a href="#usuario" class="w3-bar-item w3-button"><i class="fa fa-user"></i>USUARIO</a>
-                    <a href="registroC.jsp" class="w3-bar-item w3-button"><i class="fa fa-users"></i>REGISTRO</a>
                     <a href="#about" class="w3-bar-item w3-button">CATALOGO</a>
                     <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> PRODUCTOS</a>
                     <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> MARCA</a>
@@ -49,15 +42,6 @@
             <i class="fa fa-bars"></i>
         </a>
         <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-            <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-            <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-            <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTANOS</a>
-            <a href="#usuario" onclick="w3_close()" class="w3-bar-item w3-button">USUARIO</a>
-            <a href="registroC.jsp" class="w3-bar-item w3-button">REGISTRO</a>
-
             <a href="#about" class="w3-bar-item w3-button">CATALOGO</a>
                     <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> PRODUCTOS</a>
                     <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> MARCA</a>
@@ -67,7 +51,6 @@
                     <a href="#" class="w3-bar-item w3-button"><i class="fa fa-users"></i>ABOUT</a>
                     <a href="" class="w3-bar-item w3-button"><i class="fa fa-users"></i>CONTACTANOS</a>
                     <a href="registroU.jsp" class="w3-bar-item w3-button">REGISTRO</a>
-
         </nav>
 
         <div class="container">            
