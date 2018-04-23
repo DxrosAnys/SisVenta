@@ -32,7 +32,7 @@
                     <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
                     <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>CONTACTANOS</a>
                     <a href="#usuario" class="w3-bar-item w3-button"><i class="fa fa-user"></i>USUARIO</a>
-                    <a href="registroU.jsp" class="w3-bar-item w3-button"><i class="fa fa-users"></i>REGISTRO</a>
+                    <a href="registroC.jsp" class="w3-bar-item w3-button"><i class="fa fa-users"></i>REGISTRO</a>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
             <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
             <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTANOS</a>
             <a href="#usuario" onclick="w3_close()" class="w3-bar-item w3-button">USUARIO</a>
-            <a href="registroU.jsp" class="w3-bar-item w3-button">REGISTRO</a>
+            <a href="registroC.jsp" class="w3-bar-item w3-button">REGISTRO</a>
         </nav>
 
         <div class="container">            

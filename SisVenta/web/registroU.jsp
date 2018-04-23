@@ -58,7 +58,10 @@
         <div class="container">                                  
             <h3>REGISTRO DE CLIENTE</h3>
             <form action="alumno" id="id_form"> 
-                <input type="hidden" name="metodo" value="registra">	
+                <div class="form-group">
+                    <label class="control-label " for="id_us">ID-usuario</label>
+                    <input class="form-control " type="text" id="id_user" name="id" placeholder="Ingrese su id">
+                </div>
                 <div class="form-group">
                     <label class="control-label " for="id_nombre">Nombres</label>
                     <input class="form-control " type="text" id="id_nombre" name="nombre" placeholder="Ingrese el nombre">
