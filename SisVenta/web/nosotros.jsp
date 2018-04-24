@@ -39,7 +39,6 @@
                     <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PROMOCIONES</a>
                     <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>OFERTAS</a>
                     <a href="#usuario" class="w3-bar-item w3-button"><i class="fa fa-user"></i>NOVEDADES</a>                
-                    <a href="nosotros.jsp" class="w3-bar-item w3-button"><i class="fa fa-users"></i>CONTACTANOS</a>
                     <a href="registroC.jsp" class="w3-bar-item w3-button"><i class="fa fa-users"></i>REGISTRO</a>
                 </div>
             </div>
@@ -53,7 +52,6 @@
             <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PROMOCIONES</a>
             <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>OFERTAS</a>
             <a href="#usuario" class="w3-bar-item w3-button"><i class="fa fa-user"></i>NOVEDADES</a>
-            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-users"></i>CONTACTANOS</a>
             <a href="registroC.jsp" class="w3-bar-item w3-button">REGISTRO</a>
         </nav>    
         <br>
