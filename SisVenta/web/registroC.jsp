@@ -68,12 +68,21 @@
                     <input class="form-control " type="text" id="id_apellido" name="txtape" placeholder="Ingrese el apellido">
                 </div>
                 <div class="form-group">
+<<<<<<< HEAD
                     <label class="control-label w3-text-white" for="id_nombre">Usuario</label>
                     <input class="form-control " type="text" id="id_nombre" name="txtusu" placeholder="Ingrese su usario">
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_nombre">Contraseña</label>
                     <input class="form-control " type="text" id="id_nombre" name="txtcon" placeholder="Ingrese contraseña">
+=======
+                    <label class="control-label w3-text-white" for="id_usuario">Usuario</label>
+                    <input class="form-control " type="text" id="id_usuario" name="usuario" placeholder="Ingrese su usario">
+                </div>
+                <div class="form-group">
+                    <label class="control-label w3-text-white" for="id_contraseña">Contraseña</label>
+                    <input class="form-control " type="text" id="id_contraseña" name="contraseña" placeholder="Ingrese contraseña">
+>>>>>>> 727e331b5dd52229629b4bb49fcfcb74eb730140
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_correo">Correo electronico</label>
@@ -85,11 +94,19 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_numero">Numero</label>
+<<<<<<< HEAD
                     <input class="form-control " type="text" id="id_numero" name="txtnum" placeholder="Ingrese correo">
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_dni">DNI</label>
                     <input class="form-control " type="text" id="id_dni" name="txtdni" placeholder="Ingrese la edad">
+=======
+                    <input class="form-control " type="text" id="id_numero" name="numero" placeholder="Ingrese su Numero">
+                </div>
+                <div class="form-group">
+                    <label class="control-label w3-text-white" for="id_dni">DNI</label>
+                    <input class="form-control " type="text" id="id_dni" name="dni" placeholder="Ingrese su DNI">
+>>>>>>> 727e331b5dd52229629b4bb49fcfcb74eb730140
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-warning center-block" >Crear Usuario</button>
@@ -109,6 +126,8 @@
                         validating: 'glyphicon glyphicon-refresh'
                     },
                     fields: {
+                        
+                        //valida registros
                         nombre: {
                             validators: {
                                 notEmpty: {
@@ -126,26 +145,98 @@
                             validators: {
                                 notEmpty: {
                                     message: 'El apellido es un campo obligatorio'
+                                    },
+                                regexp: {
+                                    regexp: /^[A-Za-z ñÑ]+$/,
+                                    
+                                     message: 'Solo letras o espacios'
                                 }
                             }
                         },
-                        edad: {
+                        
+                        usuario: {
                             validators: {
                                 notEmpty: {
-                                    message: 'La edad es un campo obligatorio'
-                                },
-                                lessThan: {
-                                    value: 45,
-                                    inclusive: true,
-                                    message: 'La edad es menor a 45'
-                                },
-                                greaterThan: {
-                                    value: 18,
-                                    inclusive: true,
-                                    message: 'La edad es mayor a 18'
+                                    message: 'El usuario es un campo obligatorio'
+                                    },
+                                regexp: {
+                                    regexp: /^[A-Za-z ñÑ 0-9]+$/,
+                                    
+                                     message: 'Solo letras, espacios o numeros, no caracteres'
                                 }
                             }
                         },
+                        
+                        //en proceso
+                               contraseña: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'La contraseña es un campo obligatorio'
+                                    },
+                                regexp: {
+                                    regexp: /^[A-Za-z ñÑ 0-9]+$/,
+                                    
+                                     message: 'La contraseña debe tener como minimo 7 digitos'
+                                }
+                            }
+                        },
+                        
+                        //en proceso
+                             correo: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'El correo es un campo obligatorio'
+                                    },
+                                regexp: {
+                                    regexp: /^[A-Za-z ñÑ 0-9 @ . ]+$/,
+                                    
+                                     message: 'El correo debe tener como minimo el simbolo @'
+                                }
+                            }
+                        },
+                        
+                     
+                             direccion: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'La direccion es un campo obligatorio'
+                                    },
+                                regexp: {
+                                    regexp: /^[A-Za-z ñÑ 0-9 . ,]+$/,
+                                    
+                                     message: 'La direccion no debe tener caracteres'
+                                }
+                            }
+                        },
+                     
+                     
+                      numero: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'El numero es un campo obligatorio'
+                                    },
+                                regexp: {
+                                    regexp: /^[+ 0-9]+$/,
+                                    
+                                     message: 'El numero no debe tener caracteres o letras'
+                                }
+                            }
+                        },
+                     
+                       dni: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'El numero de DNI es un campo obligatorio'
+                                    },
+                                regexp: {
+                                    regexp: /^[ 0-9]+$/,
+                                    
+                                     message: 'El DNI no debe tener letras o caracteres'
+                                }
+                            }
+                        },
+                     
+                     
                     }
                 });
 
@@ -165,7 +256,7 @@
             <i class="fa fa-twitter w3-hover-opacity"></i>
             <i class="fa fa-linkedin w3-hover-opacity"></i>
         </div>
-        <p>Powered by Ypower</p>
+        <p>Powered by Grupo Web Integrado</p>
     </footer>  
     </body>
 </html>
