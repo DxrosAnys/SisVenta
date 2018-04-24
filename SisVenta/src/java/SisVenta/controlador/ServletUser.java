@@ -8,7 +8,6 @@ package SisVenta.controlador;
 import SisVenta.dao.usuarioDao;
 import SisVenta.modelo.usuario;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.Date;
 import javax.servlet.RequestDispatcher;
@@ -52,7 +51,7 @@ public class ServletUser extends HttpServlet {
        usu.setPass(request.getParameter("txtcon"));
        usu.setEmail(request.getParameter("txtcor"));
        usu.setDireccion(request.getParameter("txtdir"));
-       usu.setCelular(request.getParameter("txtnum"));
+       usu.setCelular(request.getParameter("txtcel"));
        usu.setDNI(request.getParameter("txtdni"));
        String DNI =request.getParameter("txtdni");
        

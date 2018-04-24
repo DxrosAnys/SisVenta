@@ -58,7 +58,7 @@
         <div class="container">                                  
             <h3 class="w3-text-white w3-center">REGISTRO DE CLIENTE</h3>
             <form action="RegistrarUsuario" METHOD="POST" id="id_form">
-
+               
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_nombre">Nombres</label>
                     <input class="form-control " type="text" id="id_nombre" name="txtnom" placeholder="Ingrese el nombre">
@@ -68,21 +68,12 @@
                     <input class="form-control " type="text" id="id_apellido" name="txtape" placeholder="Ingrese el apellido">
                 </div>
                 <div class="form-group">
-<<<<<<< HEAD
                     <label class="control-label w3-text-white" for="id_nombre">Usuario</label>
                     <input class="form-control " type="text" id="id_nombre" name="txtusu" placeholder="Ingrese su usario">
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_nombre">Contraseña</label>
                     <input class="form-control " type="text" id="id_nombre" name="txtcon" placeholder="Ingrese contraseña">
-=======
-                    <label class="control-label w3-text-white" for="id_usuario">Usuario</label>
-                    <input class="form-control " type="text" id="id_usuario" name="usuario" placeholder="Ingrese su usario">
-                </div>
-                <div class="form-group">
-                    <label class="control-label w3-text-white" for="id_contraseña">Contraseña</label>
-                    <input class="form-control " type="text" id="id_contraseña" name="contraseña" placeholder="Ingrese contraseña">
->>>>>>> 727e331b5dd52229629b4bb49fcfcb74eb730140
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_correo">Correo electronico</label>
@@ -94,28 +85,27 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_numero">Numero</label>
-<<<<<<< HEAD
                     <input class="form-control " type="text" id="id_numero" name="txtnum" placeholder="Ingrese correo">
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_dni">DNI</label>
                     <input class="form-control " type="text" id="id_dni" name="txtdni" placeholder="Ingrese la edad">
-=======
-                    <input class="form-control " type="text" id="id_numero" name="numero" placeholder="Ingrese su Numero">
+                </div>
+                <div>
+                    <label class="control-label w3-text-white" for="id_dni">Celular:</label>
+                    <input class="form-control " type="text" id="id_numero" name="txtcel" placeholder="Ingrese su Numero">
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_dni">DNI</label>
                     <input class="form-control " type="text" id="id_dni" name="dni" placeholder="Ingrese su DNI">
->>>>>>> 727e331b5dd52229629b4bb49fcfcb74eb730140
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-warning center-block" >Crear Usuario</button>
                 </div>
                 <div>
                     <label>${requestScope.mensaje}</label>
-                </div>
-            </form>
-        </div>
+                </div>           
+            </form>     
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#id_form').bootstrapValidator({
@@ -128,7 +118,7 @@
                     fields: {
                         
                         //valida registros
-                        nombre: {
+                        txtnom: {
                             validators: {
                                 notEmpty: {
                                     message: 'El nombre es un campo obligatorio'
@@ -141,7 +131,7 @@
                                 }
                             }
                         },
-                        apellido: {
+                        txtape: {
                             validators: {
                                 notEmpty: {
                                     message: 'El apellido es un campo obligatorio'
@@ -154,7 +144,7 @@
                             }
                         },
                         
-                        usuario: {
+                        txtusu: {
                             validators: {
                                 notEmpty: {
                                     message: 'El usuario es un campo obligatorio'
@@ -168,7 +158,7 @@
                         },
                         
                         //en proceso
-                               contraseña: {
+                               txtcon: {
                             validators: {
                                 notEmpty: {
                                     message: 'La contraseña es un campo obligatorio'
@@ -182,7 +172,7 @@
                         },
                         
                         //en proceso
-                             correo: {
+                             txtcor: {
                             validators: {
                                 notEmpty: {
                                     message: 'El correo es un campo obligatorio'
@@ -196,7 +186,7 @@
                         },
                         
                      
-                             direccion: {
+                             txtdir: {
                             validators: {
                                 notEmpty: {
                                     message: 'La direccion es un campo obligatorio'
@@ -210,7 +200,7 @@
                         },
                      
                      
-                      numero: {
+                      txtcel: {
                             validators: {
                                 notEmpty: {
                                     message: 'El numero es un campo obligatorio'
@@ -234,9 +224,7 @@
                                      message: 'El DNI no debe tener letras o caracteres'
                                 }
                             }
-                        },
-                     
-                     
+                        },                
                     }
                 });
 
