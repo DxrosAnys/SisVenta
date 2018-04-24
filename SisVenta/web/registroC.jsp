@@ -236,7 +236,7 @@
             <i class="fa fa-twitter w3-hover-opacity"></i>
             <i class="fa fa-linkedin w3-hover-opacity"></i>
         </div>
-        <p>Powered by Ypower</p>
+        <p>Powered by Grupo Web Integrado</p>
     </footer>  
     </body>
 </html>
