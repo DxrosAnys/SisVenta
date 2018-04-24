@@ -168,7 +168,7 @@
                                     message: 'El correo es un campo obligatorio'
                                     },
                                 regexp: {
-                                    regexp: /^[A-Za-z ñÑ 0-9 @]+$/,
+                                    regexp: /^[A-Za-z ñÑ 0-9 @ . ]+$/,
                                     
                                      message: 'El correo debe tener como minimo el simbolo @'
                                 }
