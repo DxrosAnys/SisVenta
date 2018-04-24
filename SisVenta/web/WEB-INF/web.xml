@@ -4,9 +4,17 @@
         <servlet-name>ServletSisVenta</servlet-name>
         <servlet-class>SisVenta.controlador.ServletSisVenta</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletUser</servlet-name>
+        <servlet-class>SisVenta.controlador.ServletUser</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletSisVenta</servlet-name>
         <url-pattern>/ServletSisVenta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletUser</servlet-name>
+        <url-pattern>/ServletUser</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
