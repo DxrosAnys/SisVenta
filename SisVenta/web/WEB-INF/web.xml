@@ -14,7 +14,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletUser</servlet-name>
-        <url-pattern>/ServletUser</url-pattern>
+        <url-pattern>/RegistrarUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -19,7 +19,7 @@ public class usuario {
     private String pass;
     private String email;
     private String direccion;
-    private String telefono;
+    private String celular;
     private String foto;
     private Date dateregister;
     private String DNI;
@@ -28,7 +28,7 @@ public class usuario {
     public usuario() {
     }
 
-    public usuario(String usercod, String nick, String nombre, String apellido, String pass, String email, String direccion, String telefono, String foto, Date dateregister, String DNI, String ustatus) {
+    public usuario(String usercod, String nick, String nombre, String apellido, String pass, String email, String direccion, String celular, String foto, Date dateregister, String DNI, String ustatus) {
         this.usercod = usercod;
         this.nick = nick;
         this.nombre = nombre;
@@ -36,7 +36,7 @@ public class usuario {
         this.pass = pass;
         this.email = email;
         this.direccion = direccion;
-        this.telefono = telefono;
+        this.celular = celular;
         this.foto = foto;
         this.dateregister = dateregister;
         this.DNI = DNI;
@@ -101,12 +101,12 @@ public class usuario {
         this.direccion = direccion;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getCelular() {
+        return celular;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
 
     public String getFoto() {
