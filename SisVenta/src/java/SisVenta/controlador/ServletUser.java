@@ -9,7 +9,6 @@ import SisVenta.dao.usuarioDao;
 import SisVenta.modelo.usuario;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Date;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -44,7 +43,6 @@ public class ServletUser extends HttpServlet {
     private void RegistrarUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        usuario usu=new usuario();
        String destino;
-       java.util.Date fecha = new Date();
        usu.setNombre(request.getParameter("txtnom"));
        usu.setApellido(request.getParameter("txtape"));      
        usu.setNick(request.getParameter("txtusu"));
