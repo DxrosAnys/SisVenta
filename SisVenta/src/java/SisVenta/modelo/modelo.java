@@ -38,20 +38,29 @@ public class modelo {
         this.cat_cod = cat_cod;
         this.dateregister = dateregister;
     }
-    public String getCatcod() {
-        return cat_cod;
+
+    public String getMod_cod() {
+        return mod_cod;
     }
 
-    public void setCatcod(String cat_cod) {
-        this.cat_cod = cat_cod;
+    public void setMod_cod(String mod_cod) {
+        this.mod_cod = mod_cod;
     }
 
-    public String getMarcod() {
-        return mar_cod;
+    public double getPrecio() {
+        return precio;
     }
 
-    public void setMarcod(String mar_cod) {
-        this.mar_cod = mar_cod;
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
     public String getDescripcion() {
@@ -78,28 +87,20 @@ public class modelo {
         this.deadline = deadline;
     }
 
-    public double getPrecio() {
-        return precio;
+    public String getMar_cod() {
+        return mar_cod;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setMar_cod(String mar_cod) {
+        this.mar_cod = mar_cod;
     }
 
-    public int getStock() {
-        return stock;
+    public String getCat_cod() {
+        return cat_cod;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
-
-    public String getModcod() {
-        return mod_cod;
-    }
-
-    public void setModcod(String mod_cod) {
-        this.mod_cod = mod_cod;
+    public void setCat_cod(String cat_cod) {
+        this.cat_cod = cat_cod;
     }
 
     public Date getDateregister() {
@@ -109,6 +110,7 @@ public class modelo {
     public void setDateregister(Date dateregister) {
         this.dateregister = dateregister;
     }
+      
     
     
 }

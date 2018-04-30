@@ -24,12 +24,8 @@ public class NewMain {
         try{
         conexion.getConnection();
        modeloDao obj=new modeloDao();
-		//int res=obj.registraUsuario("Beto","Lee", "use1","abcde");
-		//Usuario x=obj.validaLogueo("use1", "abcde");
-		//if(x!=null)
-		  //System.out.println(x.getApellido());
 		for(modelo x:obj.readAll()){
-			System.out.print(x.getModcod()+" "+x.getDescripcion()+" "+x.getCatcod()+" "+x.getMarcod()+" "+x.getPrecio()+" "+x.getStock()+" "+x.getDeadline()+" "+x.getDateregister()+"\n");
+			System.out.print(x.getMod_cod()+" "+x.getDescripcion()+" "+x.getCat_cod()+" "+x.getMar_cod()+" "+x.getPrecio()+" "+x.getStock()+" "+x.getDeadline()+" "+x.getDateregister()+"\n");
 		}
         }catch(Exception e){
             throw  e;
