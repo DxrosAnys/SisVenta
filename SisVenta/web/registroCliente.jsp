@@ -27,13 +27,13 @@
         <script src="js/bootstrapValidator.js"></script>
         <title>Registro</title>
     </head>
-    <body background="img/bg-powerful.jpg">                
-       <%@include file="header.jsp" %> 
+    <body background="img/img.general/bg-powerful.jpg">                
+        <%@include file="header.jsp" %> 
         <p>--------------------------------------------------------------------------------</p>  
         <div class="container">                                  
             <h3 class="w3-text-white w3-center">REGISTRO DE CLIENTE</h3>
             <form action="RegistrarUsuario" METHOD="POST" id="id_form">
-               
+
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_nombre">Nombres</label>
                     <input class="form-control " type="text" id="id_nombre" name="txtnom" placeholder="Ingrese el nombre">
@@ -73,145 +73,133 @@
                     <label class="w3-text-white">${requestScope.mensaje}</label>
                 </div>           
             </form>     
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#id_form').bootstrapValidator({
-                    message: 'This value is not valid',
-                    feedbackIcons: {
-                        valid: 'glyphicon glyphicon-ok',
-                        invalid: 'glyphicon glyphicon-remove',
-                        validating: 'glyphicon glyphicon-refresh'
-                    },
-                    fields: {
-                        
-                        //valida registros
-                        txtnom: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'El nombre es un campo obligatorio'
-                                },
-                                regexp: {
-                                    regexp: /^[A-Za-z ñÑ]+$/,
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#id_form').bootstrapValidator({
+                        message: 'This value is not valid',
+                        feedbackIcons: {
+                            valid: 'glyphicon glyphicon-ok',
+                            invalid: 'glyphicon glyphicon-remove',
+                            validating: 'glyphicon glyphicon-refresh'
+                        },
+                        fields: {
+                            //valida registros
+                            txtnom: {
+                                validators: {
+                                    notEmpty: {
+                                        message: 'El nombre es un campo obligatorio'
+                                    },
+                                    regexp: {
+                                        regexp: /^[A-Za-z ñÑ]+$/,
+                                        message: 'Solo letras o espacios'
+                                    }
+                                }
+                            },
+                            txtape: {
+                                validators: {
+                                    notEmpty: {
+                                        message: 'El apellido es un campo obligatorio'
+                                    },
+                                    regexp: {
+                                        regexp: /^[A-Za-z ñÑ]+$/,
 
-                                    message: 'Solo letras o espacios'
+                                        message: 'Solo letras o espacios'
+                                    }
+                                }
+                            },
+                            txtusu: {
+                                validators: {
+                                    notEmpty: {
+                                        message: 'El usuario es un campo obligatorio'
+                                    },
+                                    regexp: {
+                                        regexp: /^[A-Za-z ñÑ 0-9]+$/,
 
+                                        message: 'Solo letras, espacios o numeros, no caracteres'
+                                    }
                                 }
-                            }
-                        },
-                        txtape: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'El apellido es un campo obligatorio'
+                            },
+                            //en proceso
+                            txtcon: {
+                                validators: {
+                                    notEmpty: {
+                                        message: 'La contraseña es un campo obligatorio'
                                     },
-                                regexp: {
-                                    regexp: /^[A-Za-z ñÑ]+$/,
-                                    
-                                     message: 'Solo letras o espacios'
+                                    regexp: {
+                                        regexp: /^[A-Za-z ñÑ 0-9]+$/,
+
+                                        message: 'La contraseña debe tener como minimo 7 digitos'
+                                    }
                                 }
-                            }
-                        },
-                        
-                        txtusu: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'El usuario es un campo obligatorio'
+                            },
+                            //en proceso
+                            txtcor: {
+                                validators: {
+                                    notEmpty: {
+                                        message: 'El correo es un campo obligatorio'
                                     },
-                                regexp: {
-                                    regexp: /^[A-Za-z ñÑ 0-9]+$/,
-                                    
-                                     message: 'Solo letras, espacios o numeros, no caracteres'
+                                    regexp: {
+                                        regexp: /^[A-Za-z ñÑ 0-9 @ . ]+$/,
+
+                                        message: 'El correo debe tener como minimo el simbolo @'
+                                    }
                                 }
-                            }
-                        },
-                        
-                        //en proceso
-                               txtcon: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'La contraseña es un campo obligatorio'
+                            },
+                            txtdir: {
+                                validators: {
+                                    notEmpty: {
+                                        message: 'La direccion es un campo obligatorio'
                                     },
-                                regexp: {
-                                    regexp: /^[A-Za-z ñÑ 0-9]+$/,
-                                    
-                                     message: 'La contraseña debe tener como minimo 7 digitos'
+                                    regexp: {
+                                        regexp: /^[A-Za-z ñÑ 0-9 . ,]+$/,
+
+                                        message: 'La direccion no debe tener caracteres'
+                                    }
                                 }
-                            }
-                        },
-                        
-                        //en proceso
-                             txtcor: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'El correo es un campo obligatorio'
+                            },
+                            txtcel: {
+                                validators: {
+                                    notEmpty: {
+                                        message: 'El numero es un campo obligatorio'
                                     },
-                                regexp: {
-                                    regexp: /^[A-Za-z ñÑ 0-9 @ . ]+$/,
-                                    
-                                     message: 'El correo debe tener como minimo el simbolo @'
+                                    regexp: {
+                                        regexp: /^[+ 0-9]+$/,
+
+                                        message: 'El numero no debe tener caracteres o letras'
+                                    }
                                 }
-                            }
-                        },
-                        
-                     
-                             txtdir: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'La direccion es un campo obligatorio'
+                            },
+                            txtdni: {
+                                validators: {
+                                    notEmpty: {
+                                        message: 'El numero de DNI es un campo obligatorio'
                                     },
-                                regexp: {
-                                    regexp: /^[A-Za-z ñÑ 0-9 . ,]+$/,
-                                    
-                                     message: 'La direccion no debe tener caracteres'
+                                    regexp: {
+                                        regexp: /^[ 0-9]+$/,
+
+                                        message: 'El DNI no debe tener letras o caracteres'
+                                    }
                                 }
-                            }
-                        },
-                     
-                     
-                      txtcel: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'El numero es un campo obligatorio'
-                                    },
-                                regexp: {
-                                    regexp: /^[+ 0-9]+$/,
-                                    
-                                     message: 'El numero no debe tener caracteres o letras'
-                                }
-                            }
-                        },
-                     
-                       dni: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'El numero de DNI es un campo obligatorio'
-                                    },
-                                regexp: {
-                                    regexp: /^[ 0-9]+$/,
-                                    
-                                     message: 'El DNI no debe tener letras o caracteres'
-                                }
-                            }
-                        },                
-                    }
+                            },
+                        }
+                    });
+                    // Validate the form manually
+                    $('#validateBtn').click(function () {
+                        $('#id_form').bootstrapValidator('validate');
+                    });
                 });
-
-                // Validate the form manually
-                $('#validateBtn').click(function () {
-                    $('#id_form').bootstrapValidator('validate');
-                });
-            });
-        </script>
-        <footer class="w3-center w3-black w3-padding-64">
-        <a href="registroC.jsp" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <div class="w3-xlarge w3-section">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-        </div>
-        <p>Powered by Ypower</p>
-    </footer>  
+            </script>
+            <footer class="w3-center w3-black w3-padding-64">
+                <a href="registroCliente.jsp" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+                <div class="w3-xlarge w3-section">
+                    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                    <i class="fa fa-instagram w3-hover-opacity"></i>
+                    <i class="fa fa-snapchat w3-hover-opacity"></i>
+                    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                    <i class="fa fa-twitter w3-hover-opacity"></i>
+                    <i class="fa fa-linkedin w3-hover-opacity"></i>
+                </div>
+                <p>Powered by Ypower</p>
+            </footer>  
     </body>
 </html>

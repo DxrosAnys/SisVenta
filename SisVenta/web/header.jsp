@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link href="css/w3.css" rel="stylesheet" type="text/css"/>
+        <script src="js/bootstrapValidator.js" type="text/javascript"></script>
         <title>Ypower</title>
     </head>
     <body>
@@ -56,7 +57,7 @@
 
                 <div class="w3-center"><br>
                     <span onclick="document.getElementById('id01').style.display = 'none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
-                    <img src="img/e1.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+                    <img src="img/img.general/e1.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
                 </div>
 
                 <form class="w3-container" action="/action_page.php">

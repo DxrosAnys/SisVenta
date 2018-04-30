@@ -20,7 +20,7 @@
         <link href="css/w3.css" rel="stylesheet" type="text/css"/>
         <title>Ypower</title>
     </head>   
-   <body  background="img/bg-powerful.jpg">
+   <body  background="img/img.general/bg-powerful.jpg">
      
        <%@include file="header.jsp" %>
         <br/>
@@ -29,13 +29,13 @@
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="img/b1.jpg" alt="First slide">
+                        <img class="d-block w-100" src="img/img.indexp/b1.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/b4.jpg"  alt="Second slide">
+                        <img class="d-block w-100" src="img/img.indexp/b4.jpg"  alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/b3.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="img/img.indexp/b3.jpg" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -53,21 +53,21 @@
                 
                 <div class="w3-row-padding">
                     <div class="w3-third w3-container w3-margin-bottom">
-                        <img src="img/d1.jpg" alt="Norway" style="width:90%" class="w3-hover-opacity">
+                        <img src="img/img.indexp/d1.jpg" alt="Norway" style="width:90%" class="w3-hover-opacity">
                         <div class="w3-container">
                             <p><h2 class="w3-text-white w3-center">Mouse !</h2></p>
                             <p class="w3-text-white"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
                         </div>
                     </div>
                     <div class="w3-third w3-container w3-margin-bottom">
-                        <img src="img/d2.jpg" alt="Norway" style="width:90%" class="w3-hover-opacity">
+                        <img src="img/img.indexp/d2.jpg" alt="Norway" style="width:90%" class="w3-hover-opacity">
                         <div class="w3-container">
                             <p><h2 class="w3-text-white w3-center">HeadSet !!!</h2></p>
                             <p class="w3-text-white"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
                         </div>
                     </div>
                     <div class="w3-third w3-container">
-                        <img src="img/d3.jpeg" alt="Norway" style="width:90%" class="w3-hover-opacity">
+                        <img src="img/img.indexp/d3.jpeg" alt="Norway" style="width:90%" class="w3-hover-opacity">
                         <div class="w3-container">
                             <p><h2 class="w3-text-white w3-center ">PC`s</h3></p>
                                 <p class="w3-text-white"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
@@ -89,7 +89,7 @@
                         <p class="lead w3-text-white" align=justify>Encuentra numerosos tipos de componentes gaming y/o genericos a los mejores precios del mercado.En YPower tenemos todo los que necesitas.</p>
                     </div>
                     <div class="col-md-6">
-                        <img class="featurette-image img-responsive center-block"  width="540" height="400" src="img/d4.jpg">
+                        <img class="featurette-image img-responsive center-block"  width="540" height="400" src="img/img.indexp/d4.jpg">
                     </div>
                 </div>      
             </div>
