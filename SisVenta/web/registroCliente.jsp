@@ -28,32 +28,7 @@
         <title>Registro</title>
     </head>
     <body background="img/bg-powerful.jpg">                
-        <div class="w3-top">
-            <div class="w3-bar w3-white w3-card" id="myNavbar">
-                <a href="index.jsp" class="w3-bar-item w3-button w3-wide">YPower</a>
-                <!-- Right-sided navbar links -->
-                <div class="w3-right w3-hide-small">
-                    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-                    <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-                    <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-                    <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-                    <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>CONTACTANOS</a>
-                    <a href="#usuario" class="w3-bar-item w3-button"><i class="fa fa-user"></i>USUARIO</a>                        
-                </div>
-            </div>
-        </div>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-            <i class="fa fa-bars"></i>
-        </a>
-        <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-            <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-            <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-            <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTANOS</a>
-            <a href="#usuario" onclick="w3_close()" class="w3-bar-item w3-button">USUARIO</a>
-        </nav>  
+       <%@include file="header.jsp" %> 
         <p>--------------------------------------------------------------------------------</p>  
         <div class="container">                                  
             <h3 class="w3-text-white w3-center">REGISTRO DE CLIENTE</h3>
@@ -73,7 +48,7 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_nombre">Contraseña</label>
-                    <input class="form-control " type="text" id="id_nombre" name="txtcon" placeholder="Ingrese contraseña">
+                    <input class="form-control " type="password" id="id_nombre" name="txtcon" placeholder="Ingrese contraseña">
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_correo">Correo electronico</label>
@@ -84,26 +59,18 @@
                     <input class="form-control " type="text" id="id_direccion" name="txtdir" placeholder="Ingrese su direccion">
                 </div>
                 <div class="form-group">
-                    <label class="control-label w3-text-white" for="id_numero">Numero</label>
-                    <input class="form-control " type="text" id="id_numero" name="txtnum" placeholder="Ingrese correo">
-                </div>
-                <div class="form-group">
-                    <label class="control-label w3-text-white" for="id_dni">DNI</label>
-                    <input class="form-control " type="text" id="id_dni" name="txtdni" placeholder="Ingrese la edad">
-                </div>
-                <div>
                     <label class="control-label w3-text-white" for="id_dni">Celular:</label>
                     <input class="form-control " type="text" id="id_numero" name="txtcel" placeholder="Ingrese su Numero">
                 </div>
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_dni">DNI</label>
-                    <input class="form-control " type="text" id="id_dni" name="dni" placeholder="Ingrese su DNI">
+                    <input class="form-control " type="text" id="id_dni" name="txtdni" placeholder="Ingrese su DNI">
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-warning center-block" >Crear Usuario</button>
                 </div>
                 <div>
-                    <label>${requestScope.mensaje}</label>
+                    <label class="w3-text-white">${requestScope.mensaje}</label>
                 </div>           
             </form>     
         <script type="text/javascript">
@@ -244,7 +211,7 @@
             <i class="fa fa-twitter w3-hover-opacity"></i>
             <i class="fa fa-linkedin w3-hover-opacity"></i>
         </div>
-        <p>Powered by Grupo Web Integrado</p>
+        <p>Powered by Ypower</p>
     </footer>  
     </body>
 </html>

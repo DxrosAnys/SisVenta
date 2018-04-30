@@ -10,7 +10,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletSisVenta</servlet-name>
-        <url-pattern>/ServletSisVenta</url-pattern>
+        <url-pattern>/ConsultarProducto</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletUser</servlet-name>

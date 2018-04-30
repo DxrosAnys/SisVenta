@@ -11,6 +11,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  static {
+    _jspx_dependants = new java.util.ArrayList<String>(1);
+    _jspx_dependants.add("/header.jsp");
+  }
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
@@ -60,18 +65,39 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>Ypower</title>\n");
       out.write("    </head>   \n");
       out.write("   <body  background=\"img/bg-powerful.jpg\">\n");
+      out.write("     \n");
+      out.write("       ");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("    <head>\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>\n");
+      out.write("        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\" integrity=\"sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ\" crossorigin=\"anonymous\"></script>\n");
+      out.write("        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\" integrity=\"sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm\" crossorigin=\"anonymous\"></script>\n");
+      out.write("\n");
+      out.write("        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css\" integrity=\"sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4\" crossorigin=\"anonymous\">\n");
+      out.write("        <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.0.10/css/all.css\" integrity=\"sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg\" crossorigin=\"anonymous\">\n");
+      out.write("        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n");
+      out.write("        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Raleway\">\n");
+      out.write("        <link href=\"css/w3.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
+      out.write("        <title>Ypower</title>\n");
+      out.write("    </head>\n");
+      out.write("    <body>\n");
       out.write("        <div class=\"w3-top\">\n");
       out.write("            <div class=\"w3-bar w3-white w3-card\" id=\"myNavbar\">\n");
       out.write("                <a href=\"index.jsp\" class=\"w3-bar-item w3-button w3-white\">YPOWER</a>\n");
       out.write("                <div class=\"w3-right w3-hide-medium\">\n");
-      out.write("                    <a href=\"catala.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-bookmark\"></i>CATAGOLO</a>\n");
+      out.write("                    <a href=\"ConsultarProducto\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-bookmark\"></i>CATAGOLO</a>\n");
       out.write("                    <a href=\"producto.jsp\"class=\"w3-bar-item w3-button\"><i class=\"fa fa-product-hunt\"></i>PRODUCTOS</a>\n");
       out.write("                    <a href=\"promo.jsp\"class=\"w3-bar-item w3-button\"><i class=\"fa fa-gift\"></i>PROMOCIONES</a>\n");
       out.write("                    <a href=\"oferta.jsp\"class=\"w3-bar-item w3-button\"><i class=\"fa fa-cart-plus\"></i>OFERTAS</a>\n");
       out.write("                    <a href=\"novedades.jsp\"class=\"w3-bar-item w3-button\"><i class=\"fa fa-area-chart\"></i>NOVEDADES</a>\n");
       out.write("                    <a href=\"nosotros.jsp\"class=\"w3-bar-item w3-button\"><i class=\"fa fa-envelope\"></i>NOSOTROS</a>\n");
-      out.write("                    <a href=\"registroC.jsp\"class=\"w3-bar-item w3-button\"><i class=\"fa fa-users\"></i>REGISTRO</a>\n");
-      out.write("                    <button href=\"login.jsp\"class=\"w3-bar-item w3-button\" onclick=\"document.getElementById('id01').style.display='block'\"><i class=\"fa fa-user\"></i>USUARIO</button>>\n");
+      out.write("                    <a href=\"registroCliente.jsp\"class=\"w3-bar-item w3-button\"><i class=\"fa fa-users\"></i>REGISTRO</a>\n");
+      out.write("                    <button href=\"login.jsp\"class=\"w3-bar-item w3-button\" onclick=\"document.getElementById('id01').style.display='block'\"><i class=\"fa fa-user\"></i>USUARIO</button>\n");
       out.write("                </div>\n");
       out.write("            </div>           \n");
       out.write("        </div>\n");
@@ -79,16 +105,17 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <i class=\"fa fa-bars\"></i>\n");
       out.write("        </a>\n");
       out.write("        <nav class=\"w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large\" style=\"display:none\" id=\"mySidebar\">\n");
-      out.write("            <a href=\"#team\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-user\"></i>CATALOGO</a>\n");
+      out.write("            <a href=\"ConsultarProducto\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-user\"></i>CATALOGO</a>\n");
       out.write("            <a href=\"#work\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-th\"></i>PRODUCTOS</a>\n");
       out.write("            <a href=\"#pricing\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-usd\"></i> PROMOCIONES</a>\n");
       out.write("            <a href=\"#contact\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-envelope\"></i>OFERTAS</a>\n");
       out.write("            <a href=\"#usuario\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-user\"></i>NOVEDADES</a>\n");
       out.write("            <a href=\"nosotros.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-users\"></i>NOSOTROS</a>\n");
-      out.write("            <a href=\"registroC.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-users\"></i>REGISTRO</a>\n");
+      out.write("            <a href=\"registroCliente.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-users\"></i>REGISTRO</a>\n");
       out.write("            <a href=\"login.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-user\"></i>USUARIO</a>\n");
       out.write("        </nav>\n");
-      out.write("         <div id=\"id01\" class=\"w3-modal\">\n");
+      out.write("        \n");
+      out.write("          <div id=\"id01\" class=\"w3-modal\">\n");
       out.write("    <div class=\"w3-modal-content w3-card-4 w3-animate-zoom\" style=\"max-width:600px\">\n");
       out.write("  \n");
       out.write("      <div class=\"w3-center\"><br>\n");
@@ -114,6 +141,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("    </div>\n");
       out.write("  </div>\n");
+      out.write("    </body>\n");
+      out.write("</html>\n");
+      out.write("\n");
       out.write("        <br/>\n");
       out.write("        <br/>\n");
       out.write("        <div class=\"container\">            \n");

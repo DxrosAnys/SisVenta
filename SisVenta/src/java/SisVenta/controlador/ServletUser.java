@@ -54,18 +54,18 @@ public class ServletUser extends HttpServlet {
        String DNI =request.getParameter("txtdni");
        
        try {
-           if (DNI!=null){
-       usuarioDao usudao=new usuarioDao();
-       String msg=usudao.create(usu);
-       request.setAttribute("mensaje", msg);
+           if (DNI==null){
+               request.setAttribute("mensaje", "Debe ingresar valores");
            }else{
-        request.setAttribute("mensaje", "Debe ingresar valores");   
+               usuarioDao usudao=new usuarioDao();   
+               String msg=usudao.create(usu);
+               request.setAttribute("mensaje", msg);
            }
-       destino= "registroC.jsp";
+       destino= "registroCliente.jsp";
        
        } catch (ClassNotFoundException | SQLException e) {
             request.setAttribute("mensaje", e.getMessage());
-            destino = "registroC.jsp";
+            destino = "registroCliente.jsp";
         }
        RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);

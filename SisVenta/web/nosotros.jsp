@@ -28,32 +28,7 @@
         <title>Nosotros</title>
     </head>
     <body background="img/bg-powerful.jpg">  
-        <div class="w3-top">
-            <div class="w3-bar w3-white w3-card" id="myNavbar">
-                <a href="index.jsp" class="w3-bar-item w3-button w3-wide">YPower</a>
-                <!-- Right-sided navbar links -->
-                <div class="w3-right w3-hide-small">
-                    <a href="#about" class="w3-bar-item w3-button">CATALOGO</a>
-                    <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> PRODUCTOS</a>
-                    <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> MARCA</a>
-                    <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PROMOCIONES</a>
-                    <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>OFERTAS</a>
-                    <a href="#usuario" class="w3-bar-item w3-button"><i class="fa fa-user"></i>NOVEDADES</a>                
-                    <a href="registroC.jsp" class="w3-bar-item w3-button"><i class="fa fa-users"></i>REGISTRO</a>
-                </div>
-            </div>
-        </div>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-            <i class="fa fa-bars"></i>
-        </a>
-        <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-            <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> PRODUCTOS</a>
-            <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> MARCA</a>
-            <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PROMOCIONES</a>
-            <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>OFERTAS</a>
-            <a href="#usuario" class="w3-bar-item w3-button"><i class="fa fa-user"></i>NOVEDADES</a>
-            <a href="registroC.jsp" class="w3-bar-item w3-button">REGISTRO</a>
-        </nav>    
+        <%@include file="header.jsp" %> 
         <br>
         <h1 class="w3-text-white w3-center">WE ARE GAMING</h1>
         <br>

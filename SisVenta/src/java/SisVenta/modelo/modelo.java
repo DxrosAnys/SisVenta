@@ -14,55 +14,44 @@ import java.util.Date;
  * @author Dxros
  */
 public class modelo {
-    private String modcod;
-    private String  catcod;
-    private String marcod;
+    private String mod_cod;
+    private double precio;   
+    private int stock;
     private String descripcion;
     private double descuento;
     private Date deadline;
-    private double precio;
-    private int stock;
+    private String mar_cod;
+    private String cat_cod;
     private Date dateregister;
 
     public modelo() {
     }
-
-    public modelo(String catcod, String marcod, String descripcion, double descuento, Date deadline, double precio, int stock) {
-        this.catcod = catcod;
-        this.marcod = marcod;
+    
+    public modelo(String mod_cod, double precio, int stock, String descripcion, double descuento, Date deadline, String mar_cod, String cat_cod, Date dateregister) {
+        this.mod_cod = mod_cod;
+        this.precio = precio;
+        this.stock = stock;
         this.descripcion = descripcion;
         this.descuento = descuento;
         this.deadline = deadline;
-        this.precio = precio;
-        this.stock = stock;
-    }
-
-    public modelo(String modcod, String catcod, String marcod, String descripcion, double descuento, Date deadline, double precio, int stock, Date dateregister) {
-        this.modcod = modcod;
-        this.catcod = catcod;
-        this.marcod = marcod;
-        this.descripcion = descripcion;
-        this.descuento = descuento;
-        this.deadline = deadline;
-        this.precio = precio;
-        this.stock = stock;
+        this.mar_cod = mar_cod;
+        this.cat_cod = cat_cod;
         this.dateregister = dateregister;
     }
-
     public String getCatcod() {
-        return catcod;
+        return cat_cod;
     }
 
-    public void setCatcod(String catcod) {
-        this.catcod = catcod;
+    public void setCatcod(String cat_cod) {
+        this.cat_cod = cat_cod;
     }
 
     public String getMarcod() {
-        return marcod;
+        return mar_cod;
     }
 
-    public void setMarcod(String marcod) {
-        this.marcod = marcod;
+    public void setMarcod(String mar_cod) {
+        this.mar_cod = mar_cod;
     }
 
     public String getDescripcion() {
@@ -106,11 +95,11 @@ public class modelo {
     }
 
     public String getModcod() {
-        return modcod;
+        return mod_cod;
     }
 
-    public void setModcod(String modcod) {
-        this.modcod = modcod;
+    public void setModcod(String mod_cod) {
+        this.mod_cod = mod_cod;
     }
 
     public Date getDateregister() {
