@@ -27,13 +27,13 @@
         <script src="js/bootstrapValidator.js"></script>
         <title>Nosotros</title>
     </head>
-    <body background="img/img.general/bg-powerful.jpg">  
+    <body background="img/general/bg-powerful.jpg">  
         <%@include file="header.jsp" %> 
         <br>
         <h1 class="w3-text-white w3-center">WE ARE GAMING</h1>
         <br>
         <br>
-        <img src="img/img.nosotros/POWER.png" class="center-block">
+        <img src="img/nosotros/POWER.png" class="center-block">
         <br>
         <br>
         <h4 class="w3-text-white w3-center">       
@@ -51,7 +51,7 @@
                 </h4>
             </div>
             <div class="col-md-6">
-                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="img/img.nosotros/a1.jpg" data-holder-rendered="true">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="img/nosotros/a1.jpg" data-holder-rendered="true">
             </div>
         </div>  
         </div>
@@ -60,7 +60,7 @@
         <div class="container">
         <div class="row featurette">      
             <div class="col-md-6">
-                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="img/img.nosotros/a2.jpg" data-holder-rendered="true">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="img/nosotros/a2.jpg" data-holder-rendered="true">
             </div>
             <div class="col-md-6">
                 <h1 class="featurette-heading w3-text-white">Diseño Inspirador</h1>
@@ -82,7 +82,7 @@
                 </h4>               
             </div>           
             <div class="col-md-6">
-                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="img/img.nosotros/a3.jpg" data-holder-rendered="true">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="img/nosotros/a3.jpg" data-holder-rendered="true">
             </div>
         </div>
         </div>
@@ -92,7 +92,7 @@
         <br>
        
         <div>
-            <img src="img/img.nosotros/POWER3.png" class="" ></div>
+            <img src="img/nosotros/POWER3.png" class="" ></div>
         <footer class="w3-center w3-black w3-padding-64">
             <a href="nosotros.jsp" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
             <div class="w3-xlarge w3-section">

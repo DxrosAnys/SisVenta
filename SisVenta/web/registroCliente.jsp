@@ -27,8 +27,9 @@
         <script src="js/bootstrapValidator.js"></script>
         <title>Registro</title>
     </head>
-    <body background="img/img.general/bg-powerful.jpg">                
-        <%@include file="header.jsp" %> 
+      <%@include file="header.jsp" %> 
+    <body background="img/general/bg-powerful.jpg">                
+      
         <p>--------------------------------------------------------------------------------</p>  
         <div class="container">                                  
             <h3 class="w3-text-white w3-center">REGISTRO DE CLIENTE</h3>
