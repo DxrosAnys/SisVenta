@@ -51,7 +51,7 @@
                                     <tr class="cptr col-xs-6 col-sm-4 col-md-3 col-lg-3 <c:if test="${cont.count % 2 ==0}">odd</c:if> <c:if test="${cont.count % 2 !=0}">even</c:if>" role="row">
                                             <td class="cptd sorting_1">
                                                 <div class="cpcajaprod">                       
-                                                        <img src="img/modelo/${md.mod_cod}.jpg" alt=""  height="192" width="168" class="w3-hover-opacity"/>                   
+                                                        <img src="resources/img/modelo/${md.mod_cod}.jpg" alt=""  height="192" width="168" class="w3-hover-opacity"/>                   
                                                 <div class="nom">
                                                     <div class="tit">${md.descripcion}</div>                               
                                                     <div class="pre">S/. ${md.precio}</div>
