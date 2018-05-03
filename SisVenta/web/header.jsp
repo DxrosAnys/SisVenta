@@ -20,13 +20,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link href="resources/css/w3.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/main.css" rel="stylesheet" type="text/css"/>
-       <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-       
-        
-         <link rel="stylesheet" href="resources/css/bootstrap.css">
+        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+
+        <link rel="stylesheet" href="resources/css/bootstrap.css">
         <link rel="stylesheet" href="resources/css/bootstrap-theme.css">
         <link href="resources/css/tablestyle.css" rel="stylesheet" type="text/css"/>
-        
+
         <script src="resources/js/bootstrap.min.js"></script>
         <script src="resources/js/jquery-1.10.2.min.js"></script>
         <title>Ypower</title>
@@ -87,5 +87,5 @@
 
             </div>
         </div>
-  
+
 
