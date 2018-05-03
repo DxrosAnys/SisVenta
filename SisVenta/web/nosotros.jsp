@@ -7,15 +7,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-   <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  
-        <title>Nosotros</title>
-    </head>
-    
      <%@include file="header.jsp" %> 
-    <body background="resources/img/general/bg-powerful.jpg">  
-       
+   
+       <title>Nosotros</title>
         <br>
         <h1 class="w3-text-white w3-center">WE ARE GAMING</h1>
         <br>
