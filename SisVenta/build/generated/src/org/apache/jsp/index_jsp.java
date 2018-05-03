@@ -84,11 +84,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Raleway\">\r\n");
       out.write("        <link href=\"css/w3.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
-      out.write("<<<<<<< HEAD\r\n");
       out.write("        <link href=\"css/main.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
-      out.write("=======\r\n");
       out.write("        <script src=\"js/bootstrapValidator.js\" type=\"text/javascript\"></script>\r\n");
-      out.write(">>>>>>> 778c33724c88ae747be5c98660909c97ef3b2e80\r\n");
+      out.write("        <link href=\"css/tablestyle.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("        <title>Ypower</title>\r\n");
       out.write("    </head>\r\n");
       out.write("    <body>\r\n");
@@ -126,7 +124,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("                <div class=\"w3-center\"><br>\r\n");
       out.write("                    <span onclick=\"document.getElementById('id01').style.display = 'none'\" class=\"w3-button w3-xlarge w3-transparent w3-display-topright\" title=\"Close Modal\">×</span>\r\n");
-      out.write("                    <img src=\"img/img.general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
+      out.write("                    <img src=\"img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
       out.write("                </div>\r\n");
       out.write("\r\n");
       out.write("                <form class=\"w3-container\" action=\"/action_page.php\">\r\n");
@@ -147,7 +145,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");
-      out.write("    </body>\r\n");
+      out.write("  \r\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("        <br/>\r\n");

@@ -9,32 +9,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link href="css/w3.css" rel="stylesheet" type="text/css"/>
-
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.css">
-        <link rel="stylesheet" href="css/bootstrapValidator.css">
-
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery-1.10.2.min.js"></script>
-        <script src="js/bootstrapValidator.js"></script>
+        
+        <link rel="stylesheet" href="resources/css/bootstrapValidator.css">
+        <script src="resources/js/bootstrapValidator.js" type="text/javascript"></script>
+        
         <title>Registro</title>
     </head>
       <%@include file="header.jsp" %> 
-    <body background="img/general/bg-powerful.jpg">                
+    <body background="resources/img/general/bg-powerful.jpg">                
       
-        <p>--------------------------------------------------------------------------------</p>  
+        <br>
+        <br>
         <div class="container">                                  
-            <h3 class="w3-text-white w3-center">REGISTRO DE CLIENTE</h3>
+            <h2 class="w3-text-white w3-center"><strong>REGISTRO DE CLIENTE</strong></h2>
             <form action="RegistrarUsuario" METHOD="POST" id="id_form">
-
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_nombre">Nombres</label>
                     <input class="form-control " type="text" id="id_nombre" name="txtnom" placeholder="Ingrese el nombre">
@@ -72,8 +60,9 @@
                 </div>
                 <div>
                     <label class="w3-text-white">${requestScope.mensaje}</label>
-                </div>           
-            </form>     
+                </div>       
+            </form>   
+        </div>
             <script type="text/javascript">
                 $(document).ready(function () {
                     $('#id_form').bootstrapValidator({
