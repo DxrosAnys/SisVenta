@@ -9,31 +9,18 @@
 <html>
    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link href="css/w3.css" rel="stylesheet" type="text/css"/>
-
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.css">
-        <link rel="stylesheet" href="css/bootstrapValidator.css">
-
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery-1.10.2.min.js"></script>
-        <script src="js/bootstrapValidator.js"></script>
+ 
         <title>Nosotros</title>
     </head>
-    <body background="img/img.general/bg-powerful.jpg">  
-        <%@include file="header.jsp" %> 
+    
+     <%@include file="header.jsp" %> 
+    <body background="resources/img/general/bg-powerful.jpg">  
+       
         <br>
         <h1 class="w3-text-white w3-center">WE ARE GAMING</h1>
         <br>
         <br>
-        <img src="img/img.nosotros/POWER.png" class="center-block">
+        <img src="resources/img/nosotros/POWER.png" class="center-block">
         <br>
         <br>
         <h4 class="w3-text-white w3-center">       
@@ -51,7 +38,7 @@
                 </h4>
             </div>
             <div class="col-md-6">
-                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="img/img.nosotros/a1.jpg" data-holder-rendered="true">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="resources/img/nosotros/a1.jpg" data-holder-rendered="true">
             </div>
         </div>  
         </div>
@@ -60,7 +47,7 @@
         <div class="container">
         <div class="row featurette">      
             <div class="col-md-6">
-                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="img/img.nosotros/a2.jpg" data-holder-rendered="true">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="resources/img/nosotros/a2.jpg" data-holder-rendered="true">
             </div>
             <div class="col-md-6">
                 <h1 class="featurette-heading w3-text-white">Diseño Inspirador</h1>
@@ -82,7 +69,7 @@
                 </h4>               
             </div>           
             <div class="col-md-6">
-                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="img/img.nosotros/a3.jpg" data-holder-rendered="true">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500 x 500" src="resources/img/nosotros/a3.jpg" data-holder-rendered="true">
             </div>
         </div>
         </div>
@@ -92,7 +79,7 @@
         <br>
        
         <div>
-            <img src="img/img.nosotros/POWER3.png" class="" ></div>
+            <img src="resources/img/nosotros/POWER3.png" class="" ></div>
         <footer class="w3-center w3-black w3-padding-64">
             <a href="nosotros.jsp" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
             <div class="w3-xlarge w3-section">

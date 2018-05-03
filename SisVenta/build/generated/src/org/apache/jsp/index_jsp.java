@@ -64,7 +64,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link href=\"css/w3.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("        <title>Ypower</title>\r\n");
       out.write("    </head>   \r\n");
+<<<<<<< HEAD
       out.write("   <body  background=\"img/img.general/bg-powerful.jpg\">\r\n");
+=======
+      out.write("   <body  background=\"img/general/bg-powerful.jpg\">\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
       out.write("     \r\n");
       out.write("       ");
       out.write("\r\n");
@@ -84,7 +88,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Raleway\">\r\n");
       out.write("        <link href=\"css/w3.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+<<<<<<< HEAD
       out.write("        <script src=\"js/bootstrapValidator.js\" type=\"text/javascript\"></script>\r\n");
+=======
+      out.write("        <link href=\"css/main.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("        <script src=\"js/bootstrapValidator.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("        <link href=\"css/tablestyle.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
       out.write("        <title>Ypower</title>\r\n");
       out.write("    </head>\r\n");
       out.write("    <body>\r\n");
@@ -122,7 +132,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("                <div class=\"w3-center\"><br>\r\n");
       out.write("                    <span onclick=\"document.getElementById('id01').style.display = 'none'\" class=\"w3-button w3-xlarge w3-transparent w3-display-topright\" title=\"Close Modal\">×</span>\r\n");
+<<<<<<< HEAD
       out.write("                    <img src=\"img/img.general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
+=======
+      out.write("                    <img src=\"img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
       out.write("                </div>\r\n");
       out.write("\r\n");
       out.write("                <form class=\"w3-container\" action=\"/action_page.php\">\r\n");
@@ -143,7 +157,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");
-      out.write("    </body>\r\n");
+      out.write("  \r\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("        <br/>\r\n");
@@ -152,13 +166,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div id=\"carouselExampleFade\" class=\"carousel slide carousel-fade\" data-ride=\"carousel\">\r\n");
       out.write("                <div class=\"carousel-inner\">\r\n");
       out.write("                    <div class=\"carousel-item active\">\r\n");
-      out.write("                        <img class=\"d-block w-100\" src=\"img/img.indexp/b1.jpg\" alt=\"First slide\">\r\n");
+      out.write("                        <img class=\"d-block w-100\" src=\"img/imgindex/b1.jpg\" alt=\"First slide\">\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"carousel-item\">\r\n");
-      out.write("                        <img class=\"d-block w-100\" src=\"img/img.indexp/b4.jpg\"  alt=\"Second slide\">\r\n");
+      out.write("                        <img class=\"d-block w-100\" src=\"img/imgindex/b4.jpg\"  alt=\"Second slide\">\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"carousel-item\">\r\n");
-      out.write("                        <img class=\"d-block w-100\" src=\"img/img.indexp/b3.jpg\" alt=\"Third slide\">\r\n");
+      out.write("                        <img class=\"d-block w-100\" src=\"img/imgindex/b3.jpg\" alt=\"Third slide\">\r\n");
       out.write("                    </div>\r\n");
       out.write("                </div>\r\n");
       out.write("                <a class=\"carousel-control-prev\" href=\"#carouselExampleFade\" role=\"button\" data-slide=\"prev\">\r\n");
@@ -176,21 +190,33 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                \r\n");
       out.write("                <div class=\"w3-row-padding\">\r\n");
       out.write("                    <div class=\"w3-third w3-container w3-margin-bottom\">\r\n");
+<<<<<<< HEAD
       out.write("                        <img src=\"img/img.indexp/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+=======
+      out.write("                        <img src=\"img/imgindex/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center\">Mouse !</h2></p>\r\n");
       out.write("                            <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"w3-third w3-container w3-margin-bottom\">\r\n");
+<<<<<<< HEAD
       out.write("                        <img src=\"img/img.indexp/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+=======
+      out.write("                        <img src=\"img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center\">HeadSet !!!</h2></p>\r\n");
       out.write("                            <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"w3-third w3-container\">\r\n");
+<<<<<<< HEAD
       out.write("                        <img src=\"img/img.indexp/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+=======
+      out.write("                        <img src=\"img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center \">PC`s</h3></p>\r\n");
       out.write("                                <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
@@ -212,7 +238,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <p class=\"lead w3-text-white\" align=justify>Encuentra numerosos tipos de componentes gaming y/o genericos a los mejores precios del mercado.En YPower tenemos todo los que necesitas.</p>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"col-md-6\">\r\n");
-      out.write("                        <img class=\"featurette-image img-responsive center-block\"  width=\"540\" height=\"400\" src=\"img/img.indexp/d4.jpg\">\r\n");
+      out.write("                        <img class=\"featurette-image img-responsive center-block\"  width=\"540\" height=\"400\" src=\"img/imgindex/d4.jpg\">\r\n");
       out.write("                    </div>\r\n");
       out.write("                </div>      \r\n");
       out.write("            </div>\r\n");
