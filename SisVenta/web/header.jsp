@@ -20,16 +20,16 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link href="resources/css/w3.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/main.css" rel="stylesheet" type="text/css"/>
-<<<<<<< HEAD
+
         <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
 
 
         <link rel="stylesheet" href="resources/css/bootstrap.css">
         <link rel="stylesheet" href="resources/css/bootstrap-theme.css">
-=======
+
        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
->>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29
+
         <link href="resources/css/tablestyle.css" rel="stylesheet" type="text/css"/>
 
         <script src="resources/js/bootstrap.min.js"></script>
@@ -79,7 +79,7 @@
                         <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Ingresa tu usuario" name="usrname" required>
                         <label><b>Contraseña</b></label>
                         <input class="w3-input w3-border" type="text" placeholder="Ingresa tu conteseña" name="psw" required>
-                        <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Ingresar</button>
+                        <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit">Ingresar</button>
                         <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Recuerdame
                     </div>
                 </form>
@@ -91,9 +91,4 @@
 
             </div>
         </div>
-<<<<<<< HEAD
-
-=======
-   
->>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29
 
