@@ -7,7 +7,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Ypower</title>
+    </head>   
+    
+=======
    
+>>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29
     <%@include file="header.jsp" %>
     <title>Ypower</title>
         <br/>
