@@ -13,10 +13,9 @@ import java.util.Date;
  */
 public class detalleVenta {
     private String detvencod;
-    private String modcod;
+    private String mod_cod;
     private String usercod;
-    private String catcod;
-    private String marcod;
+    private String sub_cod;
     private Double precio;
     private Double cantidad;
     private Double descuento;
@@ -26,33 +25,11 @@ public class detalleVenta {
     public detalleVenta() {
     }
 
-    public detalleVenta(String detvencod, String modcod, String usercod, String catcod, String marcod, Double precio, Double cantidad, Double descuento, Double importe, Date buydate) {
+    public detalleVenta(String detvencod, String mod_cod, String usercod, String sub_cod, Double precio, Double cantidad, Double descuento, Double importe, Date buydate) {
         this.detvencod = detvencod;
-        this.modcod = modcod;
+        this.mod_cod = mod_cod;
         this.usercod = usercod;
-        this.catcod = catcod;
-        this.marcod = marcod;
-        this.precio = precio;
-        this.cantidad = cantidad;
-        this.descuento = descuento;
-        this.importe = importe;
-        this.buydate = buydate;
-    }
-
-    public detalleVenta(String modcod, String usercod, String catcod, String marcod, Double precio, Double cantidad, Double descuento, Double importe, Date buydate) {
-        this.modcod = modcod;
-        this.usercod = usercod;
-        this.catcod = catcod;
-        this.marcod = marcod;
-        this.precio = precio;
-        this.cantidad = cantidad;
-        this.descuento = descuento;
-        this.importe = importe;
-        this.buydate = buydate;
-    }
-
-    public detalleVenta(String detvencod,Double precio, Double cantidad, Double descuento, Double importe, Date buydate) {
-        this.detvencod = detvencod;
+        this.sub_cod = sub_cod;
         this.precio = precio;
         this.cantidad = cantidad;
         this.descuento = descuento;
@@ -68,36 +45,12 @@ public class detalleVenta {
         this.detvencod = detvencod;
     }
 
-    public String getModcod() {
-        return modcod;
-    }
-
-    public void setModcod(String modcod) {
-        this.modcod = modcod;
-    }
-
     public String getUsercod() {
         return usercod;
     }
 
     public void setUsercod(String usercod) {
         this.usercod = usercod;
-    }
-
-    public String getCatcod() {
-        return catcod;
-    }
-
-    public void setCatcod(String catcod) {
-        this.catcod = catcod;
-    }
-
-    public String getMarcod() {
-        return marcod;
-    }
-
-    public void setMarcod(String marcod) {
-        this.marcod = marcod;
     }
 
     public Double getPrecio() {
@@ -138,6 +91,22 @@ public class detalleVenta {
 
     public void setBuydate(Date buydate) {
         this.buydate = buydate;
+    }
+
+    public String getMod_cod() {
+        return mod_cod;
+    }
+
+    public void setMod_cod(String mod_cod) {
+        this.mod_cod = mod_cod;
+    }
+
+    public String getSub_cod() {
+        return sub_cod;
+    }
+
+    public void setSub_cod(String sub_cod) {
+        this.sub_cod = sub_cod;
     }
     
     

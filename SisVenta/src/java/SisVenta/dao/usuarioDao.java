@@ -9,21 +9,23 @@ import SisVenta.database.conexion;
 import SisVenta.modelo.usuario;
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.SQLException;
 import java.sql.Types;
+import SisVenta.service.CrudInterface;
+import java.util.List;
 
 /**
  *
  * @author Dxros
  */
-public class usuarioDao {
+public class usuarioDao implements  CrudInterface<usuario>{
 
     Connection cn;
     CallableStatement cs;
     String Res;
     usuario cli;
 
+    @Override
     public String create(usuario u) throws ClassNotFoundException, SQLException {
         try {
             cn = conexion.getConnection();
@@ -47,5 +49,20 @@ public class usuarioDao {
             throw e;
         }
         return Res;
+    }
+
+    @Override
+    public String update(usuario l) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String delete(usuario l) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<usuario> readAll() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

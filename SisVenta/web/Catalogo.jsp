@@ -34,179 +34,68 @@
                     --COREGIR BATERIA
                     <h5 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right w3-text-black ">Categoria : </h5>
                     <div class="caja_con_ci col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right" style="">
+                       
                         <select name="cbopccat" id="cbopccat" class="form-control caja_con_bod_menu_opc_select sele_multiple hidden-xs hidden-sm" style="" multiple="">
-                            <!--<option value="">::SELECCIONE::</option>-->     
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="17">CAMARAS WEB &amp; VIGILANCIA (40)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="6" selected="">CASES &amp; ACCESORIOS (155)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="33">CELULARES / TABLET &amp; ACCESORIOS (76)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="10">CONECTIVIDAD / REDES (55)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="23">CONSOLAS / JOYSTICK &amp; MANDOS (16)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="4">DISCOS DUROS &amp; ACCESORIOS (123)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="30">EQUIPOS PUNTO DE VENTA ( POS ) (9)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="16">FUENTES DE PODER (61)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="20">HOGAR (7)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="8">IMPRESORAS &amp; ACCESORIOS (32)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="13">LAPTOP &amp; ACCESORIOS (50)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="25">LECTORES &amp; DISPOSITIVOS (10)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="14">LICENCIAS &amp; SOFTWARE (38)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="5">MEMORIAS / RAM / USB / SD (94)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="31">MINI PCS / ALL IN ONE (8)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="3">MONITOR / TV &amp; ACCESORIOS (119)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="7">PLACA MADRE ( MOTHERBOARD ) (110)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="19">POLOS / MOCHILAS / GAMER (41)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="0">PROCESADORES &amp; COMPLEMENTOS (102)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="12">PROYECTORES &amp; ACCESORIOS (28)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="29">SILLAS / GAMING (9)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="21">SONIDO &amp; PARLANTES (193)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="32">SUMINISTRO / TINTAS / CARTUCHOS (102)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="22">TABLETA DIGITALIZADORA (7)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="9">TARJETAS DE VIDEO (59)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="1">TECLADOS / MOUSE / PAD MOUSE / KIT (209)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="2">UPS ESTABILIZADOR &amp; SUPRESOR (32)</option>                
-                            <!--            </div>-->
-
                         </select> 
 
-                        <!--//movi-->
                         <select name="cbopccat2" id="cbopccat2" class="form-control caja_con_bod_menu_opc_select visible-xs visible-sm" style="">
                             <option value="">::SELECCIONE::</option>     
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="17">CAMARAS WEB &amp; VIGILANCIA (40)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="6" selected="">CASES &amp; ACCESORIOS (155)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="33">CELULARES / TABLET &amp; ACCESORIOS (76)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="10">CONECTIVIDAD / REDES (55)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="23">CONSOLAS / JOYSTICK &amp; MANDOS (16)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="4">DISCOS DUROS &amp; ACCESORIOS (123)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="30">EQUIPOS PUNTO DE VENTA ( POS ) (9)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="16">FUENTES DE PODER (61)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="20">HOGAR (7)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="8">IMPRESORAS &amp; ACCESORIOS (32)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="13">LAPTOP &amp; ACCESORIOS (50)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="25">LECTORES &amp; DISPOSITIVOS (10)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="14">LICENCIAS &amp; SOFTWARE (38)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="5">MEMORIAS / RAM / USB / SD (94)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="31">MINI PCS / ALL IN ONE (8)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="3">MONITOR / TV &amp; ACCESORIOS (119)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="7">PLACA MADRE ( MOTHERBOARD ) (110)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="19">POLOS / MOCHILAS / GAMER (41)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="0">PROCESADORES &amp; COMPLEMENTOS (102)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="12">PROYECTORES &amp; ACCESORIOS (28)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="29">SILLAS / GAMING (9)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="21">SONIDO &amp; PARLANTES (193)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="32">SUMINISTRO / TINTAS / CARTUCHOS (102)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="22">TABLETA DIGITALIZADORA (7)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="9">TARJETAS DE VIDEO (59)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
                             <option value="1">TECLADOS / MOUSE / PAD MOUSE / KIT (209)</option>                
-                            <!--            </div>-->
-                            <!--            <div class="caja_con_lin_ci">     -->             <!--para inicio--> <!--aumentado para que este por defecto-->
-                            <option value="2">UPS ESTABILIZADOR &amp; SUPRESOR (32)</option>                
-                            <!--            </div>-->
-
+                           <option value="2">UPS ESTABILIZADOR &amp; SUPRESOR (32)</option>                  
                         </select>
-                        <!--//-->
+                       
 
                     </div>
                     <hr class="titulo2 style2 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">

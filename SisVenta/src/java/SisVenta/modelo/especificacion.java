@@ -10,56 +10,24 @@ package SisVenta.modelo;
  * @author Dxros
  */
 public class especificacion {
-    private String specod;
-    private String modcod;
-    private String marcod;
-    private String catcod;
+    private String spe_cod;
+    private String mod_cod;
+    private String sub_cod;
     private String spec1;
     private String spec2;
 
     public especificacion() {
     }
 
-    public especificacion(String specod, String modcod, String marcod, String catcod, String spec1, String spec2) {
-        this.specod = specod;
-        this.modcod = modcod;
-        this.marcod = marcod;
-        this.catcod = catcod;
+    public especificacion(String spe_cod, String mod_cod, String sub_cod, String spec1, String spec2) {
+        this.spe_cod = spe_cod;
+        this.mod_cod = mod_cod;
+        this.sub_cod = sub_cod;
         this.spec1 = spec1;
         this.spec2 = spec2;
     }
 
-    public String getSpecod() {
-        return specod;
-    }
-
-    public void setSpecod(String specod) {
-        this.specod = specod;
-    }
-
-    public String getModcod() {
-        return modcod;
-    }
-
-    public void setModcod(String modcod) {
-        this.modcod = modcod;
-    }
-
-    public String getMarcod() {
-        return marcod;
-    }
-
-    public void setMarcod(String marcod) {
-        this.marcod = marcod;
-    }
-
-    public String getCatcod() {
-        return catcod;
-    }
-
-    public void setCatcod(String catcod) {
-        this.catcod = catcod;
-    }
+    
 
     public String getSpec1() {
         return spec1;
@@ -75,6 +43,30 @@ public class especificacion {
 
     public void setSpec2(String spec2) {
         this.spec2 = spec2;
+    }
+
+    public String getSpe_cod() {
+        return spe_cod;
+    }
+
+    public void setSpe_cod(String spe_cod) {
+        this.spe_cod = spe_cod;
+    }
+
+    public String getMod_cod() {
+        return mod_cod;
+    }
+
+    public void setMod_cod(String mod_cod) {
+        this.mod_cod = mod_cod;
+    }
+
+    public String getSub_cod() {
+        return sub_cod;
+    }
+
+    public void setSub_cod(String sub_cod) {
+        this.sub_cod = sub_cod;
     }
     
     
