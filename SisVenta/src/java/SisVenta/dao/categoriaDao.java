@@ -48,7 +48,7 @@ public class categoriaDao implements CrudInterface<categoria>{
         List<categoria> listcat = new ArrayList<>();
         try {         
             cn = conexion.getConnection();
-            sql = "select cat_cod";
+            sql = "select cat_cod, cat_descripcion, nivel from categoria;";
             ps = cn.prepareStatement(sql);
             st = ps.executeQuery();
            while (st.next()) {
