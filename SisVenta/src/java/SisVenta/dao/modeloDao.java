@@ -14,12 +14,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+import SisVenta.service.CrudInterface;
 /**
  *
  * @author Dxros
  */
-public class modeloDao {
+public class modeloDao implements CrudInterface<modelo>{
      Connection cn;
     CallableStatement cs;
     PreparedStatement ps;
@@ -28,15 +28,16 @@ public class modeloDao {
     ResultSet st;
     modelo mod;
 
+     @Override
     public List<modelo> readAll() throws Exception{
       List<modelo> lismod = new ArrayList<>();
         try {         
             cn = conexion.getConnection();
-            sql = "select mod_cod,precio,stock,descripcion,descuento,deadline,mar_cod,cat_cod,fec_registro from modelo order by mod_cod";
+            sql = "select mod_cod,precio,stock,descripcion,descuento,deadline,sub_cod,fec_registro from modelo order by mod_cod";
             ps = cn.prepareStatement(sql);
             st = ps.executeQuery();
            while (st.next()) {
-                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4),st.getDouble(5),st.getDate(6),st.getString(7),st.getString(8),st.getDate(9));
+                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4),st.getDouble(5),st.getDate(6),st.getString(7),st.getDate(8));
                 lismod.add(mod);
             }
             ps.close();
@@ -47,5 +48,20 @@ public class modeloDao {
             cn.close();
         }
         return lismod;
+    }
+
+    @Override
+    public String create(modelo l) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String update(modelo l) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String delete(modelo l) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

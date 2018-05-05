@@ -3,7 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/PROWEB/SisVenta/SisVenta/web/registroCliente.jsp</file>
+=======
+            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/dao/usuarioDao.java</file>
+            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/service/CrudInterface.java</file>
+            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/dao/marcaDao.java</file>
+            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/dao/modeloDao.java</file>
+            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/modelo/categoria.java</file>
+>>>>>>> 2e850787101719b68edde5b212c3d774472e2fbf
         </group>
     </open-files>
 </project-private>

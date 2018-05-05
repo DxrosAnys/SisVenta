@@ -10,39 +10,21 @@ package SisVenta.modelo;
  * @author Dxros
  */
 public class listaDeseo {
-    private String wiscod;
-    private String modcod;
+    private String wis_cod;
+    private String mod_cod;
     private String usercod;
-    private String catcod;
-    private String marcod;
+    private String sub_cod;
     private String wishdate;
 
     public listaDeseo() {
     }
 
-    public listaDeseo(String wiscod, String modcod, String usercod, String catcod, String marcod, String wishdate) {
-        this.wiscod = wiscod;
-        this.modcod = modcod;
+    public listaDeseo(String wis_cod, String mod_cod, String usercod, String sub_cod, String wishdate) {
+        this.wis_cod = wis_cod;
+        this.mod_cod = mod_cod;
         this.usercod = usercod;
-        this.catcod = catcod;
-        this.marcod = marcod;
+        this.sub_cod = sub_cod;
         this.wishdate = wishdate;
-    }
-
-    public String getWiscod() {
-        return wiscod;
-    }
-
-    public void setWiscod(String wiscod) {
-        this.wiscod = wiscod;
-    }
-
-    public String getModcod() {
-        return modcod;
-    }
-
-    public void setModcod(String modcod) {
-        this.modcod = modcod;
     }
 
     public String getUsercod() {
@@ -53,28 +35,36 @@ public class listaDeseo {
         this.usercod = usercod;
     }
 
-    public String getCatcod() {
-        return catcod;
-    }
-
-    public void setCatcod(String catcod) {
-        this.catcod = catcod;
-    }
-
-    public String getMarcod() {
-        return marcod;
-    }
-
-    public void setMarcod(String marcod) {
-        this.marcod = marcod;
-    }
-
     public String getWishdate() {
         return wishdate;
     }
 
     public void setWishdate(String wishdate) {
         this.wishdate = wishdate;
+    }
+
+    public String getWis_cod() {
+        return wis_cod;
+    }
+
+    public void setWis_cod(String wis_cod) {
+        this.wis_cod = wis_cod;
+    }
+
+    public String getMod_cod() {
+        return mod_cod;
+    }
+
+    public void setMod_cod(String mod_cod) {
+        this.mod_cod = mod_cod;
+    }
+
+    public String getSub_cod() {
+        return sub_cod;
+    }
+
+    public void setSub_cod(String sub_cod) {
+        this.sub_cod = sub_cod;
     }
     
 }

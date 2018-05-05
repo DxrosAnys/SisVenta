@@ -51,13 +51,34 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
+<<<<<<< HEAD
       out.write("\r\n");
+=======
+<<<<<<< HEAD
+      out.write("   \r\n");
+      out.write("    ");
+=======
+>>>>>>> 2e850787101719b68edde5b212c3d774472e2fbf
       out.write("    <head>\r\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("        <title>Ypower</title>\r\n");
       out.write("    </head>   \r\n");
       out.write("\r\n");
       out.write("    ");
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+      out.write("   <body  background=\"img/img.general/bg-powerful.jpg\">\r\n");
+=======
+      out.write("   <body  background=\"img/general/bg-powerful.jpg\">\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
+      out.write("     \r\n");
+      out.write("       ");
+>>>>>>> e225ad3fe4f5a5792a009ae81edca19bb265e059
+>>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29
+>>>>>>> 5b8d02509f55ece9569908fa3061e5d1c0e8a51a
+>>>>>>> 2e850787101719b68edde5b212c3d774472e2fbf
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -85,11 +106,32 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("       <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("       <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+<<<<<<< HEAD
       out.write("\r\n");
+=======
+>>>>>>> 2e850787101719b68edde5b212c3d774472e2fbf
       out.write("        <link href=\"resources/css/tablestyle.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("\r\n");
       out.write("        <script src=\"resources/js/bootstrap.min.js\"></script>\r\n");
       out.write("        <script src=\"resources/js/jquery-1.10.2.min.js\"></script>\r\n");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+      out.write("        <link href=\"css/w3.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+<<<<<<< HEAD
+      out.write("        <script src=\"js/bootstrapValidator.js\" type=\"text/javascript\"></script>\r\n");
+=======
+      out.write("        <link href=\"css/main.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("        <script src=\"js/bootstrapValidator.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("        <link href=\"css/tablestyle.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
+>>>>>>> e225ad3fe4f5a5792a009ae81edca19bb265e059
+>>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29
+      out.write("        <title>Ypower</title>\r\n");
+>>>>>>> 5b8d02509f55ece9569908fa3061e5d1c0e8a51a
+>>>>>>> 2e850787101719b68edde5b212c3d774472e2fbf
       out.write("    </head>\r\n");
       out.write("    <body background=\"resources/img/general/bg-powerful.jpg\">\r\n");
       out.write("        <div class=\"w3-top\">\r\n");
@@ -126,7 +168,25 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("                <div class=\"w3-center\"><br>\r\n");
       out.write("                    <span onclick=\"document.getElementById('id01').style.display = 'none'\" class=\"w3-button w3-xlarge w3-transparent w3-display-topright\" title=\"Close Modal\">×</span>\r\n");
+<<<<<<< HEAD
       out.write("                    <img src=\"resources/img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
+=======
+      out.write("                    <img src=\"resources/img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+      out.write("                    <img src=\"resources/img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
+=======
+<<<<<<< HEAD
+      out.write("                    <img src=\"img/img.general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
+=======
+      out.write("                    <img src=\"img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
+>>>>>>> e225ad3fe4f5a5792a009ae81edca19bb265e059
+>>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29
+>>>>>>> 5b8d02509f55ece9569908fa3061e5d1c0e8a51a
+>>>>>>> 2e850787101719b68edde5b212c3d774472e2fbf
       out.write("                </div>\r\n");
       out.write("\r\n");
       out.write("                <form class=\"w3-container\" action=\"/action_page.php\">\r\n");
@@ -147,9 +207,24 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");
+<<<<<<< HEAD
+      out.write("   \r\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("    <title>Ypower</title>\r\n");
+=======
+      out.write("\r\n");
+      out.write("\r\n");
+<<<<<<< HEAD
+      out.write("    <title>Ypower</title>\r\n");
+=======
+<<<<<<< HEAD
+      out.write("\r\n");
+=======
+>>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29
+      out.write("   <body  background=\"resources/img/general/bg-powerful.jpg\">\r\n");
+>>>>>>> 5b8d02509f55ece9569908fa3061e5d1c0e8a51a
+>>>>>>> 2e850787101719b68edde5b212c3d774472e2fbf
       out.write("        <br/>\r\n");
       out.write("        <br/>\r\n");
       out.write("        <div class=\"container\">            \r\n");
@@ -181,20 +256,73 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"w3-row-padding\">\r\n");
       out.write("                    <div class=\"w3-third w3-container w3-margin-bottom\">\r\n");
       out.write("                        <img src=\"resources/img/imgindex/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+      out.write("                        <img src=\"resources/img/imgindex/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+=======
+<<<<<<< HEAD
+      out.write("                        <img src=\"img/img.indexp/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+=======
+      out.write("                        <img src=\"img/imgindex/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
+>>>>>>> e225ad3fe4f5a5792a009ae81edca19bb265e059
+>>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29
+>>>>>>> 5b8d02509f55ece9569908fa3061e5d1c0e8a51a
+>>>>>>> 2e850787101719b68edde5b212c3d774472e2fbf
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center\">Mouse !</h2></p>\r\n");
       out.write("                            <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"w3-third w3-container w3-margin-bottom\">\r\n");
+<<<<<<< HEAD
       out.write("                        <img src=\"resources/img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+=======
+      out.write("                        <img src=\"resources/img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+      out.write("                        <img src=\"resources/img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+=======
+<<<<<<< HEAD
+      out.write("                        <img src=\"img/img.indexp/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+=======
+      out.write("                        <img src=\"img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
+>>>>>>> e225ad3fe4f5a5792a009ae81edca19bb265e059
+>>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29
+>>>>>>> 5b8d02509f55ece9569908fa3061e5d1c0e8a51a
+>>>>>>> 2e850787101719b68edde5b212c3d774472e2fbf
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center\">HeadSet !!!</h2></p>\r\n");
       out.write("                            <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"w3-third w3-container\">\r\n");
+<<<<<<< HEAD
       out.write("                        <img src=\"resources/img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+=======
+      out.write("                        <img src=\"resources/img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+      out.write("                        <img src=\"resources/img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+=======
+<<<<<<< HEAD
+      out.write("                        <img src=\"img/img.indexp/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+=======
+      out.write("                        <img src=\"img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+>>>>>>> da1bc1bfb0b7ca36e73f9c892a31ccbd98f11aa0
+>>>>>>> e225ad3fe4f5a5792a009ae81edca19bb265e059
+>>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29
+>>>>>>> 5b8d02509f55ece9569908fa3061e5d1c0e8a51a
+>>>>>>> 2e850787101719b68edde5b212c3d774472e2fbf
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center \">PC`s</h3></p>\r\n");
       out.write("                                <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
