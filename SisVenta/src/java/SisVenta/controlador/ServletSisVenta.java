@@ -5,6 +5,7 @@
  */
 package SisVenta.controlador;
 
+import SisVenta.dao.categoriaDao;
 import SisVenta.dao.modeloDao;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -49,12 +50,14 @@ public class ServletSisVenta extends HttpServlet {
 
     private void ConsultarProducto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
         String destino;
-        modeloDao lista = new modeloDao();  
+        modeloDao modlis = new modeloDao();  
+        categoriaDao catlis = new categoriaDao();
             try {
-                request.setAttribute("Listar", lista.readAll());
+                request.setAttribute("ListarMod", modlis.readAll());
+//                request.setAttribute("ListarCat", catlis.readAll());
                 destino = "Catalogo.jsp";
             } catch (ClassNotFoundException | SQLException e) {
-                request.setAttribute("Listar", e.getMessage());
+                request.setAttribute("ListarMod", e.getMessage());
                 destino = "Catalogo.jsp";
             }       
         RequestDispatcher rd = request.getRequestDispatcher(destino);

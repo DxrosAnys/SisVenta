@@ -31,40 +31,15 @@
             <div class="cpcol-izq col-xs-12 col-sm-12 col-md-3 col-lg-3">
                 <h4 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right"> Buscar por: </h4>
                 <div class="col-izq col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    --COREGIR BATERIA
                     <h5 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right w3-text-black ">Categoria : </h5>
                     <div class="caja_con_ci col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right" style="">
                        
-                        <select name="cbopccat" id="cbopccat" class="form-control caja_con_bod_menu_opc_select sele_multiple hidden-xs hidden-sm" style="" multiple="">
-                            <option value="17">CAMARAS WEB &amp; VIGILANCIA (40)</option>                
-                            <option value="6" selected="">CASES &amp; ACCESORIOS (155)</option>                
-                            <option value="33">CELULARES / TABLET &amp; ACCESORIOS (76)</option>                
-                            <option value="10">CONECTIVIDAD / REDES (55)</option>                
-                            <option value="23">CONSOLAS / JOYSTICK &amp; MANDOS (16)</option>                
-                            <option value="4">DISCOS DUROS &amp; ACCESORIOS (123)</option>                
-                            <option value="30">EQUIPOS PUNTO DE VENTA ( POS ) (9)</option>                
-                            <option value="16">FUENTES DE PODER (61)</option>                
-                            <option value="20">HOGAR (7)</option>                
-                            <option value="8">IMPRESORAS &amp; ACCESORIOS (32)</option>                
-                            <option value="13">LAPTOP &amp; ACCESORIOS (50)</option>                
-                            <option value="25">LECTORES &amp; DISPOSITIVOS (10)</option>                
-                            <option value="14">LICENCIAS &amp; SOFTWARE (38)</option>                
-                            <option value="5">MEMORIAS / RAM / USB / SD (94)</option>                
-                            <option value="31">MINI PCS / ALL IN ONE (8)</option>                
-                            <option value="3">MONITOR / TV &amp; ACCESORIOS (119)</option>                
-                            <option value="7">PLACA MADRE ( MOTHERBOARD ) (110)</option>                
-                            <option value="19">POLOS / MOCHILAS / GAMER (41)</option>                
-                            <option value="0">PROCESADORES &amp; COMPLEMENTOS (102)</option>                
-                            <option value="12">PROYECTORES &amp; ACCESORIOS (28)</option>                
-                            <option value="29">SILLAS / GAMING (9)</option>                
-                            <option value="21">SONIDO &amp; PARLANTES (193)</option>                
-                            <option value="32">SUMINISTRO / TINTAS / CARTUCHOS (102)</option>                
-                            <option value="22">TABLETA DIGITALIZADORA (7)</option>                
-                            <option value="9">TARJETAS DE VIDEO (59)</option>                
-                            <option value="1">TECLADOS / MOUSE / PAD MOUSE / KIT (209)</option>                
-                            <option value="2">UPS ESTABILIZADOR &amp; SUPRESOR (32)</option>                
-                        </select> 
-
+                            <select name="cbopccat" id="cbopccat" class="form-control caja_con_bod_menu_opc_select sele_multiple hidden-xs hidden-sm" style="" multiple="">
+                                <c:forEach varStatus="cont"  var="cat" items="${requestScope.ListarCat}">
+                                <option value="${cont.count}">${cat.cat_descripcion}</option>           
+                                 </c:forEach>
+                            </select> 
+                       
                         <select name="cbopccat2" id="cbopccat2" class="form-control caja_con_bod_menu_opc_select visible-xs visible-sm" style="">
                             <option value="">::SELECCIONE::</option>     
                             <option value="17">CAMARAS WEB &amp; VIGILANCIA (40)</option>                
@@ -93,9 +68,9 @@
                             <option value="22">TABLETA DIGITALIZADORA (7)</option>                
                             <option value="9">TARJETAS DE VIDEO (59)</option>                
                             <option value="1">TECLADOS / MOUSE / PAD MOUSE / KIT (209)</option>                
-                           <option value="2">UPS ESTABILIZADOR &amp; SUPRESOR (32)</option>                  
+                            <option value="2">UPS ESTABILIZADOR &amp; SUPRESOR (32)</option>                  
                         </select>
-                       
+
 
                     </div>
                     <hr class="titulo2 style2 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">
@@ -187,7 +162,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <c:forEach varStatus="cont" var="md" items="${requestScope.Listar}">
+                                    <c:forEach varStatus="cont" var="md" items="${requestScope.ListarMod}">
                                         <tr width="208.86" height="366.46"class="cptr col-xs-6 col-sm-4 col-md-3 col-lg-3 <c:if test="${cont.count % 2 ==0}">odd</c:if> <c:if test="${cont.count % 2 !=0}">even</c:if>" role="row">
                                                 <td class="cptd sorting_1 w3-center" width="180" height="350">
                                                     <div class="cpcajaprod">                       

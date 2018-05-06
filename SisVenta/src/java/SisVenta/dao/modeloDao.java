@@ -15,12 +15,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import SisVenta.service.CrudInterface;
+import java.sql.Date;
+import java.sql.Types;
 /**
  *
  * @author Dxros
  */
 public class modeloDao implements CrudInterface<modelo>{
-     Connection cn;
+    Connection cn;
     CallableStatement cs;
     PreparedStatement ps;
     String Res;
@@ -52,7 +54,25 @@ public class modeloDao implements CrudInterface<modelo>{
 
     @Override
     public String create(modelo l) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       try{
+           cn = conexion.getConnection();
+           cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_INSMOD(?,?,?,?,?,?,?,?)}");
+           cs.setString(1, l.getSub_cod());
+           cs.setString(2, l.getDescripcion());
+           cs.setDouble(3, l.getPrecio());
+           cs.setDouble(4, l.getDescuento());
+           cs.setDouble(5, l.getStock());
+           cs.setDate(6, (Date) l.getDeadline());
+           cs.setDate(7, (Date) l.getDateregister());
+           cs.registerOutParameter(8,Types.VARCHAR);
+           cs.execute();
+           Res= cs.getString(8);
+           cn.close();
+           cs.close();
+       }catch(ClassNotFoundException | SQLException e){
+           throw e;
+       }
+        return Res;
     }
 
     @Override
