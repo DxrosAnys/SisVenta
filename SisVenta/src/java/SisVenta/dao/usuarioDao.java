@@ -48,7 +48,7 @@ public class usuarioDao implements CrudInterface<usuario> {
             st.close();
         } catch (ClassNotFoundException | SQLException e) {
             throw e;
-        }finally {
+        } finally {
             cn.close();
         }
         return lisusu;

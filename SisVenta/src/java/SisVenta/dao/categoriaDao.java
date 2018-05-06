@@ -36,11 +36,32 @@ public class categoriaDao implements CrudInterface<categoria> {
         List<categoria> listcat = new ArrayList<>();
         try {
             cn = conexion.getConnection();
-            sql = "select cat_cod, cat_descripcion, nivel from categoria;";
+            sql = "select cat_cod, cat_descripcion, nivel from categoria where LENGTH(nivel) = 1";
             ps = cn.prepareStatement(sql);
             st = ps.executeQuery();
             while (st.next()) {
-                cat = new categoria();
+                cat = new categoria(st.getString(1),st.getString(2),st.getString(3));
+                listcat.add(cat);
+            }
+            ps.close();
+            st.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            throw e;
+        } finally {
+            cn.close();
+        }
+        return listcat;
+    }
+    
+    public List<categoria> readAllSub() throws Exception {
+        List<categoria> listcat = new ArrayList<>();
+        try {
+            cn = conexion.getConnection();
+            sql = "select cat_cod, cat_descripcion, nivel from categoria where LENGTH(nivel) > 1";
+            ps = cn.prepareStatement(sql);
+            st = ps.executeQuery();
+            while (st.next()) {
+                cat = new categoria(st.getString(1),st.getString(2),st.getString(3));
                 listcat.add(cat);
             }
             ps.close();
@@ -53,6 +74,9 @@ public class categoriaDao implements CrudInterface<categoria> {
         return listcat;
     }
 
+
+    
+    
     @Override
     public String create(categoria l) throws Exception {
         try {

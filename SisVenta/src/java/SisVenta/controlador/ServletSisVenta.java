@@ -51,13 +51,14 @@ public class ServletSisVenta extends HttpServlet {
     private void ConsultarProducto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
         String destino;
         modeloDao modlis = new modeloDao();  
-        categoriaDao catlis = new categoriaDao();
+        categoriaDao catlis = new categoriaDao();  
             try {
-                request.setAttribute("ListarMod", modlis.readAll());
-//                request.setAttribute("ListarCat", catlis.readAll());
+                request.setAttribute("Listar", modlis.readAll());
+                request.setAttribute("ListarCat", catlis.readAll());
+                request.setAttribute("ListarSubCat", catlis.readAllSub());
                 destino = "Catalogo.jsp";
             } catch (ClassNotFoundException | SQLException e) {
-                request.setAttribute("ListarMod", e.getMessage());
+                request.setAttribute("Mensaje", e.getMessage());
                 destino = "Catalogo.jsp";
             }       
         RequestDispatcher rd = request.getRequestDispatcher(destino);

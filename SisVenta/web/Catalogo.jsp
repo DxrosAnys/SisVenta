@@ -4,6 +4,7 @@
     Author     : Dxros
 --%>
 
+<%@page import="SisVenta.dao.categoriaDao"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 
@@ -33,45 +34,12 @@
                 <div class="col-izq col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h5 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right w3-text-black ">Categoria : </h5>
                     <div class="caja_con_ci col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right" style="">
-                       
-                            <select name="cbopccat" id="cbopccat" class="form-control caja_con_bod_menu_opc_select sele_multiple hidden-xs hidden-sm" style="" multiple="">
-                                <c:forEach varStatus="cont"  var="cat" items="${requestScope.ListarCat}">
-                                <option value="${cont.count}">${cat.cat_descripcion}</option>           
+                   
+                        <select name="cbopccat" id="cbopccat" class="form-control caja_con_bod_menu_opc_select sele_multiple hidden-xs hidden-sm" style="" multiple="">
+                                <c:forEach var="cat" items="${requestScope.ListarCat}">
+                                <option value="${cat.cat_cod}">${cat.cat_descripcion}</option>           
                                  </c:forEach>
                             </select> 
-                       
-                        <select name="cbopccat2" id="cbopccat2" class="form-control caja_con_bod_menu_opc_select visible-xs visible-sm" style="">
-                            <option value="">::SELECCIONE::</option>     
-                            <option value="17">CAMARAS WEB &amp; VIGILANCIA (40)</option>                
-                            <option value="6" selected="">CASES &amp; ACCESORIOS (155)</option>                
-                            <option value="33">CELULARES / TABLET &amp; ACCESORIOS (76)</option>                
-                            <option value="10">CONECTIVIDAD / REDES (55)</option>                
-                            <option value="23">CONSOLAS / JOYSTICK &amp; MANDOS (16)</option>                
-                            <option value="4">DISCOS DUROS &amp; ACCESORIOS (123)</option>                
-                            <option value="30">EQUIPOS PUNTO DE VENTA ( POS ) (9)</option>                
-                            <option value="16">FUENTES DE PODER (61)</option>                
-                            <option value="20">HOGAR (7)</option>                
-                            <option value="8">IMPRESORAS &amp; ACCESORIOS (32)</option>                
-                            <option value="13">LAPTOP &amp; ACCESORIOS (50)</option>                
-                            <option value="25">LECTORES &amp; DISPOSITIVOS (10)</option>                
-                            <option value="14">LICENCIAS &amp; SOFTWARE (38)</option>                
-                            <option value="5">MEMORIAS / RAM / USB / SD (94)</option>                
-                            <option value="31">MINI PCS / ALL IN ONE (8)</option>                
-                            <option value="3">MONITOR / TV &amp; ACCESORIOS (119)</option>                
-                            <option value="7">PLACA MADRE ( MOTHERBOARD ) (110)</option>                
-                            <option value="19">POLOS / MOCHILAS / GAMER (41)</option>                
-                            <option value="0">PROCESADORES &amp; COMPLEMENTOS (102)</option>                
-                            <option value="12">PROYECTORES &amp; ACCESORIOS (28)</option>                
-                            <option value="29">SILLAS / GAMING (9)</option>                
-                            <option value="21">SONIDO &amp; PARLANTES (193)</option>                
-                            <option value="32">SUMINISTRO / TINTAS / CARTUCHOS (102)</option>                
-                            <option value="22">TABLETA DIGITALIZADORA (7)</option>                
-                            <option value="9">TARJETAS DE VIDEO (59)</option>                
-                            <option value="1">TECLADOS / MOUSE / PAD MOUSE / KIT (209)</option>                
-                            <option value="2">UPS ESTABILIZADOR &amp; SUPRESOR (32)</option>                  
-                        </select>
-
-
                     </div>
                     <hr class="titulo2 style2 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">
 
@@ -80,18 +48,16 @@
                         <input type="hidden" name="cbopcsub2" id="cbopcsub2" value="68">
                         <div class="multiselect" id="cbopcsub">
 
-                            <!--subcate por defecto-->    
-                            <!--para inicio-->                             <!--para inicio-->
-                            <label><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="62"><span>CASE CON FUENTE DE PODER (21)</span></label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label class="multiselect-on"><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="68" checked=""><span>CASE SIN FUENTE / GAMER (97)</span></label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="136"><span>COOLER PARA CASE &amp; COMPLEMENTOS (36)</span></label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="80"><span>MINI CASE CON FUENTE DE PODER (1)</span></label>
-
-
-                            <!--subcate por defecto-->
+                            <c:forEach var="sub" items="${requestScope.ListarSubCat}">    
+                                <c:choose>
+                                    <c:when test="${sub.nivel == A2}">                                      
+                                        <label class="multiselect-on"><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="${sub.nivel}" checked=""><span>${sub.cat_descripcion}</span></label>
+                                    </c:when>
+                                    <c:otherwise>
+                                      <label><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="${sub.nivel}"><span>${sub.cat_descripcion}</span></label>     
+                                    </c:otherwise>                         
+                            </c:choose>
+                            </c:forEach>
 
                         </div>            
 
@@ -162,7 +128,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <c:forEach varStatus="cont" var="md" items="${requestScope.ListarMod}">
+                                    <c:forEach varStatus="cont" var="md" items="${requestScope.Listar}">
                                         <tr width="208.86" height="366.46"class="cptr col-xs-6 col-sm-4 col-md-3 col-lg-3 <c:if test="${cont.count % 2 ==0}">odd</c:if> <c:if test="${cont.count % 2 !=0}">even</c:if>" role="row">
                                                 <td class="cptd sorting_1 w3-center" width="180" height="350">
                                                     <div class="cpcajaprod">                       
