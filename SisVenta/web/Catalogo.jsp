@@ -8,14 +8,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 
-<%@include file="header.jsp" %>
+<%@include file="includes/header.jsp" %>
 <title>Catalogo de Producto</title>
 <br/>
 <br/>
 <div id="content" class="w3-text-white">
     <div class="migcon w3-container" style="width: 98%;">      
         <div class="w3-row">
-            <ol class="migmov breadcrumb col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <ol class="migmov breadcrumb col-xs-12 col-md-12">
                 <li><a href="index.jsp">Inicio</a></li>
                 <li class="active">Catalogo de Productos</li>
             </ol>  
@@ -23,88 +23,81 @@
     </div>
     <main class=" w3-container" role="main" style="width: 100%;">
         <div class="w3-row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h3 class="titulo col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">CATALOGO DE PRODUCTOS YPOWER</h3>  
-                <hr class="titulo3 style1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">
+            <div class="col-xs-12 col-md-12 ">
+                <h3 class="titulo col-xs-12 col-md-12 no-padding-left no-padding-right">CATALOGO DE PRODUCTOS YPOWER</h3>  
+                <hr class="titulo3 style1 col-xs-12 col-md-12 no-padding-left no-padding-right">
             </div>
         </div>
         <div class="row no-margin-left no-margin-right">
-            <div class="cpcol-izq col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                <h4 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right"> Buscar por: </h4>
-                <div class="col-izq col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h5 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right w3-text-black ">Categoria : </h5>
-                    <div class="caja_con_ci col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right" style="">
-                   
+            <div class="cpcol-izq col-xs-12 col-md-3 ">
+                <h4 class="titulo titcpi1 col-xs-12 col-md-12  no-padding-left no-padding-right"> Buscar por: </h4>
+                <div class="col-izq col-xs-12 col-md-12 ">
+                    <h5 class="titulo titcpi1 col-xs-12 col-md-12  no-padding-left no-padding-right w3-text-black ">Categoria : </h5>
+                    <div class="caja_con_ci col-xs-12 col-md-12  no-padding-left no-padding-right" style="">
                         <select name="cbopccat" id="cbopccat" class="form-control caja_con_bod_menu_opc_select sele_multiple hidden-xs hidden-sm" style="" multiple="">
-                                <c:forEach var="cat" items="${requestScope.ListarCat}">
+                            <c:forEach var="cat" items="${requestScope.ListarCat}">
                                 <option value="${cat.cat_cod}">${cat.cat_descripcion}</option>           
-                                 </c:forEach>
-                            </select> 
-                    </div>
-                    <hr class="titulo2 style2 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">
-
-                    <h5 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right w3-text-black">Sub-Categoria : </h5>
-                    <div class="caja_con_ci col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right" style="" id="cont1">          
+                            </c:forEach>  
+                        </select> 
+                    </div>             
+                    <h5 class="titulo titcpi1 col-xs-12 col-md-12 no-padding-left no-padding-right w3-text-black">Sub-Categoria : </h5>
+                    <div class="caja_con_ci col-xs-12 col-md-12 no-padding-left no-padding-right" style="" id="cont1">          
+                        <hr class="titulo3 style1 col-xs-12  col-md-12 no-padding-left no-padding-right">
                         <input type="hidden" name="cbopcsub2" id="cbopcsub2" value="68">
                         <div class="multiselect" id="cbopcsub">
-
                             <c:forEach var="sub" items="${requestScope.ListarSubCat}">    
                                 <c:choose>
                                     <c:when test="${sub.nivel == A2}">                                      
                                         <label class="multiselect-on"><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="${sub.nivel}" checked=""><span>${sub.cat_descripcion}</span></label>
-                                    </c:when>
-                                    <c:otherwise>
-                                      <label><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="${sub.nivel}"><span>${sub.cat_descripcion}</span></label>     
-                                    </c:otherwise>                         
-                            </c:choose>
-                            </c:forEach>
-
+                                            </c:when>
+                                            <c:otherwise>
+                                        <label><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="${sub.nivel}"><span>${sub.cat_descripcion}</span></label>     
+                                            </c:otherwise>                         
+                                        </c:choose>
+                                    </c:forEach>
                         </div>            
-
                     </div>     
-                    <hr class="titulo2 style2 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">
-
-                    <h5 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right w3-text-black" >Marca <input class="chkoption2all" type="checkbox" name="chkoption2all[]" id="chkoption2all" value="999997" style="/*display: none;*/"></h5>
-                    <div class="caja_con_ci col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right" style="" id="cont2">          
+                    <h5 class="titulo titcpi1 col-xs-12 col-md-12  no-padding-left no-padding-right w3-text-black" >Marca <input class="chkoption2all" type="checkbox" name="chkoption2all[]" id="chkoption2all" value="999997" style="/*display: none;*/"></h5>
+                    <div class="caja_con_ci col-xs-12 col-md-12  no-padding-left no-padding-right" style="" id="cont2">          
+                        <hr class="titulo3 style1 col-xs-12 col-md-12  no-padding-left no-padding-right">
                         <input type="hidden" name="cbopcmar2" id="cbopcmar2" value="207">
                         <div class="multiselect2" id="cbopcmar">
-
-                            <!--marca por defecto-->    
-                            <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption20"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="216">AEROCOOL (2)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption21"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="13">ANTRYX (4)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption22"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="169">COOLER MASTER (9)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption23"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="135">CORSAIR (22)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption24"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="245">COUGAR       (1)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption25"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="117">DEEP COOL (9)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption26"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="183">EVGA (4)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption27"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="243">GAMBYTE              (6)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption28"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="231">GAMEMAX        (1)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption29"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="148">GIGABYTE (1)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption210"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="256">IN WIN (6)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption211"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="38">NZXT (18)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption212"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="232">TEROS (1)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption213" class="multiselect-on"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="207" checked="">THERMALTAKE (13)</label>
-
-
-                            <!--marca por defecto-->
-
+                            <c:forEach var="mar" items="${requestScope.ListaMar}">  
+                                <c:choose>
+                                    <c:when test="${sub.nivel == 'MAR0000001'}">                                     
+                                        <label id="lbloption213" class="multiselect-on"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="${mar.mar_cod}" checked="">${mar.mar_descripcion}</label>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <label id="lbloption210"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="${mar.mar_cod}">${mar.mar_descripcion}</label>     
+                                        </c:otherwise>                         
+                                    </c:choose>
+                                </c:forEach>
                         </div>              
-
                     </div>
+                    <!--                    <script>
+                                            function formTemplate(pemail_id, partner_id) {
+                                                $('#formTemplate').modal('toggle');
+                                                $.ajax({
+                                                    url: "/personal/emails/form-template",
+                                                    data: {'id': pemail_id},
+                                                    dataType: "json",
+                                                    type: 'POST',
+                                                    success: function (data) {
+                                                        dashboard.addLoading(false);
+                                                        var contenidoTab = data.html;
+                                                        $("#formModalTemplateI").html(contenidoTab);
+                                                    },
+                                                    beforeSend: function () {
+                                                        dashboard.addLoading(true);
+                                                    },
+                                                    error: function () {
+                                                        dashboard.addLoading(false);
+                                                    }
+                                                });
+                    
+                                            }
+                    
+                                        </script>-->
 
                     <!--/////////-->
                     <hr class="titulofin style2 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right"> <!--/////////-->
@@ -155,5 +148,6 @@
         </div>
     </main>
 </div>
+<jsp:include page="includes/footer.jsp"></jsp:include>
 </body>
 </html>

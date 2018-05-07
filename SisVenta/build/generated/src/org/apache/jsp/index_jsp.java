@@ -13,7 +13,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   static {
     _jspx_dependants = new java.util.ArrayList<String>(1);
-    _jspx_dependants.add("/header.jsp");
+    _jspx_dependants.add("/includes/header.jsp");
   }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -51,15 +51,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
-      out.write("<<<<<<< HEAD\r\n");
-      out.write("    <head>\r\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("        <title>Ypower</title>\r\n");
-      out.write("    </head>   \r\n");
-      out.write("    \r\n");
-      out.write("=======\r\n");
-      out.write("   \r\n");
-      out.write(">>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29\r\n");
+      out.write("\r\n");
       out.write("    ");
       out.write("\r\n");
       out.write("\r\n");
@@ -79,16 +71,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Raleway\">\r\n");
       out.write("        <link href=\"resources/css/w3.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("        <link href=\"resources/css/main.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
-      out.write("<<<<<<< HEAD\r\n");
-      out.write("        <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("\r\n");
-      out.write("\r\n");
-      out.write("        <link rel=\"stylesheet\" href=\"resources/css/bootstrap.css\">\r\n");
-      out.write("        <link rel=\"stylesheet\" href=\"resources/css/bootstrap-theme.css\">\r\n");
-      out.write("=======\r\n");
       out.write("       <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("       <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
-      out.write(">>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29\r\n");
       out.write("        <link href=\"resources/css/tablestyle.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("\r\n");
       out.write("        <script src=\"resources/js/bootstrap.min.js\"></script>\r\n");
@@ -150,13 +135,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");
-      out.write("<<<<<<< HEAD\r\n");
-      out.write("\r\n");
-      out.write("=======\r\n");
-      out.write("   \r\n");
-      out.write(">>>>>>> 857517a1e88a2e61884590d5b6f8ba2aede8ec29\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
+      out.write("        \r\n");
+      out.write("     \r\n");
+      out.write(" \r\n");
       out.write("    <title>Ypower</title>\r\n");
       out.write("        <br/>\r\n");
       out.write("        <br/>\r\n");
@@ -231,18 +212,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\r\n");
       out.write("        <br>\r\n");
       out.write("        <br>\r\n");
-      out.write("    <footer class=\"w3-center w3-black w3-padding-64\">\r\n");
-      out.write("        <a href=\"index.jsp\" class=\"w3-button w3-light-grey\"><i class=\"fa fa-arrow-up w3-margin-right\"></i>To the top</a>\r\n");
-      out.write("        <div class=\"w3-xlarge w3-section\">\r\n");
-      out.write("            <i class=\"fa fa-facebook-official w3-hover-opacity\"></i>\r\n");
-      out.write("            <i class=\"fa fa-instagram w3-hover-opacity\"></i>\r\n");
-      out.write("            <i class=\"fa fa-snapchat w3-hover-opacity\"></i>\r\n");
-      out.write("            <i class=\"fa fa-pinterest-p w3-hover-opacity\"></i>\r\n");
-      out.write("            <i class=\"fa fa-twitter w3-hover-opacity\"></i>\r\n");
-      out.write("            <i class=\"fa fa-linkedin w3-hover-opacity\"></i>\r\n");
-      out.write("        </div>\r\n");
-      out.write("        <p>Powered by Ypower</p>\r\n");
-      out.write("    </footer>  \r\n");
+      out.write("   ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "includes/footer.jsp", out, false);
+      out.write("\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");
     } catch (Throwable t) {

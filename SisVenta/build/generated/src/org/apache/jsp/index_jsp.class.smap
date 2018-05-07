@@ -6,9 +6,11 @@ JSP
 + 0 index.jsp
 index.jsp
 + 1 header.jsp
-header.jsp
+includes/header.jsp
 *L
-5,15:49
-5#1,96:64
-19#0,90:159
+5,7:49
+5#1,85:56
+11#0,75:140
+86:215,3
+87,3:218
 *E

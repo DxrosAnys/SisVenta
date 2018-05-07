@@ -36,11 +36,11 @@ public class marcaDao implements CrudInterface<marca> {
         List<marca> listmar = new ArrayList<>();
         try {
             cn = conexion.getConnection();
-            sql = "select mar_cod, mar_descripcion from marca;";
+            sql = "select mar_cod, mar_descripcion from marca";
             ps = cn.prepareStatement(sql);
             st = ps.executeQuery();
             while (st.next()) {
-                mar = new marca();
+                mar = new marca(st.getString(1),st.getString(2));
                 listmar.add(mar);
             }
             ps.close();
@@ -58,7 +58,7 @@ public class marcaDao implements CrudInterface<marca> {
         try {
             cn = conexion.getConnection();
             cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_INSMAR(?,?)}");
-            cs.setString(1, l.getDescripcion());
+            cs.setString(1, l.getMar_descripcion());
             cs.registerOutParameter(2, Types.VARCHAR);
             cs.execute();
             Res = cs.getString(2);
