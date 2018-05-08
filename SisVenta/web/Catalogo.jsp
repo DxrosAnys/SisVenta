@@ -4,17 +4,18 @@
     Author     : Dxros
 --%>
 
+<%@page import="SisVenta.dao.categoriaDao"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 
-<%@include file="header.jsp" %>
+<%@include file="includes/header.jsp" %>
 <title>Catalogo de Producto</title>
 <br/>
 <br/>
 <div id="content" class="w3-text-white">
     <div class="migcon w3-container" style="width: 98%;">      
         <div class="w3-row">
-            <ol class="migmov breadcrumb col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <ol class="migmov breadcrumb col-xs-12 col-md-12">
                 <li><a href="index.jsp">Inicio</a></li>
                 <li class="active">Catalogo de Productos</li>
             </ol>  
@@ -22,148 +23,81 @@
     </div>
     <main class=" w3-container" role="main" style="width: 100%;">
         <div class="w3-row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h3 class="titulo col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">CATALOGO DE PRODUCTOS YPOWER</h3>  
-                <hr class="titulo3 style1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">
+            <div class="col-xs-12 col-md-12 ">
+                <h3 class="titulo col-xs-12 col-md-12 no-padding-left no-padding-right">CATALOGO DE PRODUCTOS YPOWER</h3>  
+                <hr class="titulo3 style1 col-xs-12 col-md-12 no-padding-left no-padding-right">
             </div>
         </div>
         <div class="row no-margin-left no-margin-right">
-            <div class="cpcol-izq col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                <h4 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right"> Buscar por: </h4>
-                <div class="col-izq col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    --COREGIR BATERIA
-                    <h5 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right w3-text-black ">Categoria : </h5>
-                    <div class="caja_con_ci col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right" style="">
-                       
+            <div class="cpcol-izq col-xs-12 col-md-3 ">
+                <h4 class="titulo titcpi1 col-xs-12 col-md-12  no-padding-left no-padding-right"> Buscar por: </h4>
+                <div class="col-izq col-xs-12 col-md-12 ">
+                    <h5 class="titulo titcpi1 col-xs-12 col-md-12  no-padding-left no-padding-right w3-text-black ">Categoria : </h5>
+                    <div class="caja_con_ci col-xs-12 col-md-12  no-padding-left no-padding-right" style="">
                         <select name="cbopccat" id="cbopccat" class="form-control caja_con_bod_menu_opc_select sele_multiple hidden-xs hidden-sm" style="" multiple="">
-                            <option value="17">CAMARAS WEB &amp; VIGILANCIA (40)</option>                
-                            <option value="6" selected="">CASES &amp; ACCESORIOS (155)</option>                
-                            <option value="33">CELULARES / TABLET &amp; ACCESORIOS (76)</option>                
-                            <option value="10">CONECTIVIDAD / REDES (55)</option>                
-                            <option value="23">CONSOLAS / JOYSTICK &amp; MANDOS (16)</option>                
-                            <option value="4">DISCOS DUROS &amp; ACCESORIOS (123)</option>                
-                            <option value="30">EQUIPOS PUNTO DE VENTA ( POS ) (9)</option>                
-                            <option value="16">FUENTES DE PODER (61)</option>                
-                            <option value="20">HOGAR (7)</option>                
-                            <option value="8">IMPRESORAS &amp; ACCESORIOS (32)</option>                
-                            <option value="13">LAPTOP &amp; ACCESORIOS (50)</option>                
-                            <option value="25">LECTORES &amp; DISPOSITIVOS (10)</option>                
-                            <option value="14">LICENCIAS &amp; SOFTWARE (38)</option>                
-                            <option value="5">MEMORIAS / RAM / USB / SD (94)</option>                
-                            <option value="31">MINI PCS / ALL IN ONE (8)</option>                
-                            <option value="3">MONITOR / TV &amp; ACCESORIOS (119)</option>                
-                            <option value="7">PLACA MADRE ( MOTHERBOARD ) (110)</option>                
-                            <option value="19">POLOS / MOCHILAS / GAMER (41)</option>                
-                            <option value="0">PROCESADORES &amp; COMPLEMENTOS (102)</option>                
-                            <option value="12">PROYECTORES &amp; ACCESORIOS (28)</option>                
-                            <option value="29">SILLAS / GAMING (9)</option>                
-                            <option value="21">SONIDO &amp; PARLANTES (193)</option>                
-                            <option value="32">SUMINISTRO / TINTAS / CARTUCHOS (102)</option>                
-                            <option value="22">TABLETA DIGITALIZADORA (7)</option>                
-                            <option value="9">TARJETAS DE VIDEO (59)</option>                
-                            <option value="1">TECLADOS / MOUSE / PAD MOUSE / KIT (209)</option>                
-                            <option value="2">UPS ESTABILIZADOR &amp; SUPRESOR (32)</option>                
+                            <c:forEach var="cat" items="${requestScope.ListarCat}">
+                                <option value="${cat.cat_cod}">${cat.cat_descripcion}</option>           
+                            </c:forEach>  
                         </select> 
-
-                        <select name="cbopccat2" id="cbopccat2" class="form-control caja_con_bod_menu_opc_select visible-xs visible-sm" style="">
-                            <option value="">::SELECCIONE::</option>     
-                            <option value="17">CAMARAS WEB &amp; VIGILANCIA (40)</option>                
-                            <option value="6" selected="">CASES &amp; ACCESORIOS (155)</option>                
-                            <option value="33">CELULARES / TABLET &amp; ACCESORIOS (76)</option>                
-                            <option value="10">CONECTIVIDAD / REDES (55)</option>                
-                            <option value="23">CONSOLAS / JOYSTICK &amp; MANDOS (16)</option>                
-                            <option value="4">DISCOS DUROS &amp; ACCESORIOS (123)</option>                
-                            <option value="30">EQUIPOS PUNTO DE VENTA ( POS ) (9)</option>                
-                            <option value="16">FUENTES DE PODER (61)</option>                
-                            <option value="20">HOGAR (7)</option>                
-                            <option value="8">IMPRESORAS &amp; ACCESORIOS (32)</option>                
-                            <option value="13">LAPTOP &amp; ACCESORIOS (50)</option>                
-                            <option value="25">LECTORES &amp; DISPOSITIVOS (10)</option>                
-                            <option value="14">LICENCIAS &amp; SOFTWARE (38)</option>                
-                            <option value="5">MEMORIAS / RAM / USB / SD (94)</option>                
-                            <option value="31">MINI PCS / ALL IN ONE (8)</option>                
-                            <option value="3">MONITOR / TV &amp; ACCESORIOS (119)</option>                
-                            <option value="7">PLACA MADRE ( MOTHERBOARD ) (110)</option>                
-                            <option value="19">POLOS / MOCHILAS / GAMER (41)</option>                
-                            <option value="0">PROCESADORES &amp; COMPLEMENTOS (102)</option>                
-                            <option value="12">PROYECTORES &amp; ACCESORIOS (28)</option>                
-                            <option value="29">SILLAS / GAMING (9)</option>                
-                            <option value="21">SONIDO &amp; PARLANTES (193)</option>                
-                            <option value="32">SUMINISTRO / TINTAS / CARTUCHOS (102)</option>                
-                            <option value="22">TABLETA DIGITALIZADORA (7)</option>                
-                            <option value="9">TARJETAS DE VIDEO (59)</option>                
-                            <option value="1">TECLADOS / MOUSE / PAD MOUSE / KIT (209)</option>                
-                           <option value="2">UPS ESTABILIZADOR &amp; SUPRESOR (32)</option>                  
-                        </select>
-                       
-
-                    </div>
-                    <hr class="titulo2 style2 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">
-
-                    <h5 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right w3-text-black">Sub-Categoria : </h5>
-                    <div class="caja_con_ci col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right" style="" id="cont1">          
+                    </div>             
+                    <h5 class="titulo titcpi1 col-xs-12 col-md-12 no-padding-left no-padding-right w3-text-black">Sub-Categoria : </h5>
+                    <div class="caja_con_ci col-xs-12 col-md-12 no-padding-left no-padding-right" style="" id="cont1">          
+                        <hr class="titulo3 style1 col-xs-12  col-md-12 no-padding-left no-padding-right">
                         <input type="hidden" name="cbopcsub2" id="cbopcsub2" value="68">
                         <div class="multiselect" id="cbopcsub">
-
-                            <!--subcate por defecto-->    
-                            <!--para inicio-->                             <!--para inicio-->
-                            <label><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="62"><span>CASE CON FUENTE DE PODER (21)</span></label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label class="multiselect-on"><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="68" checked=""><span>CASE SIN FUENTE / GAMER (97)</span></label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="136"><span>COOLER PARA CASE &amp; COMPLEMENTOS (36)</span></label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="80"><span>MINI CASE CON FUENTE DE PODER (1)</span></label>
-
-
-                            <!--subcate por defecto-->
-
+                            <c:forEach var="sub" items="${requestScope.ListarSubCat}">    
+                                <c:choose>
+                                    <c:when test="${sub.nivel == A2}">                                      
+                                        <label class="multiselect-on"><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="${sub.nivel}" checked=""><span>${sub.cat_descripcion}</span></label>
+                                            </c:when>
+                                            <c:otherwise>
+                                        <label><input class="chkoption" type="checkbox" name="chkoption[]" id="chkoption" value="${sub.nivel}"><span>${sub.cat_descripcion}</span></label>     
+                                            </c:otherwise>                         
+                                        </c:choose>
+                                    </c:forEach>
                         </div>            
-
                     </div>     
-                    <hr class="titulo2 style2 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">
-
-                    <h5 class="titulo titcpi1 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right w3-text-black" >Marca <input class="chkoption2all" type="checkbox" name="chkoption2all[]" id="chkoption2all" value="999997" style="/*display: none;*/"></h5>
-                    <div class="caja_con_ci col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right" style="" id="cont2">          
+                    <h5 class="titulo titcpi1 col-xs-12 col-md-12  no-padding-left no-padding-right w3-text-black" >Marca <input class="chkoption2all" type="checkbox" name="chkoption2all[]" id="chkoption2all" value="999997" style="/*display: none;*/"></h5>
+                    <div class="caja_con_ci col-xs-12 col-md-12  no-padding-left no-padding-right" style="" id="cont2">          
+                        <hr class="titulo3 style1 col-xs-12 col-md-12  no-padding-left no-padding-right">
                         <input type="hidden" name="cbopcmar2" id="cbopcmar2" value="207">
                         <div class="multiselect2" id="cbopcmar">
-
-                            <!--marca por defecto-->    
-                            <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption20"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="216">AEROCOOL (2)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption21"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="13">ANTRYX (4)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption22"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="169">COOLER MASTER (9)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption23"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="135">CORSAIR (22)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption24"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="245">COUGAR       (1)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption25"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="117">DEEP COOL (9)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption26"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="183">EVGA (4)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption27"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="243">GAMBYTE              (6)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption28"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="231">GAMEMAX        (1)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption29"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="148">GIGABYTE (1)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption210"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="256">IN WIN (6)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption211"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="38">NZXT (18)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption212"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="232">TEROS (1)</label>
-                            <!--<hr class="separa2 style2">-->              <!--para inicio-->                             <!--para inicio-->
-                            <label id="lbloption213" class="multiselect-on"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="207" checked="">THERMALTAKE (13)</label>
-
-
-                            <!--marca por defecto-->
-
+                            <c:forEach var="mar" items="${requestScope.ListaMar}">  
+                                <c:choose>
+                                    <c:when test="${sub.nivel == 'MAR0000001'}">                                     
+                                        <label id="lbloption213" class="multiselect-on"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="${mar.mar_cod}" checked="">${mar.mar_descripcion}</label>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <label id="lbloption210"><input class="chkoption2" type="checkbox" name="chkoption2[]" id="chkoption2" value="${mar.mar_cod}">${mar.mar_descripcion}</label>     
+                                        </c:otherwise>                         
+                                    </c:choose>
+                                </c:forEach>
                         </div>              
-
                     </div>
+                    <!--                    <script>
+                                            function formTemplate(pemail_id, partner_id) {
+                                                $('#formTemplate').modal('toggle');
+                                                $.ajax({
+                                                    url: "/personal/emails/form-template",
+                                                    data: {'id': pemail_id},
+                                                    dataType: "json",
+                                                    type: 'POST',
+                                                    success: function (data) {
+                                                        dashboard.addLoading(false);
+                                                        var contenidoTab = data.html;
+                                                        $("#formModalTemplateI").html(contenidoTab);
+                                                    },
+                                                    beforeSend: function () {
+                                                        dashboard.addLoading(true);
+                                                    },
+                                                    error: function () {
+                                                        dashboard.addLoading(false);
+                                                    }
+                                                });
+                    
+                                            }
+                    
+                                        </script>-->
 
                     <!--/////////-->
                     <hr class="titulofin style2 col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right"> <!--/////////-->
@@ -214,5 +148,6 @@
         </div>
     </main>
 </div>
+<jsp:include page="includes/footer.jsp"></jsp:include>
 </body>
 </html>

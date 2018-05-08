@@ -8,12 +8,16 @@
 <!DOCTYPE html>
 <html>
 
+<<<<<<< HEAD
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Ypower</title>
     </head>   
 
     <%@include file="header.jsp" %>
+=======
+    <%@include file="includes/header.jsp" %> 
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
     <title>Ypower</title>
         <br/>
         <br/>
@@ -88,17 +92,6 @@
         </div>
         <br>
         <br>
-    <footer class="w3-center w3-black w3-padding-64">
-        <a href="index.jsp" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <div class="w3-xlarge w3-section">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-        </div>
-        <p>Powered by Ypower</p>
-    </footer>  
+   <jsp:include page="includes/footer.jsp"></jsp:include>
 </body>
 </html>

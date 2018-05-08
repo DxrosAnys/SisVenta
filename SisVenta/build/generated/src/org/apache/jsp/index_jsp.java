@@ -13,7 +13,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   static {
     _jspx_dependants = new java.util.ArrayList<String>(1);
-    _jspx_dependants.add("/header.jsp");
+    _jspx_dependants.add("/includes/header.jsp");
   }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -51,6 +51,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
+<<<<<<< HEAD
 
       out.write("\r\n");
 
@@ -71,6 +72,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("     \r\n");
       out.write("       ");
 
+=======
+      out.write("\r\n");
+      out.write("    ");
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -89,6 +94,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Raleway\">\r\n");
       out.write("        <link href=\"resources/css/w3.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("        <link href=\"resources/css/main.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+<<<<<<< HEAD
       out.write("\r\n");
       out.write("        <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("\r\n");
@@ -96,6 +102,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" href=\"resources/css/bootstrap.css\">\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"resources/css/bootstrap-theme.css\">\r\n");
       out.write("\r\n");
+=======
+      out.write("\r\n");
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("       <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("       <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
 
@@ -105,6 +114,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("        <script src=\"resources/js/bootstrap.min.js\"></script>\r\n");
       out.write("        <script src=\"resources/js/jquery-1.10.2.min.js\"></script>\r\n");
+<<<<<<< HEAD
 
       out.write("        <link href=\"css/w3.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
 
@@ -116,6 +126,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("        <title>Ypower</title>\r\n");
 
+=======
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("    </head>\r\n");
       out.write("    <body background=\"resources/img/general/bg-powerful.jpg\">\r\n");
       out.write("        <div class=\"w3-top\">\r\n");
@@ -154,6 +166,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <span onclick=\"document.getElementById('id01').style.display = 'none'\" class=\"w3-button w3-xlarge w3-transparent w3-display-topright\" title=\"Close Modal\">×</span>\r\n");
 
       out.write("                    <img src=\"resources/img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
+<<<<<<< HEAD
 
       out.write("                    <img src=\"resources/img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
 
@@ -163,6 +176,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("                    <img src=\"img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
 
+=======
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("                </div>\r\n");
       out.write("\r\n");
       out.write("                <form class=\"w3-container\" action=\"/action_page.php\">\r\n");
@@ -183,6 +198,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");
+<<<<<<< HEAD
 
       out.write("   \r\n");
       out.write("\r\n");
@@ -198,6 +214,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("   <body  background=\"resources/img/general/bg-powerful.jpg\">\r\n");
 
+=======
+      out.write("        \r\n");
+      out.write("     \r\n");
+      out.write(" \r\n");
+      out.write("    <title>Ypower</title>\r\n");
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("        <br/>\r\n");
       out.write("        <br/>\r\n");
       out.write("        <div class=\"container\">            \r\n");
@@ -229,6 +251,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"w3-row-padding\">\r\n");
       out.write("                    <div class=\"w3-third w3-container w3-margin-bottom\">\r\n");
       out.write("                        <img src=\"resources/img/imgindex/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+<<<<<<< HEAD
 
       out.write("                        <img src=\"resources/img/imgindex/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
 
@@ -236,6 +259,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("                        <img src=\"img/imgindex/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
 
+=======
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center\">Mouse !</h2></p>\r\n");
       out.write("                            <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
@@ -246,6 +271,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <img src=\"resources/img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
 
       out.write("                        <img src=\"resources/img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+<<<<<<< HEAD
 
 
       out.write("                        <img src=\"resources/img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
@@ -256,6 +282,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <img src=\"img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
 
 
+=======
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center\">HeadSet !!!</h2></p>\r\n");
       out.write("                            <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
@@ -266,6 +294,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <img src=\"resources/img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
 
       out.write("                        <img src=\"resources/img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
+<<<<<<< HEAD
 
       out.write("                        <img src=\"resources/img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
 
@@ -273,6 +302,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("                        <img src=\"img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
 
+=======
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center \">PC`s</h3></p>\r\n");
       out.write("                                <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
@@ -301,18 +332,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\r\n");
       out.write("        <br>\r\n");
       out.write("        <br>\r\n");
-      out.write("    <footer class=\"w3-center w3-black w3-padding-64\">\r\n");
-      out.write("        <a href=\"index.jsp\" class=\"w3-button w3-light-grey\"><i class=\"fa fa-arrow-up w3-margin-right\"></i>To the top</a>\r\n");
-      out.write("        <div class=\"w3-xlarge w3-section\">\r\n");
-      out.write("            <i class=\"fa fa-facebook-official w3-hover-opacity\"></i>\r\n");
-      out.write("            <i class=\"fa fa-instagram w3-hover-opacity\"></i>\r\n");
-      out.write("            <i class=\"fa fa-snapchat w3-hover-opacity\"></i>\r\n");
-      out.write("            <i class=\"fa fa-pinterest-p w3-hover-opacity\"></i>\r\n");
-      out.write("            <i class=\"fa fa-twitter w3-hover-opacity\"></i>\r\n");
-      out.write("            <i class=\"fa fa-linkedin w3-hover-opacity\"></i>\r\n");
-      out.write("        </div>\r\n");
-      out.write("        <p>Powered by Ypower</p>\r\n");
-      out.write("    </footer>  \r\n");
+      out.write("   ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "includes/footer.jsp", out, false);
+      out.write("\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");
     } catch (Throwable t) {

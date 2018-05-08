@@ -11,30 +11,17 @@ package SisVenta.modelo;
  */
 public class categoria {
     private String cat_cod;
-    private String descripcion;
+    private String cat_descripcion;
     private String nivel;
 
     public categoria() {
     }
 
-    public categoria(String descripcion, String nivel) {
-        this.descripcion = descripcion;
-        this.nivel = nivel;
-    }
-
-    public categoria(String cat_cod, String descripcion, String nivel) {
+    public categoria(String cat_cod, String cat_descripcion, String nivel) {
         this.cat_cod = cat_cod;
-        this.descripcion = descripcion;
+        this.cat_descripcion = cat_descripcion;
         this.nivel = nivel;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+    }  
 
     public String getNivel() {
         return nivel;
@@ -50,6 +37,14 @@ public class categoria {
 
     public void setCat_cod(String cat_cod) {
         this.cat_cod = cat_cod;
+    }
+
+    public String getCat_descripcion() {
+        return cat_descripcion;
+    }
+
+    public void setCat_descripcion(String cat_descripcion) {
+        this.cat_descripcion = cat_descripcion;
     }
 
 }

@@ -12,8 +12,8 @@ import java.util.List;
  * @author Dxros
  */
 public interface CrudInterface <L>{
+    List<L> readAll() throws Exception;
     String create(L l) throws Exception;
     String update(L l) throws Exception;
-    String delete(L l) throws Exception;
-    List<L> readAll() throws Exception;
+    String delete(L l) throws Exception; 
 }

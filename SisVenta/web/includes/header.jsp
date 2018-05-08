@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link href="resources/css/w3.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/main.css" rel="stylesheet" type="text/css"/>
+<<<<<<< HEAD:SisVenta/web/header.jsp
 
         <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
 
@@ -30,6 +31,11 @@
        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
 
+=======
+
+       <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+       <link href="resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec:SisVenta/web/includes/header.jsp
         <link href="resources/css/tablestyle.css" rel="stylesheet" type="text/css"/>
 
         <script src="resources/js/bootstrap.min.js"></script>
@@ -91,4 +97,9 @@
 
             </div>
         </div>
+<<<<<<< HEAD:SisVenta/web/header.jsp
 
+=======
+        
+     
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec:SisVenta/web/includes/header.jsp

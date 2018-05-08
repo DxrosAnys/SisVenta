@@ -12,7 +12,7 @@ import java.util.Date;
  * @author Dxros
  */
 public class usuario {
-    private String usercod;
+    private String user_cod;
     private String nick;
     private String nombre;
     private String apellido;    
@@ -28,8 +28,8 @@ public class usuario {
     public usuario() {
     }
 
-    public usuario(String usercod, String nick, String nombre, String apellido, String pass, String email, String direccion, String celular, String foto, Date dateregister, String DNI, String ustatus) {
-        this.usercod = usercod;
+    public usuario(String user_cod, String nick, String nombre, String apellido, String pass, String email, String direccion, String celular, String foto, Date dateregister, String DNI, String ustatus) {
+        this.user_cod = user_cod;
         this.nick = nick;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -43,14 +43,8 @@ public class usuario {
         this.ustatus = ustatus;
     }
 
-   
-
-    public String getUsercod() {
-        return usercod;
-    }
-
-    public void setUsercod(String usercod) {
-        this.usercod = usercod;
+    public usuario(String string, String string0, String string1, String string2, String string3, String string4, String string5, java.sql.Date date, String string6, String string7, String string8) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getNick() {
@@ -139,6 +133,14 @@ public class usuario {
 
     public void setDateregister(Date dateregister) {
         this.dateregister = dateregister;
+    }
+
+    public String getUser_cod() {
+        return user_cod;
+    }
+
+    public void setUser_cod(String user_cod) {
+        this.user_cod = user_cod;
     }
     
     
