@@ -58,7 +58,7 @@ public class marcaDao implements CrudInterface<marca> {
         try {
             cn = conexion.getConnection();
             cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_INSMAR(?,?)}");
-            cs.setString(1, l.getMar_descripcion());
+            cs.setString(1, l.getDescripcion());
             cs.registerOutParameter(2, Types.VARCHAR);
             cs.execute();
             Res = cs.getString(2);

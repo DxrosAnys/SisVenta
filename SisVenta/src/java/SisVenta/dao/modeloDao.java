@@ -39,7 +39,7 @@ public class modeloDao implements CrudInterface<modelo>{
             ps = cn.prepareStatement(sql);
             st = ps.executeQuery();
            while (st.next()) {
-                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4),st.getDouble(5),st.getDate(6),st.getString(7),st.getDate(8));
+                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4),st.getDouble(5),st.getDate(6),st.getDate(7));
                 lismod.add(mod);
             }
             ps.close();
@@ -56,17 +56,16 @@ public class modeloDao implements CrudInterface<modelo>{
     public String create(modelo l) throws Exception {
        try{
            cn = conexion.getConnection();
-           cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_INSMOD(?,?,?,?,?,?,?,?)}");
-           cs.setString(1, l.getSub_cod());
-           cs.setString(2, l.getDescripcion());
-           cs.setDouble(3, l.getPrecio());
-           cs.setDouble(4, l.getDescuento());
-           cs.setDouble(5, l.getStock());
-           cs.setDate(6, (Date) l.getDeadline());
-           cs.setDate(7, (Date) l.getDateregister());
-           cs.registerOutParameter(8,Types.VARCHAR);
+           cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_INSMOD(?,?,?,?,?,?,?)}");
+           cs.setString(1, l.getDescripcion());
+           cs.setDouble(2, l.getPrecio());
+           cs.setDouble(3, l.getDescuento());
+           cs.setDouble(4, l.getStock());
+           cs.setDate(5, (Date) l.getDeadline());
+           cs.setDate(6, (Date) l.getDateregister());
+           cs.registerOutParameter(7,Types.VARCHAR);
            cs.execute();
-           Res= cs.getString(8);
+           Res= cs.getString(7);
            cn.close();
            cs.close();
        }catch(ClassNotFoundException | SQLException e){
