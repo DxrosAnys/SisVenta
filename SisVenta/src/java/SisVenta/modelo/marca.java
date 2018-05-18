@@ -11,16 +11,17 @@ package SisVenta.modelo;
  */
 public class marca {
     private String mar_cod;
-    private String mar_descripcion;
+    private String descripcion;
 
     public marca() {
     }
 
-    public marca(String mar_cod, String mar_descripcion) {
+    public marca(String mar_cod, String descripcion) {
         this.mar_cod = mar_cod;
-        this.mar_descripcion = mar_descripcion;
+        this.descripcion = descripcion;
     }
 
+    
     public String getMar_cod() {
         return mar_cod;
     }
@@ -29,14 +30,13 @@ public class marca {
         this.mar_cod = mar_cod;
     }
 
-    public String getMar_descripcion() {
-        return mar_descripcion;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setMar_descripcion(String mar_descripcion) {
-        this.mar_descripcion = mar_descripcion;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
-
-    
+ 
     
 }

@@ -57,7 +57,6 @@ public class ServletSisVenta extends HttpServlet {
                 request.setAttribute("Listar", modlis.readAll());
                 categoriaDao catlis = new categoriaDao(); 
                 request.setAttribute("ListarCat", catlis.readAll());
-                request.setAttribute("ListarSubCat", catlis.readAllSub());
                  marcaDao marlis = new marcaDao();
                 request.setAttribute("ListaMar", marlis.readAll());
                 destino = "Catalogo.jsp";

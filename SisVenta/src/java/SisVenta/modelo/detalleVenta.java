@@ -14,8 +14,7 @@ import java.util.Date;
 public class detalleVenta {
     private String detvencod;
     private String mod_cod;
-    private String usercod;
-    private String sub_cod;
+    private String user_cod;
     private Double precio;
     private Double cantidad;
     private Double descuento;
@@ -25,11 +24,10 @@ public class detalleVenta {
     public detalleVenta() {
     }
 
-    public detalleVenta(String detvencod, String mod_cod, String usercod, String sub_cod, Double precio, Double cantidad, Double descuento, Double importe, Date buydate) {
+    public detalleVenta(String detvencod, String mod_cod, String user_cod, Double precio, Double cantidad, Double descuento, Double importe, Date buydate) {
         this.detvencod = detvencod;
         this.mod_cod = mod_cod;
-        this.usercod = usercod;
-        this.sub_cod = sub_cod;
+        this.user_cod = user_cod;
         this.precio = precio;
         this.cantidad = cantidad;
         this.descuento = descuento;
@@ -45,12 +43,20 @@ public class detalleVenta {
         this.detvencod = detvencod;
     }
 
-    public String getUsercod() {
-        return usercod;
+    public String getMod_cod() {
+        return mod_cod;
     }
 
-    public void setUsercod(String usercod) {
-        this.usercod = usercod;
+    public void setMod_cod(String mod_cod) {
+        this.mod_cod = mod_cod;
+    }
+
+    public String getUser_cod() {
+        return user_cod;
+    }
+
+    public void setUser_cod(String user_cod) {
+        this.user_cod = user_cod;
     }
 
     public Double getPrecio() {
@@ -93,22 +99,5 @@ public class detalleVenta {
         this.buydate = buydate;
     }
 
-    public String getMod_cod() {
-        return mod_cod;
-    }
-
-    public void setMod_cod(String mod_cod) {
-        this.mod_cod = mod_cod;
-    }
-
-    public String getSub_cod() {
-        return sub_cod;
-    }
-
-    public void setSub_cod(String sub_cod) {
-        this.sub_cod = sub_cod;
-    }
-    
-    
-            
+              
 }

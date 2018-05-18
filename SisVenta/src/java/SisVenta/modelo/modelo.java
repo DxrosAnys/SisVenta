@@ -20,23 +20,21 @@ public class modelo {
     private String descripcion;
     private double descuento;
     private Date deadline;
-    private String sub_cod;
     private Date dateregister;
 
     public modelo() {
     }
 
-    public modelo(String mod_cod, double precio, int stock, String descripcion, double descuento, Date deadline, String sub_cod, Date dateregister) {
+    public modelo(String mod_cod, double precio, int stock, String descripcion, double descuento, Date deadline, Date dateregister) {
         this.mod_cod = mod_cod;
         this.precio = precio;
         this.stock = stock;
         this.descripcion = descripcion;
         this.descuento = descuento;
         this.deadline = deadline;
-        this.sub_cod = sub_cod;
         this.dateregister = dateregister;
     }
-
+    
     public String getMod_cod() {
         return mod_cod;
     }
@@ -93,14 +91,5 @@ public class modelo {
         this.dateregister = dateregister;
     }
 
-    public String getSub_cod() {
-        return sub_cod;
-    }
-
-    public void setSub_cod(String sub_cod) {
-        this.sub_cod = sub_cod;
-    }
-      
-    
     
 }

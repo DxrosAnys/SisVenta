@@ -12,34 +12,16 @@ package SisVenta.modelo;
 public class listaDeseo {
     private String wis_cod;
     private String mod_cod;
-    private String usercod;
-    private String sub_cod;
+    private String user_cod;
     private String wishdate;
 
     public listaDeseo() {
     }
 
-    public listaDeseo(String wis_cod, String mod_cod, String usercod, String sub_cod, String wishdate) {
+    public listaDeseo(String wis_cod, String mod_cod, String user_cod, String wishdate) {
         this.wis_cod = wis_cod;
         this.mod_cod = mod_cod;
-        this.usercod = usercod;
-        this.sub_cod = sub_cod;
-        this.wishdate = wishdate;
-    }
-
-    public String getUsercod() {
-        return usercod;
-    }
-
-    public void setUsercod(String usercod) {
-        this.usercod = usercod;
-    }
-
-    public String getWishdate() {
-        return wishdate;
-    }
-
-    public void setWishdate(String wishdate) {
+        this.user_cod = user_cod;
         this.wishdate = wishdate;
     }
 
@@ -59,12 +41,22 @@ public class listaDeseo {
         this.mod_cod = mod_cod;
     }
 
-    public String getSub_cod() {
-        return sub_cod;
+    public String getUser_cod() {
+        return user_cod;
     }
 
-    public void setSub_cod(String sub_cod) {
-        this.sub_cod = sub_cod;
+    public void setUser_cod(String user_cod) {
+        this.user_cod = user_cod;
     }
+
+    public String getWishdate() {
+        return wishdate;
+    }
+
+    public void setWishdate(String wishdate) {
+        this.wishdate = wishdate;
+    }
+
+
     
 }

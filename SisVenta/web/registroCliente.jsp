@@ -6,6 +6,14 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<html>
+=======
+<<<<<<< HEAD
+
+>>>>>>> 0de8054ebb7d248eb0a89f43f8d188d66d832c39
 <html>   
     <title>Registro</title>
     <%@include file="includes/header.jsp" %> 
@@ -30,6 +38,64 @@
                         <li><a href="index.jsp">Inicio</a></li>
                         <li class="active">Registro de Cliente</li>
                     </ol>     
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> f0d5544a72b16db8ada30386c0ddcde9e28dd6d0
+    <%@include file="includes/header.jsp" %> 
+
+    <link rel="stylesheet" href="resources/css/bootstrapValidator.css">
+    <script src="resources/js/bootstrapValidator.js" type="text/javascript"></script>
+    <title>Registro</title>
+    <br>
+    <br>
+    <div class="container">                                  
+        <div class="w3-row" style="width: 98%;">      
+            <ol class="migmov breadcrumb col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <li><a href="index.jsp">Inicio</a></li>
+                <li class="active">Registro de Cliente</li>
+            </ol>     
+        </div>
+        <div class="w3-row">
+            <form action="RegistrarUsuario" METHOD="POST" id="id_form">
+                <div class="col-xs-12 col-md-6">
+                    <div class="form-group">
+                        <label class="control-label w3-text-white" for="id_nombre">Nombres</label>
+                        <input class="form-control " type="text" id="id_nombre" name="txtnom" placeholder="Ingrese el nombre">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="form-group">
+                        <label class="control-label w3-text-white" for="id_apellido">Apellidos</label>
+                        <input class="form-control " type="text" id="id_apellido" name="txtape" placeholder="Ingrese el apellido">
+                    </div>
+                </div>         
+                <div class="col-xs-12 col-md-6">
+                    <div class="form-group" >
+                        <label class="control-label w3-text-white" for="id_nombre">Usuario</label>
+                        <input class="form-control " type="text" id="id_nombre" name="txtusu" placeholder="Ingrese su usario">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="form-group" >
+                        <label class="control-label w3-text-white" for="id_nombre">Contraseña</label>
+                        <input class="form-control " type="password" id="id_nombre" name="txtcon" placeholder="Ingrese contraseña">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="form-group">
+                        <label class="control-label w3-text-white" for="id_correo">Correo electronico</label>
+                        <input class="form-control " type="text" id="id_correo" name="txtcor" placeholder="Ingrese correo">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="form-group">
+                        <label class="control-label w3-text-white" for="id_direccion">Direccion</label>
+                        <input class="form-control " type="text" id="id_direccion" name="txtdir" placeholder="Ingrese su direccion">
+                    </div>
+>>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
+>>>>>>> 0de8054ebb7d248eb0a89f43f8d188d66d832c39
                 </div>
                 <div class="w3-row">
                     <form action="RegistrarUsuario" METHOD="POST" id="id_form">
