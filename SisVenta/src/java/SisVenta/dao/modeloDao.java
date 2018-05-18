@@ -44,7 +44,7 @@ public class modeloDao implements CrudInterface<modelo>{
             }
             ps.close();
             st.close();
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             throw e;
         }finally {
             cn.close();
@@ -68,7 +68,7 @@ public class modeloDao implements CrudInterface<modelo>{
            Res= cs.getString(7);
            cn.close();
            cs.close();
-       }catch(ClassNotFoundException | SQLException e){
+       }catch(SQLException e){
            throw e;
        }
         return Res;

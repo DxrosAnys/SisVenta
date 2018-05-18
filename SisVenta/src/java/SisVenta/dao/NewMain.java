@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package SisVenta.dao;
-
 import SisVenta.database.conexion;
 import SisVenta.modelo.modelo;
 import java.sql.SQLException;
