@@ -51,31 +51,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
-<<<<<<< HEAD
-
-      out.write("\r\n");
-
-      out.write("   \r\n");
-      out.write("    ");
-
       out.write("    <head>\r\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("        <title>Ypower</title>\r\n");
       out.write("    </head>   \r\n");
-      out.write("\r\n");
       out.write("    ");
-
-      out.write("   <body  background=\"img/img.general/bg-powerful.jpg\">\r\n");
-
-      out.write("   <body  background=\"img/general/bg-powerful.jpg\">\r\n");
-
-      out.write("     \r\n");
-      out.write("       ");
-
-=======
-      out.write("\r\n");
-      out.write("    ");
->>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -94,7 +74,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Raleway\">\r\n");
       out.write("        <link href=\"resources/css/w3.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("        <link href=\"resources/css/main.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
-<<<<<<< HEAD
       out.write("\r\n");
       out.write("        <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("\r\n");
@@ -102,33 +81,21 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" href=\"resources/css/bootstrap.css\">\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"resources/css/bootstrap-theme.css\">\r\n");
       out.write("\r\n");
-=======
+      out.write("        <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("        <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("\r\n");
->>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
-      out.write("       <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
-      out.write("       <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
-
       out.write("\r\n");
-
+      out.write("\r\n");
+      out.write("        <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("        <link href=\"resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("\r\n");
       out.write("        <link href=\"resources/css/tablestyle.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("\r\n");
       out.write("        <script src=\"resources/js/bootstrap.min.js\"></script>\r\n");
       out.write("        <script src=\"resources/js/jquery-1.10.2.min.js\"></script>\r\n");
-<<<<<<< HEAD
-
-      out.write("        <link href=\"css/w3.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
-
-      out.write("        <script src=\"js/bootstrapValidator.js\" type=\"text/javascript\"></script>\r\n");
-
-      out.write("        <link href=\"css/main.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
-      out.write("        <script src=\"js/bootstrapValidator.js\" type=\"text/javascript\"></script>\r\n");
-      out.write("        <link href=\"css/tablestyle.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
-
-      out.write("        <title>Ypower</title>\r\n");
-
-=======
->>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
+      out.write("        \r\n");
       out.write("    </head>\r\n");
+      out.write("    \r\n");
       out.write("    <body background=\"resources/img/general/bg-powerful.jpg\">\r\n");
       out.write("        <div class=\"w3-top\">\r\n");
       out.write("            <div class=\"w3-bar w3-white w3-card\" id=\"myNavbar\">\r\n");
@@ -140,89 +107,63 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <a href=\"oferta.jsp\"class=\"w3-bar-item w3-button\"><i class=\"fa fa-cart-plus\"></i>OFERTAS</a>\r\n");
       out.write("                    <a href=\"novedades.jsp\"class=\"w3-bar-item w3-button\"><i class=\"fa fa-area-chart\"></i>NOVEDADES</a>\r\n");
       out.write("                    <a href=\"nosotros.jsp\"class=\"w3-bar-item w3-button\"><i class=\"fa fa-envelope\"></i>NOSOTROS</a>\r\n");
-      out.write("                    <a href=\"registroCliente.jsp\"class=\"w3-bar-item w3-button\"><i class=\"fa fa-users\"></i>REGISTRO</a>\r\n");
-      out.write("                    <button href=\"login.jsp\"class=\"w3-bar-item w3-button\" onclick=\"document.getElementById('id01').style.display = 'block'\"><i class=\"fa fa-user\"></i>USUARIO</button>\r\n");
+      out.write("                    <div class=\"w3-dropdown-hover w3-hide-small\">\r\n");
+      out.write("                        <button class=\"w3-button\" title=\"Notifications\">INICIAR SESION<i class=\"fa fa-caret-down\"></i></button>     \r\n");
+      out.write("                        <div class=\"w3-dropdown-content w3-card-4 w3-bar-block\">\r\n");
+      out.write("                            <button href=\"login.jsp\"class=\"w3-bar-item w3-button\" onclick=\"document.getElementById('id01').style.display = 'block'\"><i class=\"fa fa-user\"></i>USUARIO</button>\r\n");
+      out.write("                            <a href=\"registroCliente.jsp\" class=\"w3-bar-item w3-button\">REGISTRO</a>\r\n");
+      out.write("                        </div>\r\n");
+      out.write("                    </div>                   \r\n");
       out.write("                </div>\r\n");
       out.write("            </div>           \r\n");
       out.write("        </div>\r\n");
       out.write("        <a href=\"javascript:void(0)\" class=\"w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium\" onclick=\"w3_open()\">\r\n");
       out.write("            <i class=\"fa fa-bars\"></i>\r\n");
       out.write("        </a>\r\n");
+      out.write("        \r\n");
       out.write("        <nav class=\"w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large\" style=\"display:none\" id=\"mySidebar\">\r\n");
       out.write("            <a href=\"#catalago\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-user\"></i>CATALOGO</a>\r\n");
       out.write("            <a href=\"#work\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-th\"></i>PRODUCTOS</a>\r\n");
       out.write("            <a href=\"#pricing\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-usd\"></i> PROMOCIONES</a>\r\n");
       out.write("            <a href=\"#contact\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-envelope\"></i>OFERTAS</a>\r\n");
       out.write("            <a href=\"#usuario\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-user\"></i>NOVEDADES</a>\r\n");
-      out.write("            <a href=\"nosotros.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-users\"></i>NOSOTROS</a>\r\n");
-      out.write("            <a href=\"Registro\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-users\"></i>REGISTRO</a>\r\n");
-      out.write("            <a href=\"Logear\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-user\"></i>USUARIO</a>\r\n");
+      out.write("            <a href=\"#nosotros\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-users\"></i>NOSOTROS</a>\r\n");
+      out.write("            <div class=\"w3-dropdown-hover w3-hide-small\">\r\n");
+      out.write("                <button class=\"w3-button\" title=\"inicioS\">INICIAR SESION<i class=\"fa fa-caret-down\"></i></button>     \r\n");
+      out.write("                <div class=\"w3-dropdown-content w3-card-4 w3-bar-block\">\r\n");
+      out.write("                    <button href=\"#inicio\"class=\"w3-bar-item w3-button\" onclick=\"document.getElementById('id01').style.display = 'block'\"><i class=\"fa fa-user\"></i>USUARIO</button>\r\n");
+      out.write("                    <a href=\"#registroCliente\" class=\"w3-bar-item w3-button\">REGISTRO</a>\r\n");
+      out.write("                </div>\r\n");
+      out.write("            </div>\r\n");
       out.write("        </nav>\r\n");
-      out.write("\r\n");
+      out.write("        \r\n");
       out.write("        <div id=\"id01\" class=\"w3-modal\">\r\n");
       out.write("            <div class=\"w3-modal-content w3-card-4 w3-animate-zoom\" style=\"max-width:600px\">\r\n");
-      out.write("\r\n");
       out.write("                <div class=\"w3-center\"><br>\r\n");
       out.write("                    <span onclick=\"document.getElementById('id01').style.display = 'none'\" class=\"w3-button w3-xlarge w3-transparent w3-display-topright\" title=\"Close Modal\">×</span>\r\n");
-
       out.write("                    <img src=\"resources/img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
-<<<<<<< HEAD
-
-      out.write("                    <img src=\"resources/img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
-
-      out.write("                    <img src=\"resources/img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
-
-      out.write("                    <img src=\"img/img.general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
-
-      out.write("                    <img src=\"img/general/e1.png\" alt=\"Avatar\" style=\"width:30%\" class=\"w3-circle w3-margin-top\">\r\n");
-
-=======
->>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("                </div>\r\n");
-      out.write("\r\n");
       out.write("                <form class=\"w3-container\" action=\"/action_page.php\">\r\n");
       out.write("                    <div class=\"w3-section\">\r\n");
       out.write("                        <label><b>Usuario</b></label>\r\n");
       out.write("                        <input class=\"w3-input w3-border w3-margin-bottom\" type=\"text\" placeholder=\"Ingresa tu usuario\" name=\"usrname\" required>\r\n");
       out.write("                        <label><b>Contraseña</b></label>\r\n");
       out.write("                        <input class=\"w3-input w3-border\" type=\"text\" placeholder=\"Ingresa tu conteseña\" name=\"psw\" required>\r\n");
-      out.write("                        <button class=\"w3-button w3-block w3-green w3-section w3-padding\" type=\"submit\">Ingresar</button>\r\n");
+      out.write("                        <button class=\"w3-button w3-block w3-blue w3-section w3-padding\" type=\"submit\">Ingresar</button>\r\n");
       out.write("                        <input class=\"w3-check w3-margin-top\" type=\"checkbox\" checked=\"checked\"> Recuerdame\r\n");
       out.write("                    </div>\r\n");
       out.write("                </form>\r\n");
-      out.write("\r\n");
       out.write("                <div class=\"w3-container w3-border-top w3-padding-16 w3-light-grey\">\r\n");
       out.write("                    <button onclick=\"document.getElementById('id01').style.display = 'none'\" type=\"button\" class=\"w3-button w3-red\">Cancelar</button>\r\n");
       out.write("                    <span class=\"w3-right w3-padding w3-hide-small\">Olvide la <a href=\"#\">contraseña?</a></span>\r\n");
       out.write("                </div>\r\n");
-      out.write("\r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");
-<<<<<<< HEAD
-
-      out.write("   \r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("    <title>Ypower</title>\r\n");
-
-      out.write("\r\n");
-      out.write("\r\n");
-
-      out.write("    <title>Ypower</title>\r\n");
-
-      out.write("\r\n");
-
-      out.write("   <body  background=\"resources/img/general/bg-powerful.jpg\">\r\n");
-
-=======
-      out.write("        \r\n");
-      out.write("     \r\n");
+      out.write("    </body>");
       out.write(" \r\n");
       out.write("    <title>Ypower</title>\r\n");
->>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("        <br/>\r\n");
-      out.write("        <br/>\r\n");
-      out.write("        <div class=\"container\">            \r\n");
+      out.write("        <br/>                    \r\n");
       out.write("            <div id=\"carouselExampleFade\" class=\"carousel slide carousel-fade\" data-ride=\"carousel\">\r\n");
       out.write("                <div class=\"carousel-inner\">\r\n");
       out.write("                    <div class=\"carousel-item active\">\r\n");
@@ -244,66 +185,25 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <span class=\"sr-only\">Next</span>\r\n");
       out.write("                </a>\r\n");
       out.write("            </div>\r\n");
-      out.write("\r\n");
       out.write("            <hr class=\"featurette-divider\">\r\n");
-      out.write("            <div class=\"container\">\r\n");
-      out.write("                \r\n");
+      out.write("            <div class=\"container\">               \r\n");
       out.write("                <div class=\"w3-row-padding\">\r\n");
       out.write("                    <div class=\"w3-third w3-container w3-margin-bottom\">\r\n");
       out.write("                        <img src=\"resources/img/imgindex/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-<<<<<<< HEAD
-
-      out.write("                        <img src=\"resources/img/imgindex/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-
-      out.write("                        <img src=\"img/img.indexp/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-
-      out.write("                        <img src=\"img/imgindex/d1.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-
-=======
->>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center\">Mouse !</h2></p>\r\n");
       out.write("                            <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"w3-third w3-container w3-margin-bottom\">\r\n");
-
       out.write("                        <img src=\"resources/img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-
-      out.write("                        <img src=\"resources/img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-<<<<<<< HEAD
-
-
-      out.write("                        <img src=\"resources/img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-
-
-      out.write("                        <img src=\"img/img.indexp/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-
-      out.write("                        <img src=\"img/imgindex/d2.jpg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-
-
-=======
->>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center\">HeadSet !!!</h2></p>\r\n");
       out.write("                            <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"w3-third w3-container\">\r\n");
-
       out.write("                        <img src=\"resources/img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-
-      out.write("                        <img src=\"resources/img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-<<<<<<< HEAD
-
-      out.write("                        <img src=\"resources/img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-
-      out.write("                        <img src=\"img/img.indexp/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-
-      out.write("                        <img src=\"img/imgindex/d3.jpeg\" alt=\"Norway\" style=\"width:90%\" class=\"w3-hover-opacity\">\r\n");
-
-=======
->>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
       out.write("                        <div class=\"w3-container\">\r\n");
       out.write("                            <p><h2 class=\"w3-text-white w3-center \">PC`s</h3></p>\r\n");
       out.write("                                <p class=\"w3-text-white\"align=justify>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>\r\n");
@@ -329,7 +229,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </div>\r\n");
       out.write("                </div>      \r\n");
       out.write("            </div>\r\n");
-      out.write("        </div>\r\n");
+      out.write("\r\n");
       out.write("        <br>\r\n");
       out.write("        <br>\r\n");
       out.write("   ");

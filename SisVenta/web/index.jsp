@@ -1,27 +1,16 @@
-<%-- 
-    Document   : index
-    Created on : 19-abr-2018, 10:58:11
-    Author     : Dxros
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-
-<<<<<<< HEAD
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Ypower</title>
     </head>   
-
-    <%@include file="header.jsp" %>
-=======
     <%@include file="includes/header.jsp" %> 
->>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec
     <title>Ypower</title>
         <br/>
-        <br/>
-        <div class="container">            
+        <br/>                    
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -43,10 +32,8 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-
             <hr class="featurette-divider">
-            <div class="container">
-                
+            <div class="container">               
                 <div class="w3-row-padding">
                     <div class="w3-third w3-container w3-margin-bottom">
                         <img src="resources/img/imgindex/d1.jpg" alt="Norway" style="width:90%" class="w3-hover-opacity">
@@ -89,7 +76,7 @@
                     </div>
                 </div>      
             </div>
-        </div>
+
         <br>
         <br>
    <jsp:include page="includes/footer.jsp"></jsp:include>
