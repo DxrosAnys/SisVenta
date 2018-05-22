@@ -8,13 +8,32 @@
         <servlet-name>ServletUser</servlet-name>
         <servlet-class>SisVenta.controlador.ServletUser</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletAdministrador</servlet-name>
+        <servlet-class>SisVenta.controlador.ServletAdministrador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletModelo</servlet-name>
+        <servlet-class>SisVenta.controlador.ServletModelo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletSisVenta</servlet-name>
-        <url-pattern>/ConsultarProducto</url-pattern>
+        <url-pattern>/ConsultarModelo</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletUser</servlet-name>
         <url-pattern>/RegistrarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAdministrador</servlet-name>
+        <url-pattern>/ServletAdministrador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletModelo</servlet-name>
+        <url-pattern>/ConsultarProducto</url-pattern>
+        <url-pattern>/InsertarProducto</url-pattern>
+        <url-pattern>/BorrarProducto</url-pattern>
+        <url-pattern>/ModificarProducto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

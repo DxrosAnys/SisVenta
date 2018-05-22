@@ -36,36 +36,34 @@ public class ServletSisVenta extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       String path=request.getServletPath();
-           switch(path){
-           case "/ConsultarProducto":
-       {
-           try {
-               ConsultarProducto(request,response);
-           } catch (Exception ex) {
-               Logger.getLogger(ServletSisVenta.class.getName()).log(Level.SEVERE, null, ex);
-           }
-       }
-       }
+        String path = request.getServletPath();
+        switch (path) {
+            case "/ConsultarModelo": {
+                try {
+                    ConsultarModelo(request, response);
+                }catch (Exception ex) {
+                    Logger.getLogger(ServletSisVenta.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
     }
 
-    private void ConsultarProducto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
-        String destino; 
-        
-            try {
-                modeloDao modlis = new modeloDao();  
-                request.setAttribute("Listar", modlis.readAll());
-                categoriaDao catlis = new categoriaDao(); 
-                request.setAttribute("ListarCat", catlis.readAll());
-                 marcaDao marlis = new marcaDao();
-                request.setAttribute("ListaMar", marlis.readAll());
-                destino = "Catalogo.jsp";
-            } catch (ClassNotFoundException | SQLException e) {
-                request.setAttribute("Mensaje", e.getMessage());
-                destino = "Catalogo.jsp";
-            }       
+    private void ConsultarModelo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
+        String destino;
+
+        try {
+            modeloDao modlis = new modeloDao();
+            request.setAttribute("Listar", modlis.readAll());
+            categoriaDao catlis = new categoriaDao();
+            request.setAttribute("ListarCat", catlis.readAll());
+            marcaDao marlis = new marcaDao();
+            request.setAttribute("ListaMar", marlis.readAll());
+            destino = "Catalogo.jsp";
+        } catch (ClassNotFoundException | SQLException e) {
+            request.setAttribute("Mensaje", e.getMessage());
+            destino = "Catalogo.jsp";
+        }
         RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);
     }
-    }
-
+}

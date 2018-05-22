@@ -15,13 +15,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import SisVenta.service.CrudInterface;
-import java.sql.Date;
-import java.sql.Types;
+import com.google.gson.Gson;
+
 /**
  *
  * @author Dxros
  */
-public class modeloDao implements CrudInterface<modelo>{
+public class modeloDao implements CrudInterface<modelo> {
+
     Connection cn;
     CallableStatement cs;
     PreparedStatement ps;
@@ -30,48 +31,52 @@ public class modeloDao implements CrudInterface<modelo>{
     ResultSet st;
     modelo mod;
 
-     @Override
-    public List<modelo> readAll() throws Exception{
-      List<modelo> lismod = new ArrayList<>();
-        try {         
+    @Override
+    public List<modelo> readAll() throws Exception {
+        List<modelo> lismod = new ArrayList<>();
+        try {
             cn = conexion.getConnection();
-            sql = "select mod_cod,precio,stock,descripcion,descuento,deadline,sub_cod,fec_registro from modelo order by mod_cod";
+            sql = "select mod_cod,precio,stock,descripcion,descuento,deadline,fec_registro from modelo order by mod_cod";
             ps = cn.prepareStatement(sql);
             st = ps.executeQuery();
-           while (st.next()) {
-                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4),st.getDouble(5),st.getDate(6),st.getDate(7));
+            while (st.next()) {
+                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4), st.getDouble(5), st.getDate(6), st.getDate(7));
                 lismod.add(mod);
             }
             ps.close();
             st.close();
         } catch (SQLException e) {
             throw e;
-        }finally {
+        } finally {
             cn.close();
         }
         return lismod;
     }
 
+    public String Listado() throws Exception {
+        List<modelo> lismod = new ArrayList<>();
+        try {
+            cn = conexion.getConnection();
+            sql = "select mod_cod,precio,stock,descripcion,descuento,deadline,fec_registro from modelo order by mod_cod";
+            ps = cn.prepareStatement(sql);
+            st = ps.executeQuery();
+            while (st.next()) {
+                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4), st.getDouble(5), st.getDate(6), st.getDate(7));
+                lismod.add(mod);
+            }
+            ps.close();
+            st.close();
+        } catch (SQLException e) {
+            throw e;
+        } finally {
+            cn.close();
+        }
+        return new Gson().toJson(lismod);
+    }
+
     @Override
     public String create(modelo l) throws Exception {
-       try{
-           cn = conexion.getConnection();
-           cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_INSMOD(?,?,?,?,?,?,?)}");
-           cs.setString(1, l.getDescripcion());
-           cs.setDouble(2, l.getPrecio());
-           cs.setDouble(3, l.getDescuento());
-           cs.setDouble(4, l.getStock());
-           cs.setDate(5, (Date) l.getDeadline());
-           cs.setDate(6, (Date) l.getDateregister());
-           cs.registerOutParameter(7,Types.VARCHAR);
-           cs.execute();
-           Res= cs.getString(7);
-           cn.close();
-           cs.close();
-       }catch(SQLException e){
-           throw e;
-       }
-        return Res;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -83,4 +88,5 @@ public class modeloDao implements CrudInterface<modelo>{
     public String delete(modelo l) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
 }

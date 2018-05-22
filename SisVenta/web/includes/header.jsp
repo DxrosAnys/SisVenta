@@ -20,10 +20,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link href="resources/css/w3.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/main.css" rel="stylesheet" type="text/css"/>
-<<<<<<< HEAD:SisVenta/web/header.jsp
-
-        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-
 
         <link rel="stylesheet" href="resources/css/bootstrap.css">
         <link rel="stylesheet" href="resources/css/bootstrap-theme.css">
@@ -31,11 +27,6 @@
        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
 
-=======
-
-       <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-       <link href="resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
->>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec:SisVenta/web/includes/header.jsp
         <link href="resources/css/tablestyle.css" rel="stylesheet" type="text/css"/>
 
         <script src="resources/js/bootstrap.min.js"></script>
@@ -46,7 +37,7 @@
             <div class="w3-bar w3-white w3-card" id="myNavbar">
                 <a href="index.jsp" class="w3-bar-item w3-button w3-white">YPOWER</a>
                 <div class="w3-right w3-hide-medium">
-                    <a href="ConsultarProducto" class="w3-bar-item w3-button"><i class="fa fa-bookmark"></i>CATAGOLO</a>
+                    <a href="ConsultarModelo" class="w3-bar-item w3-button"><i class="fa fa-bookmark"></i>CATAGOLO</a>
                     <a href="producto.jsp"class="w3-bar-item w3-button"><i class="fa fa-product-hunt"></i>PRODUCTOS</a>
                     <a href="promo.jsp"class="w3-bar-item w3-button"><i class="fa fa-gift"></i>PROMOCIONES</a>
                     <a href="oferta.jsp"class="w3-bar-item w3-button"><i class="fa fa-cart-plus"></i>OFERTAS</a>
@@ -97,9 +88,3 @@
 
             </div>
         </div>
-<<<<<<< HEAD:SisVenta/web/header.jsp
-
-=======
-        
-     
->>>>>>> bbec25a5f2b354ea5180dbfc0e17b6b236943aec:SisVenta/web/includes/header.jsp

@@ -37,6 +37,9 @@ public class ServletUser extends HttpServlet {
        switch(path){
            case "/RegistrarUsuario":
                RegistrarUsuario(request,response);
+               break;
+           case "/IniciarSession":
+               IniciarSession(request,response);
        }
     }
 
@@ -69,5 +72,9 @@ public class ServletUser extends HttpServlet {
         }
        RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);
+    }
+
+    private void IniciarSession(HttpServletRequest request, HttpServletResponse response) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
