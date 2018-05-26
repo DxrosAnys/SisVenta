@@ -1,2 +1,14 @@
 
 SisVenta/nbproject/private/private.properties
+
+
+SisVenta/nbproject/private/
+
+SisVenta/build/
+
+SisVenta/nbbuild/
+
+SisVenta/dist/
+
+SisVenta/nbdist/
+.nb-gradle/
