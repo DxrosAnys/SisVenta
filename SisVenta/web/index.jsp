@@ -2,18 +2,17 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<<<<<<< HEAD
+
    
     <%@include file="includes/header.jsp" %> 
 
-=======
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Ypower</title>
     </head>   
     <%@include file="includes/header.jsp" %> 
->>>>>>> 5d6269e66f5f7f42f088f8510d4c7dcdbab96771
+
     <title>Ypower</title>
         <br/>
         <br/>                    
