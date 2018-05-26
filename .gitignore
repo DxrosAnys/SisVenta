@@ -1,8 +1,0 @@
-/SisVenta/nbproject/
-SisVenta/build/
-/SisVenta/dist/
-hs_err_pid*
-
-*.properties
-
-SisVenta/nbproject/private/private.properties
