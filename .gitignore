@@ -4,3 +4,4 @@ SisVenta/build/
 hs_err_pid*
 
 *.properties
+SisVenta/nbproject/private/private.properties
