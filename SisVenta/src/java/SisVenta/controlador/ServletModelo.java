@@ -59,7 +59,13 @@ public class ServletModelo extends HttpServlet {
                 BorrarProducto(request, response);
                 break;
             case "ModificarProducto":
+        {
+            try {
                 ModificarProducto(request, response);
+            } catch (Exception ex) {
+                Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         }
     }
 
@@ -86,6 +92,7 @@ public class ServletModelo extends HttpServlet {
         mod.setStock(Integer.parseInt(request.getParameter("txtstk")));
         mod.setDescuento(Double.parseDouble(request.getParameter("txtdsct")));
         mod.setDeadline(formatter.parse(request.getParameter("txtfcd")));
+        mod.setDateregister(formatter.parse(request.getParameter("txtdreg")));
         try {
             modeloDao modlis = new modeloDao();
             request.setAttribute("Listar", modlis.create(mod));
@@ -102,7 +109,25 @@ public class ServletModelo extends HttpServlet {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void ModificarProducto(HttpServletRequest request, HttpServletResponse response) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void ModificarProducto(HttpServletRequest request, HttpServletResponse response) throws ParseException, Exception {
+      String destino;
+        modelo mod = new modelo();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        mod.setMod_cod(request.getParameter("txtcod"));
+        mod.setDescripcion(request.getParameter("txtdesc"));
+        mod.setPrecio(Double.parseDouble(request.getParameter("txtpre")));
+        mod.setStock(Integer.parseInt(request.getParameter("txtstk")));
+        mod.setDescuento(Double.parseDouble(request.getParameter("txtdsct")));
+        mod.setDeadline(formatter.parse(request.getParameter("txtfcd")));
+        try {
+            modeloDao modlis = new modeloDao();
+            request.setAttribute("Listar", modlis.update(mod));
+            destino = "AddProducto.jsp";
+        } catch (ServletException e) {
+            request.setAttribute("Mensaje", e.getMessage());
+            destino = "AddProducto.jsp";
+        }
+        RequestDispatcher rd = request.getRequestDispatcher(destino);
+        rd.forward(request, response);
     }
 }
