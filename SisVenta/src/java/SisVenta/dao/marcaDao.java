@@ -76,7 +76,7 @@ public class marcaDao implements CrudInterface<marca> {
     }
 
     @Override
-    public String delete(marca l) throws Exception {
+    public String delete(String id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

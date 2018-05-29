@@ -74,7 +74,7 @@ public class categoriaDao implements CrudInterface<categoria> {
     }
 
     @Override
-    public String delete(categoria l) throws Exception {
+    public String delete(String id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

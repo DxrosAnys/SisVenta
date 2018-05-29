@@ -78,7 +78,7 @@ public class modeloDao implements CrudInterface<modelo> {
 
     @Override
     public String create(modelo l) throws Exception {
-      try {
+        try {
             cn = conexion.getConnection();
             cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_INSMOD(?,?,?,?,?,?,?)}");
             cs.setString(1, l.getDescripcion());
@@ -86,7 +86,7 @@ public class modeloDao implements CrudInterface<modelo> {
             cs.setDouble(3, l.getDescuento());
             cs.setInt(4, l.getStock());
             cs.setDate(5, (Date) l.getDeadline());
-            cs.setDate(6, (Date)l.getDateregister());
+            cs.setDate(6, (Date) l.getDateregister());
             cs.registerOutParameter(7, Types.VARCHAR);
             cs.execute();
             Res = cs.getString(7);
@@ -98,7 +98,7 @@ public class modeloDao implements CrudInterface<modelo> {
 
     @Override
     public String update(modelo l) throws Exception {
-         try {
+        try {
             cn = conexion.getConnection();
             cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_UPDMOD(?,?,?,?,?,?,?)}");
             cs.setString(1, l.getMod_cod());
@@ -117,8 +117,18 @@ public class modeloDao implements CrudInterface<modelo> {
     }
 
     @Override
-    public String delete(modelo l) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String delete(String id) throws Exception {
+        try {
+            cn = conexion.getConnection();
+            cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_DELMOD(?,?)}");
+            cs.setString(1, id);
+            cs.registerOutParameter(2, Types.VARCHAR);
+            cs.execute();
+            Res = cs.getString(2);
+        } catch (ClassNotFoundException | SQLException e) {
+            throw e;
+        }
+        return new Gson().toJson(Res);
     }
 
 }

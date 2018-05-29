@@ -30,10 +30,10 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletModelo</servlet-name>
-        <url-pattern>/ConsultarProducto</url-pattern>
-        <url-pattern>/InsertarProducto</url-pattern>
-        <url-pattern>/BorrarProducto</url-pattern>
-        <url-pattern>/ModificarProducto</url-pattern>
+        <url-pattern>/administration/ConsultarProducto</url-pattern>
+        <url-pattern>/administration/InsertarProducto</url-pattern>
+        <url-pattern>/administration/BorrarProducto</url-pattern>
+        <url-pattern>/administration/ModificarProducto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

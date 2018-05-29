@@ -39,7 +39,7 @@ public class ServletModelo extends HttpServlet {
             throws ServletException, IOException {
         String path = request.getServletPath();
         switch (path) {
-            case "/ConsultarProducto": {
+            case "/administration/ConsultarProducto": {
                 try {
                     ConsultarProducto(request, response);
                 } catch (Exception ex) {
@@ -47,7 +47,7 @@ public class ServletModelo extends HttpServlet {
                 }
             }
             break;
-            case "/InsertarProducto": {
+            case "/administration/InsertarProducto": {
                 try {
                     InsertarProducto(request, response);
                 } catch (Exception ex) {
@@ -55,17 +55,21 @@ public class ServletModelo extends HttpServlet {
                 }
             }
             break;
-            case "BorrarProducto":
-                BorrarProducto(request, response);
-                break;
-            case "ModificarProducto":
-        {
-            try {
-                ModificarProducto(request, response);
-            } catch (Exception ex) {
-                Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
+            case "/administration/BorrarProducto": {
+                try {
+                    BorrarProducto(request, response);
+                } catch (Exception ex) {
+                    Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
+            break;
+            case "/administration/ModificarProducto": {
+                try {
+                    ModificarProducto(request, response);
+                } catch (Exception ex) {
+                    Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
     }
 
@@ -95,7 +99,7 @@ public class ServletModelo extends HttpServlet {
         mod.setDateregister(formatter.parse(request.getParameter("txtdreg")));
         try {
             modeloDao modlis = new modeloDao();
-            request.setAttribute("Listar", modlis.create(mod));
+            request.setAttribute("Insertar", modlis.create(mod));
             destino = "AddProducto.jsp";
         } catch (ClassNotFoundException e) {
             request.setAttribute("Mensaje", e.getMessage());
@@ -105,12 +109,23 @@ public class ServletModelo extends HttpServlet {
         rd.forward(request, response);
     }
 
-    private void BorrarProducto(HttpServletRequest request, HttpServletResponse response) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void BorrarProducto(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        response.setContentType("application/json;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        try {
+            String cod = request.getParameter("cod");
+            modeloDao modlis = new modeloDao();
+            out.println(modlis.delete(cod));
+        } catch (ClassNotFoundException e) {
+            out.println("ERROR: " + e.getMessage());
+        } finally {
+            out.flush();
+            out.close();
+        }
     }
 
     private void ModificarProducto(HttpServletRequest request, HttpServletResponse response) throws ParseException, Exception {
-      String destino;
+        String destino;
         modelo mod = new modelo();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         mod.setMod_cod(request.getParameter("txtcod"));
@@ -121,11 +136,11 @@ public class ServletModelo extends HttpServlet {
         mod.setDeadline(formatter.parse(request.getParameter("txtfcd")));
         try {
             modeloDao modlis = new modeloDao();
-            request.setAttribute("Listar", modlis.update(mod));
-            destino = "AddProducto.jsp";
+            request.setAttribute("mensaje", modlis.update(mod));
+            destino = "UpdProducto.jsp";
         } catch (ServletException e) {
             request.setAttribute("Mensaje", e.getMessage());
-            destino = "AddProducto.jsp";
+            destino = "UpdProducto.jsp";
         }
         RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);
