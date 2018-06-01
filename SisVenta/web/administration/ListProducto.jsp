@@ -5,6 +5,7 @@
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -52,7 +53,9 @@
                             <td>${pro.deadline}</td>
                         </c:otherwise>
                     </c:choose>              
-                    <td>${pro.dateregister}</td>
+                            <td>${pro.dateregister}</td>
+                            
+                     <%--<fmt:parseDate value = "${pro.dateregister}" var = "parsedEmpDate" pattern = "dd-MM-yyyy" />--%>
                     <td class="text-center">
                         <a href="UpdProducto.jsp?cod_mod=${pro.mod_cod}&desc=${pro.descripcion}&pre=${pro.precio}&stk=${pro.stock}&des=${pro.descuento}&fec=${pro.deadline}">
                             <button id="UdpRegistro" > 
@@ -78,7 +81,7 @@
                 var url_ = "BorrarProducto?cod=" + cod_mod;
                 $.ajax({
                     url: url_,
-                    type: "post",
+                    type: "get",
                     cache: false,
                     async: true,
                     success: function (result) {

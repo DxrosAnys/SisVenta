@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <title>W3.CSS Template</title>
+    <title>Administración</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -11,38 +11,48 @@
         .w3-sidebar a {font-family: "Roboto", sans-serif}
         body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </style>
-    <body class="w3-content" style="max-width:1200px">
-        <div class="container">
-                <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-                    <div class="w3-container w3-display-container w3-padding-16">
-                        <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-                        <h3 class="w3-wide"><b>YPOWER</b></h3>
+    <body class="w3-content" style="max-width:1300px">
+        <div class="container row">
+                    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top w3-medium" style="z-index:3;width:250px" id="mySidebar">
+                        <div class="w3-container w3-display-container w3-padding-small">
+                            <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+                            <h3 class="w3-wide"><b>YPOWER</b></h3>
+                        </div>
+                        <div class="w3-padding-32 w3-medium w3-text-grey" style="font-weight:bold">
+                            <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+                                Productos<i class="fa fa-caret-down"></i></a>
+                            <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+                                <a href="ConsultarProducto" class="w3-bar-item w3-button w3-light-grey" target="VENTA"></i>Listar</a>
+                                <a href="AddProducto.jsp" class="w3-bar-item w3-button" target="VENTA">Insertar</a>
+                                <a href="UpdProducto.jsp" class="w3-bar-item w3-button" target="VENTA">Modificar</a>           
+                            </div>
+                            <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn2">
+                                Categorias<i class="fa fa-caret-down"></i></a>
+                            <div id="demoAcc2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+                                <a href="#" class="w3-bar-item w3-button w3-light-grey" target="VENTA">Listar</a>
+                                <a href="#" class="w3-bar-item w3-button" target="VENTA">Modificar</a>
+                                <a href="#" class="w3-bar-item w3-button" target="VENTA">Insertar</a>
+                            </div>
+                            <a onclick="myAccFunc3()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn3">
+                                Marca<i class="fa fa-caret-down"></i>
+                            </a>                     
+                            <div id="demoAcc3" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+                                <a href="#" class="w3-bar-item w3-button w3-light-grey"></i>Listar</a>
+                            </div>
+                        </div>
+                    </nav>
+<!--            <div class="col-xs-8 col-lg-8">
+                
+                    <div class="col-lg-9"> 
+                    <iframe name="VENTA"></iframe>
                     </div>
-                    <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-                        <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-                            Productos<i class="fa fa-caret-down"></i></a>
-                        <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-                            <a href="ConsultarProducto" class="w3-bar-item w3-button w3-light-grey"></i>Listar</a>
-                            <a href="#" class="w3-bar-item w3-button">Modificar</a>
-                            <a href="#" class="w3-bar-item w3-button">Insertar</a>
-                        </div>
-                        <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn2">
-                            Categorias<i class="fa fa-caret-down"></i></a>
-                        <div id="demoAcc2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-                            <a href="#" class="w3-bar-item w3-button w3-light-grey"></i>Listar</a>
-                            <a href="#" class="w3-bar-item w3-button">Modificar</a>
-                            <a href="#" class="w3-bar-item w3-button">Insertar</a>
-                        </div>
-                        <a onclick="myAccFunc3()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn3">
-                            Marca<i class="fa fa-caret-down"></i>
-                        </a>                     
-                        <div id="demoAcc3" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-                            <a href="#" class="w3-bar-item w3-button w3-light-grey"></i>Listar</a>
-                        </div>
-                    </div>
-                </nav>
+                   
+                </div>-->
+
+                </div>
+            
             </div>
-        
+
         <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>   
         <script>
 

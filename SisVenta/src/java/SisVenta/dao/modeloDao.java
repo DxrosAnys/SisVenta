@@ -18,6 +18,7 @@ import SisVenta.service.CrudInterface;
 import com.google.gson.Gson;
 import java.sql.Date;
 import java.sql.Types;
+import java.text.SimpleDateFormat;
 
 /**
  *
@@ -42,7 +43,7 @@ public class modeloDao implements CrudInterface<modelo> {
             ps = cn.prepareStatement(sql);
             st = ps.executeQuery();
             while (st.next()) {
-                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4), st.getDouble(5), st.getDate(6), st.getDate(7));
+                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4), st.getDouble(5), st.getString(6), st.getString(7));
                 lismod.add(mod);
             }
             ps.close();
@@ -63,7 +64,7 @@ public class modeloDao implements CrudInterface<modelo> {
             ps = cn.prepareStatement(sql);
             st = ps.executeQuery();
             while (st.next()) {
-                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4), st.getDouble(5), st.getDate(6), st.getDate(7));
+                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4), st.getDouble(5), st.getString(6), st.getString(7));
                 lismod.add(mod);
             }
             ps.close();
@@ -80,13 +81,12 @@ public class modeloDao implements CrudInterface<modelo> {
     public String create(modelo l) throws Exception {
         try {
             cn = conexion.getConnection();
-            cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_INSMOD(?,?,?,?,?,?,?)}");
+            cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_INSMOD(?,?,?,?,?,?)}");
             cs.setString(1, l.getDescripcion());
             cs.setDouble(2, l.getPrecio());
             cs.setDouble(3, l.getDescuento());
             cs.setInt(4, l.getStock());
-            cs.setDate(5, (Date) l.getDeadline());
-            cs.setDate(6, (Date) l.getDateregister());
+            cs.setString(5,  l.getDeadline());
             cs.registerOutParameter(7, Types.VARCHAR);
             cs.execute();
             Res = cs.getString(7);
@@ -106,7 +106,7 @@ public class modeloDao implements CrudInterface<modelo> {
             cs.setDouble(3, l.getPrecio());
             cs.setDouble(4, l.getDescuento());
             cs.setInt(5, l.getStock());
-            cs.setDate(6, (Date) l.getDeadline());
+            cs.setString(6, l.getDeadline());
             cs.registerOutParameter(7, Types.VARCHAR);
             cs.execute();
             Res = cs.getString(7);
@@ -130,5 +130,20 @@ public class modeloDao implements CrudInterface<modelo> {
         }
         return new Gson().toJson(Res);
     }
-
+  
+    public void delete2(String id) throws Exception {
+       try {
+            cn = conexion.getConnection();
+            sql = "delete from categoria_marca WHERE MOD_COD = ?";
+            ps = cn.prepareStatement(sql);
+            ps.setString(1, id);
+            ps.executeUpdate();
+            ps.close();
+        } catch (SQLException | ClassNotFoundException e) {
+            throw e;
+        } finally {
+            cn.close();
+        }
+    }
+    
 }

@@ -12,6 +12,10 @@
 <title>Agregar Productos</title>
         <br/>
         <br/>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <!--    <div class="w3-container">  
         <div class="w3-row" style="width: 98%;">      
             <ol class="migmov breadcrumb col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -39,7 +43,7 @@
                 </div>
                 <div>
                     <label>Fecha de caducidad de descuento:</label>
-                    <input type="date" id="id_fcd" name="txtfcd" placeholder="Ingrese la fecha">
+                    <input type="text" id="datepicker" name="txtfcd" placeholder="Ingrese la fecha">
                 </div>
                 <div class="form-group col-xs-12 col-md-12">
                     <div class="form-group">
@@ -47,11 +51,16 @@
                     </div>
                 </div>
                 <div class="form-group col-xs-12 col-md-12">
-                    <label class="w3-text-white">${requestScope.mensaje}</label>
+                    <label class="w3-text-white">${requestScope.Insertar}</label>
                 </div>
             </form>
         </div>
     <!--</div>-->
                 <%--<%@include file="../includes/footer.jsp" %>--%>
+                      <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({dateFormat: 'dd-MM-yy'});
+  } );
+  </script>
 </body>
 </html>

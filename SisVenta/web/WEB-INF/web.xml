@@ -16,6 +16,10 @@
         <servlet-name>ServletModelo</servlet-name>
         <servlet-class>SisVenta.controlador.ServletModelo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletMarca</servlet-name>
+        <servlet-class>SisVenta.controlador.ServletMarca</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletSisVenta</servlet-name>
         <url-pattern>/ConsultarModelo</url-pattern>
@@ -34,6 +38,10 @@
         <url-pattern>/administration/InsertarProducto</url-pattern>
         <url-pattern>/administration/BorrarProducto</url-pattern>
         <url-pattern>/administration/ModificarProducto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletMarca</servlet-name>
+        <url-pattern>/ServletMarca</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -8,12 +8,16 @@
 <%@page import="java.util.Date"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
+    <body>   
         <div class="w3-row">
             <form method="POST" action="ModificarProducto" id="idformprod">
                 <div>
@@ -37,9 +41,10 @@
                     <input type="text" id="id_dsct" name="txtdsct" placeholder="Ingrese el precio" value="<%=request.getParameter("des")%>">
                 </div>
                 <div>
-                    <label>Fecha de caducidad de descuento:</label>
-                    <input type="date" id="id_fcd" name="txtfcd" placeholder="Ingrese la fecha">
+                    <label>Fecha de caducidad de descuento:</label>             
+                    <input type="text" id="datepicker" name="txtfcd" placeholder="dd/MM/yyyy" value="">
                 </div>
+         
                 <div class="form-group col-xs-12 col-md-12">
                     <div class="form-group">
                         <button type="submit" class="btn center-block" >Actualizar</button>
@@ -50,5 +55,10 @@
                 </div>
             </form>
         </div>
+                <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({dateFormat: 'dd-MM-yy'});
+  } );
+  </script>
     </body>
 </html>

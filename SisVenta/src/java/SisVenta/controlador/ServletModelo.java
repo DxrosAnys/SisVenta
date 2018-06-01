@@ -9,8 +9,10 @@ import SisVenta.dao.modeloDao;
 import SisVenta.modelo.modelo;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -90,13 +92,11 @@ public class ServletModelo extends HttpServlet {
     private void InsertarProducto(HttpServletRequest request, HttpServletResponse response) throws ParseException, Exception {
         String destino;
         modelo mod = new modelo();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         mod.setDescripcion(request.getParameter("txtdesc"));
         mod.setPrecio(Double.parseDouble(request.getParameter("txtpre")));
         mod.setStock(Integer.parseInt(request.getParameter("txtstk")));
         mod.setDescuento(Double.parseDouble(request.getParameter("txtdsct")));
-        mod.setDeadline(formatter.parse(request.getParameter("txtfcd")));
-        mod.setDateregister(formatter.parse(request.getParameter("txtdreg")));
+        mod.setDeadline(request.getParameter("txtfcd"));
         try {
             modeloDao modlis = new modeloDao();
             request.setAttribute("Insertar", modlis.create(mod));
@@ -115,6 +115,7 @@ public class ServletModelo extends HttpServlet {
         try {
             String cod = request.getParameter("cod");
             modeloDao modlis = new modeloDao();
+            modlis.delete2(cod);
             out.println(modlis.delete(cod));
         } catch (ClassNotFoundException e) {
             out.println("ERROR: " + e.getMessage());
@@ -127,13 +128,13 @@ public class ServletModelo extends HttpServlet {
     private void ModificarProducto(HttpServletRequest request, HttpServletResponse response) throws ParseException, Exception {
         String destino;
         modelo mod = new modelo();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         mod.setMod_cod(request.getParameter("txtcod"));
         mod.setDescripcion(request.getParameter("txtdesc"));
         mod.setPrecio(Double.parseDouble(request.getParameter("txtpre")));
-        mod.setStock(Integer.parseInt(request.getParameter("txtstk")));
         mod.setDescuento(Double.parseDouble(request.getParameter("txtdsct")));
-        mod.setDeadline(formatter.parse(request.getParameter("txtfcd")));
+        mod.setStock(Integer.parseInt(request.getParameter("txtstk")));
+        mod.setDeadline(request.getParameter("txtfcd"));
+
         try {
             modeloDao modlis = new modeloDao();
             request.setAttribute("mensaje", modlis.update(mod));
