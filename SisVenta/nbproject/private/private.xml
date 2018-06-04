@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/controlador/ServletMarca.java</file>
+            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/web/administration/AddProducto.jsp</file>
             <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/dao/modeloDao.java</file>
             <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/web/administration/ListProducto.jsp</file>
             <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/controlador/ServletModelo.java</file>
+            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/web/administration/principal.jsp</file>
             <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/web/administration/UpdProducto.jsp</file>
-            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/modelo/modelo.java</file>
         </group>
     </open-files>
 </project-private>

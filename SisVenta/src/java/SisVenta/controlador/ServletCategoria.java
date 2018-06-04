@@ -5,8 +5,8 @@
  */
 package SisVenta.controlador;
 
-import SisVenta.dao.marcaDao;
-import SisVenta.modelo.marca;
+import SisVenta.dao.categoriaDao;
+import SisVenta.modelo.categoria;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Dxros
  */
-public class ServletMarca extends HttpServlet {
+public class ServletCategoria extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,79 +35,78 @@ public class ServletMarca extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String path = request.getServletPath();
+    String path = request.getServletPath();
         switch (path) {
-            case "/administration/ConsultarMarca": {
+            case "/administration/ConsultarCategoria": {
                 try {
-                    ConsultarMarca(request, response);
-                } catch (IOException | ServletException ex) {
-                    Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            break;
-            case "/administration/InsertarMarca": {
-                try {
-                    InsertarMarca(request, response);
+                    ConsultarCategoria(request, response);
                 } catch (Exception ex) {
                     Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             break;
-            case "/administration/BorrarMarca": {
+            case "/administration/InsertarCategoria": {
                 try {
-                    BorrarMarca(request, response);
+                    InsertarCategoria(request, response);
                 } catch (Exception ex) {
                     Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             break;
-            case "/administration/ModificarMarca": {
+            case "/administration/BorrarCategoria": {
                 try {
-                    ModificarMarca(request, response);
+                    BorrarCategoria(request, response);
+                } catch (Exception ex) {
+                    Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case "/administration/ModificarCategoria": {
+                try {
+                    ModificarCategoria(request, response);
                 } catch (Exception ex) {
                     Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
-
     }
 
-    private void ConsultarMarca(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void ConsultarCategoria(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String destino;
         try {
-            marcaDao mardao = new marcaDao();
-            request.setAttribute("Listar", mardao.readAll());
-            destino = "ListMarca.jsp";
+            categoriaDao catdao = new categoriaDao();
+            request.setAttribute("Listar", catdao.readAll());
+            destino = "ListCategoria.jsp";
         } catch (Exception e) {
             request.setAttribute("Mensaje", e.getMessage());
-            destino = "ListMarca.jsp";
+            destino = "ListCategoria.jsp";
         }
         RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);
     }
 
-    private void InsertarMarca(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String destino;
-        marca mar = new marca();
-        mar.setDescripcion(request.getParameter("txtdesc"));
+    private void InsertarCategoria(HttpServletRequest request, HttpServletResponse response) throws Exception {
+         String destino;
+        categoria cat = new categoria();
+        cat.setDescripcion(request.getParameter("txtdesc"));
         try {
-            marcaDao marlis = new marcaDao();
-            request.setAttribute("Insertar", marlis.create(mar));
-            destino = "AddMarca.jsp";
+            categoriaDao catlis = new categoriaDao();
+            request.setAttribute("Insertar", catlis.create(cat));
+            destino = "AddCategoria.jsp";
         } catch (ClassNotFoundException e) {
             request.setAttribute("Mensaje", e.getMessage());
-            destino = "AddMarca.jsp";
+            destino = "AddCategoria.jsp";
         }
         RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);
     }
 
-    private void BorrarMarca(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        response.setContentType("application/json;charset=UTF-8");
+    private void BorrarCategoria(HttpServletRequest request, HttpServletResponse response) throws Exception {
+      response.setContentType("application/json;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            String cod = request.getParameter("cod_mar");
-            marcaDao modlis = new marcaDao();
+            String cod = request.getParameter("cod");
+            categoriaDao modlis = new categoriaDao();
             modlis.delete(cod);
             out.println(modlis.delete(cod));
         } catch (ClassNotFoundException e) {
@@ -118,21 +117,22 @@ public class ServletMarca extends HttpServlet {
         }
     }
 
-    private void ModificarMarca(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String destino;
-        marca mod = new marca();
-        mod.setMar_cod(request.getParameter("txtcod"));
+    private void ModificarCategoria(HttpServletRequest request, HttpServletResponse response) throws Exception {
+         String destino;
+        categoria mod = new categoria();
+        mod.setCat_cod(request.getParameter("txtcod"));
         mod.setDescripcion(request.getParameter("txtdesc"));
 
         try {
-            marcaDao modlis = new marcaDao();
+            categoriaDao modlis = new categoriaDao();
             request.setAttribute("mensaje", modlis.update(mod));
-            destino = "ConsultarMarca";
+            destino = "ConsultarCategoria";
         } catch (ServletException e) {
             request.setAttribute("Mensaje", e.getMessage());
-            destino = "UpdMarca.jsp";
+            destino = "UpdCategoria.jsp";
         }
         RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);
     }
+
 }

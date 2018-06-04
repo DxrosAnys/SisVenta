@@ -5,8 +5,8 @@
  */
 package SisVenta.controlador;
 
-import SisVenta.dao.marcaDao;
-import SisVenta.modelo.marca;
+import SisVenta.dao.subcategoriaDao;
+import SisVenta.modelo.subcategoria;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Dxros
  */
-public class ServletMarca extends HttpServlet {
+public class ServletSubCategoria extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,77 +37,77 @@ public class ServletMarca extends HttpServlet {
             throws ServletException, IOException {
         String path = request.getServletPath();
         switch (path) {
-            case "/administration/ConsultarMarca": {
+            case "/administration/ConsultarSubCategoria": {
                 try {
-                    ConsultarMarca(request, response);
+                    ConsultarSubCategoria(request, response);
                 } catch (IOException | ServletException ex) {
                     Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             break;
-            case "/administration/InsertarMarca": {
+            case "/administration/InsertarSubCategoria": {
                 try {
-                    InsertarMarca(request, response);
+                    InsertarSubCategoria(request, response);
                 } catch (Exception ex) {
                     Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             break;
-            case "/administration/BorrarMarca": {
+            case "/administration/BorrarSubCategoria": {
                 try {
-                    BorrarMarca(request, response);
+                    BorrarSubCategoria(request, response);
                 } catch (Exception ex) {
                     Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             break;
-            case "/administration/ModificarMarca": {
+            case "/administration/ModificarSubCategoria": {
                 try {
-                    ModificarMarca(request, response);
+                    ModificarSubCategoria(request, response);
                 } catch (Exception ex) {
                     Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
-
     }
 
-    private void ConsultarMarca(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String destino;
+    private void ConsultarSubCategoria(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+     String destino;
         try {
-            marcaDao mardao = new marcaDao();
-            request.setAttribute("Listar", mardao.readAll());
-            destino = "ListMarca.jsp";
+            subcategoriaDao subdao = new subcategoriaDao();
+            request.setAttribute("Listar", subdao.readAll());
+            destino = "ListSubCategoria.jsp";
         } catch (Exception e) {
             request.setAttribute("Mensaje", e.getMessage());
-            destino = "ListMarca.jsp";
+            destino = "ListSubCategoria.jsp";
         }
         RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);
     }
 
-    private void InsertarMarca(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String destino;
-        marca mar = new marca();
-        mar.setDescripcion(request.getParameter("txtdesc"));
+    private void InsertarSubCategoria(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
+       String destino;
+        subcategoria sub = new subcategoria();
+        sub.setDescripcion(request.getParameter("txtdesc"));
+        sub.setCat_cod(request.getParameter("txtcat"));
         try {
-            marcaDao marlis = new marcaDao();
-            request.setAttribute("Insertar", marlis.create(mar));
-            destino = "AddMarca.jsp";
+            subcategoriaDao catlis = new subcategoriaDao();
+            request.setAttribute("Insertar", catlis.create(sub));
+            destino = "AddSubCategoria.jsp";
         } catch (ClassNotFoundException e) {
             request.setAttribute("Mensaje", e.getMessage());
-            destino = "AddMarca.jsp";
+            destino = "AddSubCategoria.jsp";
         }
         RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);
     }
 
-    private void BorrarMarca(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    private void BorrarSubCategoria(HttpServletRequest request, HttpServletResponse response) throws Exception {
         response.setContentType("application/json;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            String cod = request.getParameter("cod_mar");
-            marcaDao modlis = new marcaDao();
+            String cod = request.getParameter("cod");
+            subcategoriaDao modlis = new subcategoriaDao();
             modlis.delete(cod);
             out.println(modlis.delete(cod));
         } catch (ClassNotFoundException e) {
@@ -118,21 +118,23 @@ public class ServletMarca extends HttpServlet {
         }
     }
 
-    private void ModificarMarca(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String destino;
-        marca mod = new marca();
-        mod.setMar_cod(request.getParameter("txtcod"));
+    private void ModificarSubCategoria(HttpServletRequest request, HttpServletResponse response) throws Exception {
+       String destino;
+        subcategoria mod = new subcategoria();
+        mod.setSub_cod(request.getParameter("txtsub"));
         mod.setDescripcion(request.getParameter("txtdesc"));
+        mod.setCat_cod(request.getParameter("txtcod"));
 
         try {
-            marcaDao modlis = new marcaDao();
+            subcategoriaDao modlis = new subcategoriaDao();
             request.setAttribute("mensaje", modlis.update(mod));
-            destino = "ConsultarMarca";
+            destino = "ConsultarSubCategoria";
         } catch (ServletException e) {
             request.setAttribute("Mensaje", e.getMessage());
-            destino = "UpdMarca.jsp";
+            destino = "UpdSubCategoria.jsp";
         }
         RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);
     }
+
 }

@@ -1,11 +1,9 @@
 <%-- 
-    Document   : ListProducto
-    Created on : 21-may-2018, 9:43:49
+    Document   : ListSubCategoria
+    Created on : 02-jun-2018, 18:19:53
     Author     : Dxros
 --%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,50 +19,24 @@
             <tr>
                 <th>Codigo</th>
                 <th>Descripcion</th>
-                <th>Precio</th>
-                <th>Stock</th>
-                <th>Descuento</th>
-                <th>Fecha Limite</th>
-                <th>Fecha Registro</th>
                 <th width="5">Modificar</th>
                 <th width="5">Eliminar</th>
             </tr>
         </thead>
         <tbody>
-            <c:forEach var="pro" items="${requestScope.Listar}">
+            <c:forEach var="sub" items="${requestScope.Listar}">
                 <tr>
-                    <td>${pro.mod_cod}</td>
-                    <td>${pro.descripcion}</td>
-                    <td>${pro.precio}</td>
-                    <td>${pro.stock}</td>
-                    <c:choose>
-                        <c:when test="${pro.descuento == null || pro.descuento == 0}">
-                            <td>null</td>
-                        </c:when>
-                        <c:otherwise>
-                            <td>${pro.descuento}</td>
-                        </c:otherwise>
-                    </c:choose>
-                    <c:choose>
-                        <c:when test="${pro.deadline == null}">
-                            <td>null</td>
-                        </c:when>
-                        <c:otherwise>
-                            <td>${pro.deadline}</td>
-                        </c:otherwise>
-                    </c:choose>              
-                            <td>${pro.dateregister}</td>
-                            
-                     <%--<fmt:parseDate value = "${pro.dateregister}" var = "parsedEmpDate" pattern = "dd-MM-yyyy" />--%>
+                    <td>${sub.sub_cod}</td>
+                    <td>${sub.descripcion}</td>
                     <td class="text-center">
-                        <a href="UpdProducto.jsp?cod_mod=${pro.mod_cod}&desc=${pro.descripcion}&pre=${pro.precio}&stk=${pro.stock}&des=${pro.descuento}&fec=${pro.deadline}">
+                        <a href="UpdSubCategoria.jsp?sub_mod=${sub.sub_cod}&desc=${sub.descripcion}">
                             <button id="UdpRegistro" > 
                             <img src="../resources/img/general/updcon.png" height="15" width="15"/>
                             </button>                             
                         </a>
                     </td>
                     <td class="text-center">
-                        <button id="DelRegistro" value="${pro.mod_cod}">
+                        <button id="DelRegistro" value="${sub.sub_cod}">
                             <img src="../resources/img/general/delcon.png" height="15" width="15" />
                         </button>                                  
                         
@@ -77,8 +49,8 @@
     <script>
         $(document).ready(function () {
             $(document).on("click", "#DelRegistro", function () {
-                var cod_mod = $(this).val();
-                var url_ = "BorrarProducto?cod=" + cod_mod;
+                var cod_sub = $(this).val();
+                var url_ = "BorrarSubCategoria?cod=" + cod_sub;
                 $.ajax({
                     url: url_,
                     type: "get",

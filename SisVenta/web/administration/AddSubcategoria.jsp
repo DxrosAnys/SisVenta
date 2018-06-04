@@ -1,9 +1,11 @@
 <%-- 
-    Document   : AddMarca
-    Created on : 31-may-2018, 16:56:16
+    Document   : AddSubcategoria
+    Created on : 02-jun-2018, 18:19:28
     Author     : Dxros
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@page import="SisVenta.dao.categoriaDao"%>
+<%@page import="SisVenta.modelo.categoria"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,7 +14,7 @@
         <title>JSP Page</title>
     </head>
     <body> 
-        <title>Agregar Marca</title>
+        <title>Agregar SubCategoria</title>
         <br/>
         <br/>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -27,10 +29,22 @@
                     </ol>     
                 </div>-->
         <div class="w3-row">
-            <form method="POST" action="InsertarMarca" id="idformprod">
+            <form method="POST" action="InsertarProducto" id="idformprod">
                 <div>
                     <label>Descripción:</label>
                     <input type="text" id="id_desc" name="txtdesc" placeholder="Ingrese una descripcion">
+                </div>
+                <div>
+                    <label>Categoria:</label>
+                    <select>
+                        <%
+                            categoriaDao x = new categoriaDao();
+                            for (categoria es : x.readAll()) {
+                                out.print("<option value=" + es.getCat_cod() + ">"
+                                        + es.getDescripcion() + "");
+                            }
+                        %>
+                    </select>
                 </div>
                 <div class="form-group col-xs-12 col-md-12">
                     <div class="form-group">
