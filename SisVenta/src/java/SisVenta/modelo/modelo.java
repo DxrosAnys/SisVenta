@@ -19,13 +19,13 @@ public class modelo {
     private int stock;
     private String descripcion;
     private double descuento;
-    private Date deadline;
-    private Date dateregister;
+    private String deadline;
+    private String dateregister;
 
     public modelo() {
     }
 
-    public modelo(String mod_cod, double precio, int stock, String descripcion, double descuento, Date deadline, Date dateregister) {
+    public modelo(String mod_cod, double precio, int stock, String descripcion, double descuento, String deadline, String dateregister) {
         this.mod_cod = mod_cod;
         this.precio = precio;
         this.stock = stock;
@@ -75,19 +75,19 @@ public class modelo {
         this.descuento = descuento;
     }
 
-    public Date getDeadline() {
+    public String getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(Date deadline) {
+    public void setDeadline(String deadline) {
         this.deadline = deadline;
     }
 
-    public Date getDateregister() {
+    public String getDateregister() {
         return dateregister;
     }
 
-    public void setDateregister(Date dateregister) {
+    public void setDateregister(String dateregister) {
         this.dateregister = dateregister;
     }
 

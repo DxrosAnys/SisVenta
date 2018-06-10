@@ -20,27 +20,10 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link href="resources/css/w3.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/main.css" rel="stylesheet" type="text/css"/>
-<<<<<<< HEAD
-=======
-
-        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-
->>>>>>> 5d6269e66f5f7f42f088f8510d4c7dcdbab96771
-
-        <link rel="stylesheet" href="resources/css/bootstrap.css">
-        <link rel="stylesheet" href="resources/css/bootstrap-theme.css">
 
         <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
 
-
-<<<<<<< HEAD
-=======
-
-        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
-
->>>>>>> 5d6269e66f5f7f42f088f8510d4c7dcdbab96771
         <link href="resources/css/tablestyle.css" rel="stylesheet" type="text/css"/>
 
         <script src="resources/js/bootstrap.min.js"></script>
