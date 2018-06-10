@@ -1,0 +1,120 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.sidebar{
+    width: 250px;
+    position: absolute;
+    height: 100%;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+.sidebar h2{
+    text-align: center;
+    margin:0;
+    padding: 10px;
+    background: #2a2a2a;
+}
+.sidebar li{
+    transition-property: border;
+    transition-duration: 0.3s;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar a{
+    display: block;
+    padding: 10px;
+    color:white;
+    text-decoration: none;
+}
+.sidebar a:link{
+    text-decoration: none;
+}
+.sidebar a:hover{
+    color:white;
+}
+
+.sidebar li:hover{
+    background: #444;
+    border-left: 4px solid white;
+}
+.cabecera{
+    margin: auto 0px 0px;
+    background-color: black;
+    height: 50px;
+}
+.contenido{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0px;
+    background: white;
+    box-sizing: border-box;
+    transition: all 0.3s;
+   
+}
+.menu-bar{
+    cursor:pointer;
+    padding:15px;
+}
+.menu-bar:hover{
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: #2a6496;
+}
+
+.navbar-brand.text-logo{
+    font-weight: 900;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 36px;
+    margin-bottom: 17px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container{
+    width: 250px;
+
+}
+.navbar-brand.text-logo:hover,navbar-brand.text-logo:focus{
+    color:#d5d5d5;
+}
+.imagen_usuario-admin{
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 100%;
+}
+.controles{
+    margin-bottom: 40px;
+}
+.controles-admin1{
+    margin-left: 26%;
+    position:absolute;
+}
+.controles-admin2{
+    position: absolute;
+    margin-left:40%;
+}
+.controles-admin3{
+    position: absolute;
+    margin-left:54%;
+}
+.controles-admin2:hover{
+    color:#2E33B0;
+}
+
+.abrir{
+    transform: translateX(250px);
+    width:81.7%;
+}
+.usuario-nombres{
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
