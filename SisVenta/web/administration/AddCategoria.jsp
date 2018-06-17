@@ -1,35 +1,40 @@
-<%-- 
-    Document   : AddCategoria
-    Created on : 01-jun-2018, 1:17:15
-    Author     : Dxros
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body> 
-        <title>Agregar Categoria</title>
-        <br/>
-        <br/>
+        <link href="../resources/css/adm.css" rel="stylesheet" type="text/css"/>
+         <title>Agregar Categoria</title>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <!--    <div class="w3-container">  
-                <div class="w3-row" style="width: 98%;">      
-                    <ol class="migmov breadcrumb col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <li><a href="principal.jsp">Inicio</a></li>
-                        <li class="active">Registro de Productos</li>
-                    </ol>     
-                </div>-->
+    </head>
+    <body> 
+        
+            <div class="sidebar">
+            <h2>YPOWER</h2>
+            <ul>
+                <li><a>Producto</a></li>
+                <a href="ListProducto.jsp">Listar</a>
+                <a href="AddProducto.jsp">Insertar</a>
+                <a href="UpdProducto.jsp">Modificar</a>
+
+                <li><a>Categorias</a></li>
+                <a href="ListCategoria.jsp">Listar</a>
+                <a href="AddCategoria  .jsp">Insertar</a>
+                <a href="UpdCategoria.jsp">Modificar</a>
+
+                <li><a>Marca</a></li>
+                <a href="ListMarca.jsp">Listar</a>
+                <a href="AddMarca.jsp">Insertar</a>
+                <a href="UpdMarca.jsp">Modificar</a>               		
+            </ul>
+        </div>
+        <div class="contenido abrir">
         <div class="w3-row">
             <form method="POST" action="InsertarCategoria" id="idformcat">
                 <div>
-                    <label>DescripciÃ³n:</label>
+                    <label>Descripción:</label>
                     <input type="text" id="id_desc" name="txtdesc" placeholder="Ingrese una descripcion">
                 </div>
                 <div class="form-group col-xs-12 col-md-12">
@@ -42,5 +47,12 @@
                 </div>
             </form>
         </div>
+        </div>
+                <script>
+            $('.menu-bar').on('click', function () {
+                $('.contenido').toggleClass('abrir');
+            });
+
+        </script>
     </body>
 </html>

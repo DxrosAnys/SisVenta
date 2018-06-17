@@ -17,7 +17,27 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="../resources/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="../resources/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <link href="../resources/css/adm.css" rel="stylesheet" type="text/css"/>
+        <div class="sidebar">
+            <h2>YPOWER</h2>
+            <ul>
+                <li><a>Producto</a></li>
+                <a href="ListProducto.jsp">Listar</a>
+                <a href="AddProducto.jsp">Insertar</a>
+                <a href="UpdProducto.jsp">Modificar</a>
 
+                <li><a>Categorias</a></li>
+                <a href="ListCategoria.jsp">Listar</a>
+                <a href="AddCategoria  .jsp">Insertar</a>
+                <a href="UpdCategoria.jsp">Modificar</a>
+
+                <li><a>Marca</a></li>
+                <a href="ListMarca.jsp">Listar</a>
+                <a href="AddMarca.jsp">Insertar</a>
+                <a href="UpdMarca.jsp">Modificar</a>               		
+            </ul>
+        </div>
+    <div class="contenido abrir">
     <table id="tableProd" class="target">
         <thead>
             <tr>
@@ -54,7 +74,9 @@
             </c:forEach>
         </tbody>
     </table>
+        
     <p id="mensaje">${requestScope.mensaje}</p>
+    </div>
     <script>
         $(document).ready(function () {
             $(document).on("click", "#DelRegistro", function () {
