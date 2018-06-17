@@ -49,7 +49,7 @@
         $(document).ready(function () {
         $(document).on("click", "#DelRegistro", function () {
         var cod_cat = $(this).val();
-                var url_ = "BorrarCategoria?cod=" + cod_cat;
+                var url_ = "BorrarCategoria?cod_cat=" + cod_cat;
                 $.ajax({
                 url: url_,
                         type: "get",

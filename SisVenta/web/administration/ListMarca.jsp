@@ -50,7 +50,7 @@
         $(document).ready(function () {
             $(document).on("click", "#DelRegistro", function () {
                 var cod_mar = $(this).val();
-                var url_ = "BorrarMarca?cod=" + cod_mar;
+                var url_ = "BorrarMarca?cod_mar=" + cod_mar;
                 $.ajax({
                     url: url_,
                     type: "get",

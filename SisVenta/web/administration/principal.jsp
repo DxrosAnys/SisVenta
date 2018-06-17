@@ -48,8 +48,8 @@
                     </a>                     
                     <div id="demoAcc4" class="w3-bar-block w3-hide w3-padding-large w3-medium">
                         <a href="ConsultarSubCategoria" class="w3-bar-item w3-button w3-light-grey" >Listar</a>
-                        <a href="AddSubcategoria.jsp" class="w3-bar-item w3-button" >Insertar</a>    
-                        <a href="UpdSubcategoria.jsp" class="w3-bar-item w3-button" >Modificar</a>
+                        <a href="AddSubCategoria.jsp" class="w3-bar-item w3-button" >Insertar</a>    
+                        <a href="UpdSubCategoria.jsp" class="w3-bar-item w3-button" >Modificar</a>
 
                     </div>
                 </div>

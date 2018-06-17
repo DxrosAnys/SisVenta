@@ -3,6 +3,10 @@
     Created on : 02-jun-2018, 18:19:53
     Author     : Dxros
 --%>
+<%@page import="java.util.List"%>
+<%@page import="SisVenta.modelo.subcategoria"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="SisVenta.dao.subcategoriaDao"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -17,21 +21,26 @@
     <table id="tableProd" class="target">
         <thead>
             <tr>
-                <th>Codigo</th>
+                <th>CodSubCat</th>
+                <th>Descripcion</th>
+                <th>CodCat</th>
                 <th>Descripcion</th>
                 <th width="5">Modificar</th>
                 <th width="5">Eliminar</th>
             </tr>
         </thead>
         <tbody>
+            <c:set var="count" value="0" scope="page" />
             <c:forEach var="sub" items="${requestScope.Listar}">
                 <tr>
                     <td>${sub.sub_cod}</td>
-                    <td>${sub.descripcion}</td>
+                    <td>${sub.sbdescripcion}</td>
+                    <td colspan="">${a.cat_cod}</td>
+                    <td colspan="">${sub.descripcion}</td>
                     <td class="text-center">
-                        <a href="UpdSubCategoria.jsp?sub_mod=${sub.sub_cod}&desc=${sub.descripcion}">
+                        <a href="UpdSubCategoria.jsp?sub_cod=${sub.sub_cod}&desc=${sub.sbdescripcion}&cat_cod=${sub.cat_cod}">
                             <button id="UdpRegistro" > 
-                            <img src="../resources/img/general/updcon.png" height="15" width="15"/>
+                                <img src="../resources/img/general/updcon.png" height="15" width="15"/>
                             </button>                             
                         </a>
                     </td>
@@ -39,7 +48,7 @@
                         <button id="DelRegistro" value="${sub.sub_cod}">
                             <img src="../resources/img/general/delcon.png" height="15" width="15" />
                         </button>                                  
-                        
+
                     </td>
                 </tr>
             </c:forEach>
