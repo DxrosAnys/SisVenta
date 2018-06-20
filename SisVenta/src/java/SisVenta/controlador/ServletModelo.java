@@ -138,7 +138,7 @@ public class ServletModelo extends HttpServlet {
         try {
             modeloDao modlis = new modeloDao();
             request.setAttribute("mensaje", modlis.update(mod));
-            destino = "ConsultarProducto";
+            destino = "UpdProducto.jsp";
         } catch (ServletException e) {
             request.setAttribute("Mensaje", e.getMessage());
             destino = "UpdProducto.jsp";

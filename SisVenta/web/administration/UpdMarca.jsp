@@ -3,7 +3,7 @@
     Created on : 01-jun-2018, 1:16:37
     Author     : Dxros
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+<<<<<<< HEAD
         <div class="sidebar">
             <h2>YPOWER</h2>
             <ul>
@@ -54,5 +55,8 @@
                 </form>
             </div>
         </div>
+=======
+        <h1>Hello World!</h1>
+>>>>>>> parent of 312b501... CALCULADO
     </body>
 </html>

@@ -8,7 +8,6 @@ package SisVenta.dao;
 import SisVenta.database.conexion;
 import SisVenta.modelo.categoria;
 import SisVenta.service.CrudInterface;
-import com.google.gson.Gson;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -37,7 +36,7 @@ public class categoriaDao implements CrudInterface<categoria> {
         List<categoria> listcat = new ArrayList<>();
         try {
             cn = conexion.getConnection();
-            sql = "select cat_cod, descripcion from categoria ";
+            sql = "select cat_cod, cat_descripcion from categoria ";
             ps = cn.prepareStatement(sql);
             st = ps.executeQuery();
             while (st.next()) {
@@ -71,33 +70,12 @@ public class categoriaDao implements CrudInterface<categoria> {
 
     @Override
     public String update(categoria l) throws Exception {
-         try {
-            cn = conexion.getConnection();
-            cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_UPDCAT(?,?,?)}");
-            cs.setString(1, l.getCat_cod());
-            cs.setString(2, l.getDescripcion());
-            cs.registerOutParameter(3, Types.VARCHAR);
-            cs.execute();
-            Res = cs.getString(3);
-        } catch (ClassNotFoundException | SQLException e) {
-            throw e;
-        }
-        return Res;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public String delete(String id) throws Exception {
-             try {
-            cn = conexion.getConnection();
-            cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_DELCAT(?,?)}");
-            cs.setString(1, id);
-            cs.registerOutParameter(2, Types.VARCHAR);
-            cs.execute();
-            Res = cs.getString(2);
-        } catch (ClassNotFoundException | SQLException e) {
-            throw e;
-        }
-        return new Gson().toJson(Res);
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

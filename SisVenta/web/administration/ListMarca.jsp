@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <html>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -79,4 +80,22 @@
         });
     </script>
 </body>
+=======
+<%-- 
+    Document   : ListMarca
+    Created on : 01-jun-2018, 1:16:56
+    Author     : Dxros
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+>>>>>>> parent of 312b501... CALCULADO
 </html>

@@ -3,12 +3,13 @@
     Created on : 31-may-2018, 16:56:16
     Author     : Dxros
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<<<<<<< HEAD
         <link href="../resources/css/adm.css" rel="stylesheet" type="text/css"/>
         <title>Agregar Marca</title>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -61,5 +62,11 @@
 
         </script>
 
+=======
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+>>>>>>> parent of 312b501... CALCULADO
     </body>
 </html>

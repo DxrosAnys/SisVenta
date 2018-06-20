@@ -84,9 +84,13 @@
             </c:forEach>
         </tbody>
     </table>
+<<<<<<< HEAD
         
     <p id="mensaje">${requestScope.mensaje}</p>
     </div>
+=======
+    <p id="mensaje"></p>
+>>>>>>> parent of 312b501... CALCULADO
     <script>
         $(document).ready(function () {
             $(document).on("click", "#DelRegistro", function () {
