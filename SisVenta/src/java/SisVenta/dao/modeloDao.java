@@ -87,9 +87,9 @@ public class modeloDao implements CrudInterface<modelo> {
             cs.setDouble(3, l.getDescuento());
             cs.setInt(4, l.getStock());
             cs.setString(5,  l.getDeadline());
-            cs.registerOutParameter(7, Types.VARCHAR);
+            cs.registerOutParameter(6, Types.VARCHAR);
             cs.execute();
-            Res = cs.getString(7);
+            Res = cs.getString(6);
         } catch (ClassNotFoundException | SQLException e) {
             throw e;
         }

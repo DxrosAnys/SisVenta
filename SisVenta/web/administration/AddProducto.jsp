@@ -1,28 +1,34 @@
-<%-- 
-    Document   : AddProducto
-    Created on : 21-may-2018, 12:38:30
-    Author     : Dxros
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
 
+<body> 
+    <title>Agregar Producto</title>
+    <link href="../resources/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="../resources/js/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="../resources/js/jquery-ui.js" type="text/javascript"></script>
+    <link href="../resources/css/adm.css" rel="stylesheet" type="text/css"/>
+    <div class="sidebar">
+        <h2>YPOWER</h2>
+        <ul>
+            <li><a>Producto</a></li>
+            <a href="ListProducto.jsp">Listar</a>
+            <a href="AddProducto.jsp">Insertar</a>
+            <a href="UpdProducto.jsp">Modificar</a>
 
-<title>Agregar Productos</title>
-        <br/>
-        <br/>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<!--    <div class="w3-container">  
-        <div class="w3-row" style="width: 98%;">      
-            <ol class="migmov breadcrumb col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <li><a href="principal.jsp">Inicio</a></li>
-                <li class="active">Registro de Productos</li>
-            </ol>     
-        </div>-->
+            <li><a>Categorias</a></li>
+            <a href="ListCategoria.jsp">Listar</a>
+            <a href="AddCategoria  .jsp">Insertar</a>
+            <a href="UpdCategoria.jsp">Modificar</a>
+
+            <li><a>Marca</a></li>
+            <a href="ListMarca.jsp">Listar</a>
+            <a href="AddMarca.jsp">Insertar</a>
+            <a href="UpdMarca.jsp">Modificar</a>               		
+        </ul>
+    </div>
+    <div class="contenido abrir">
         <div class="w3-row">
             <form method="POST" action="InsertarProducto" id="idformprod">
                 <div>
@@ -55,12 +61,16 @@
                 </div>
             </form>
         </div>
-    <!--</div>-->
-                <%--<%@include file="../includes/footer.jsp" %>--%>
-                      <script>
-  $( function() {
-    $( "#datepicker" ).datepicker({dateFormat: 'dd-MM-yy'});
-  } );
-  </script>
+    </div>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({dateFormat: 'dd-MM-yy'});
+        });
+
+
+        $('.menu-bar').on('click', function () {
+            $('.contenido').toggleClass('abrir');
+        });
+    </script>
 </body>
 </html>

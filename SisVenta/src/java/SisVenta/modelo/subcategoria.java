@@ -9,6 +9,38 @@ package SisVenta.modelo;
  *
  * @author Dxros
  */
-public class subcategoria {
-    
+public class subcategoria extends categoria{
+    private String sub_cod;
+    private String sbdescripcion;
+
+    public subcategoria() {
+    }
+
+    public subcategoria(String sub_cod, String sbdescripcion) {
+        this.sub_cod = sub_cod;
+        this.sbdescripcion = sbdescripcion;
+    }
+
+    public subcategoria(String sub_cod, String sbdescripcion, String cat_cod, String descripcion) {
+        super(cat_cod, descripcion);
+        this.sub_cod = sub_cod;
+        this.sbdescripcion = sbdescripcion;
+    }
+
+    public String getSub_cod() {
+        return sub_cod;
+    }
+
+    public void setSub_cod(String sub_cod) {
+        this.sub_cod = sub_cod;
+    }
+
+    public String getSbdescripcion() {
+        return sbdescripcion;
+    }
+
+    public void setSbdescripcion(String sbdescripcion) {
+        this.sbdescripcion = sbdescripcion;
+    }
+
 }
