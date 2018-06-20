@@ -93,9 +93,4 @@
                     <span class="w3-right w3-padding w3-hide-small">Olvide la <a href="#">contraseña?</a></span>
                 </div>
             </div>
-<<<<<<< HEAD
         </div>
-=======
-        </div>
-    </body>
->>>>>>> 5d6269e66f5f7f42f088f8510d4c7dcdbab96771

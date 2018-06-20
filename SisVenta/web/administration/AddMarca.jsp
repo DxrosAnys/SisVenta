@@ -17,28 +17,9 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     </head>
     <body> 
-        <div class="sidebar">
-            <h2>YPOWER</h2>
-            <ul>
-                <li><a>Producto</a></li>
-                <a href="ListProducto.jsp">Listar</a>
-                <a href="AddProducto.jsp">Insertar</a>
-                <a href="UpdProducto.jsp">Modificar</a>
-
-                <li><a>Categorias</a></li>
-                <a href="ListCategoria.jsp">Listar</a>
-                <a href="AddCategoria  .jsp">Insertar</a>
-                <a href="UpdCategoria.jsp">Modificar</a>
-
-                <li><a>Marca</a></li>
-                <a href="ListMarca.jsp">Listar</a>
-                <a href="AddMarca.jsp">Insertar</a>
-                <a href="UpdMarca.jsp">Modificar</a>               		
-            </ul>
-        </div>
-        <div class="contenido abrir">
+            <h2>YPOWER</h2>    
             <div class="w3-row">
-                <form method="POST" action="InsertarMarca" id="idformprod">
+                <form method="POST" action="InsertarMarca" id="idformmar">
                     <div>
                         <label>Descripción:</label>
                         <input type="text" id="id_desc" name="txtdesc" placeholder="Ingrese una descripcion">
@@ -53,13 +34,5 @@
                     </div>
                 </form>
             </div>
-        </div>
-        <script>
-            $('.menu-bar').on('click', function () {
-                $('.contenido').toggleClass('abrir');
-            });
-
-        </script>
-
     </body>
 </html>
