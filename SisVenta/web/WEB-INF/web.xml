@@ -20,6 +20,14 @@
         <servlet-name>ServletMarca</servlet-name>
         <servlet-class>SisVenta.controlador.ServletMarca</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletCategoria</servlet-name>
+        <servlet-class>SisVenta.controlador.ServletCategoria</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletSubCategoria</servlet-name>
+        <servlet-class>SisVenta.controlador.ServletSubCategoria</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletSisVenta</servlet-name>
         <url-pattern>/ConsultarModelo</url-pattern>
@@ -41,7 +49,24 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletMarca</servlet-name>
-        <url-pattern>/ServletMarca</url-pattern>
+        <url-pattern>/administration/ConsultarMarca</url-pattern>
+        <url-pattern>/administration/InsertarMarca</url-pattern>
+        <url-pattern>/administration/BorrarMarca</url-pattern>
+        <url-pattern>/administration/ModificarMarca</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletCategoria</servlet-name>
+        <url-pattern>/administration/ConsultarCategoria</url-pattern>
+        <url-pattern>/administration/InsertarCategoria</url-pattern>
+        <url-pattern>/administration/BorrarCategoria</url-pattern>
+        <url-pattern>/administration/ModificarCategoria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletSubCategoria</servlet-name>
+        <url-pattern>/administration/ConsultarSubCategoria</url-pattern>
+        <url-pattern>/administration/InsertarSubCategoria</url-pattern>
+        <url-pattern>/administration/BorrarSubCategoria</url-pattern>
+        <url-pattern>/administration/ModificarSubCategoria</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

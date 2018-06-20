@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<<<<<<< HEAD
         <link href="../resources/css/adm.css" rel="stylesheet" type="text/css"/>
          <title>Agregar Categoria</title>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -55,11 +54,5 @@
             });
 
         </script>
-=======
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
->>>>>>> parent of 312b501... CALCULADO
     </body>
 </html>

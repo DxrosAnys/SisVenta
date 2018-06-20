@@ -3,7 +3,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
-<<<<<<< HEAD
     <body>  
         <link href="../resources/css/adm.css" rel="stylesheet" type="text/css"/>
             <div class="sidebar">
@@ -47,9 +46,5 @@
             </form>
         </div>
         </div>
-=======
-    <body>
-        <h1>Hello World!</h1>
->>>>>>> parent of 312b501... CALCULADO
     </body>
 </html>

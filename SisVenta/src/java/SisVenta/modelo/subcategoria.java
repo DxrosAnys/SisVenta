@@ -9,7 +9,6 @@ package SisVenta.modelo;
  *
  * @author Dxros
  */
-<<<<<<< HEAD
 public class subcategoria extends categoria{
     private String sub_cod;
     private String sbdescripcion;
@@ -44,8 +43,4 @@ public class subcategoria extends categoria{
         this.sbdescripcion = sbdescripcion;
     }
 
-=======
-public class subcategoria {
-    
->>>>>>> parent of 312b501... CALCULADO
 }
