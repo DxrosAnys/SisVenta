@@ -2,14 +2,22 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
-            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/controlador/ServletMarca.java</file>
-            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/web/administration/AddProducto.jsp</file>
-            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/dao/modeloDao.java</file>
-            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/web/administration/ListProducto.jsp</file>
-            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/src/java/SisVenta/controlador/ServletModelo.java</file>
-            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/web/administration/principal.jsp</file>
-            <file>file:/C:/Users/Dxros/Desktop/Github/SisVenta/SisVenta/web/administration/UpdProducto.jsp</file>
+            <file>file:/D:/PROWEB/SisVenta/SisVenta/src/java/SisVenta/dao/subcategoriaDao.java</file>
+            <file>file:/D:/PROWEB/SisVenta/SisVenta/web/administration/AddCategoria.jsp</file>
+            <file>file:/D:/PROWEB/SisVenta/SisVenta/src/java/SisVenta/dao/marcaDao.java</file>
+            <file>file:/D:/PROWEB/SisVenta/SisVenta/src/java/SisVenta/controlador/ServletMarca.java</file>
+            <file>file:/D:/PROWEB/SisVenta/SisVenta/web/administration/AddProducto.jsp</file>
+            <file>file:/D:/PROWEB/SisVenta/SisVenta/src/java/SisVenta/dao/modeloDao.java</file>
+            <file>file:/D:/PROWEB/SisVenta/SisVenta/web/administration/AddMarca.jsp</file>
+            <file>file:/D:/PROWEB/SisVenta/SisVenta/web/administration/principalP.jsp</file>
+            <file>file:/D:/PROWEB/SisVenta/SisVenta/web/administration/principal.jsp</file>
+            <file>file:/D:/PROWEB/SisVenta/SisVenta/web/administration/ListProducto.jsp</file>
+            <file>file:/D:/PROWEB/SisVenta/SisVenta/nbproject/build-impl.xml</file>
         </group>
+>>>>>>> ac39647c90858ec37e4a1a5ad4da7133eca47e02
     </open-files>
 </project-private>

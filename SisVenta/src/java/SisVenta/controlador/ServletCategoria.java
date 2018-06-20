@@ -105,7 +105,7 @@ public class ServletCategoria extends HttpServlet {
       response.setContentType("application/json;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            String cod = request.getParameter("cod");
+            String cod = request.getParameter("cod_cat");
             categoriaDao modlis = new categoriaDao();
             modlis.delete(cod);
             out.println(modlis.delete(cod));

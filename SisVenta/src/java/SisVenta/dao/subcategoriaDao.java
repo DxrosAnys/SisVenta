@@ -38,11 +38,11 @@ public class subcategoriaDao implements CrudInterface<subcategoria>{
        List<subcategoria> listsub = new ArrayList<>();
         try {
             cn = conexion.getConnection();
-            sql = "select sub_cod, descripcion ,cat_cod from subcategoria ";
+            sql = "select b.SUB_COD, b.DESCRIPCION,a.CAT_COD,a.DESCRIPCION from categoria a inner join subcategoria b on b.CAT_COD=a.CAT_COD ";
             ps = cn.prepareStatement(sql);
             st = ps.executeQuery();
             while (st.next()) {
-                sub = new subcategoria(st.getString(1),st.getString(2),st.getString(3));
+                sub = new subcategoria(st.getString(1),st.getString(2),st.getString(3),st.getString(4));
                 listsub.add(sub);
             }
             ps.close();
