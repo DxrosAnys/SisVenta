@@ -113,7 +113,7 @@ public class ServletModelo extends HttpServlet {
         response.setContentType("application/json;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            String cod = request.getParameter("cod");
+            String cod = request.getParameter("cod_mod");
             modeloDao modlis = new modeloDao();
             modlis.delete2(cod);
             out.println(modlis.delete(cod));

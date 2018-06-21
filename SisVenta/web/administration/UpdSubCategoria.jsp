@@ -9,50 +9,57 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body> 
-        <title>Agregar SubCategoria</title>
-        <br/>
-        <br/>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <!--    <div class="w3-container">  
-                <div class="w3-row" style="width: 98%;">      
-                    <ol class="migmov breadcrumb col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <li><a href="principal.jsp">Inicio</a></li>
-                        <li class="active">Registro de Productos</li>
-                    </ol>     
-                </div>-->
-        <div class="w3-row">
+    <%@include file="includes_admin/header_admin.jsp"%>
+    <title>Modificar SubCategoria</title>
+    <br/>
+    <br/>
+    <div class="w3-container">
+        <div class="w3-row" style="width: 98%;">      
+            <ol class="migmov breadcrumb col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <li><a href="principal.jsp">Inicio</a></li>
+                <li><a href="ConsultarSubCategoria">Listado de SubCategorias</a></li>
+                <li class="active">Modificar SubCategoria</li>
+            </ol>     
+        </div>
+        <div class="w3-row w3-center">
             <form method="POST" action="ModificarSubCategoria" id="idformprod">
-                <div>
-                    <label>Codigo:</label>
-                    <input type="text" id="id_desc" name="txtcod" placeholder="Ingrese una codigo" value="<%=request.getParameter("sub_mod")%>">
+                <div class="w3-row">
+                    <div class="col-xs-2 col-md-2 col-lg-2"></div>
+                    <div class="col-xs-4 col-md-4 col-lg-4">
+                        <div class="form-group w3-center">
+                            <label class="control-label">Codigo:</label>
+                            <input class="form-control" type="text" id="id_desc" name="txtcod" placeholder="Ingrese una codigo" value="<%=request.getParameter("sub_mod")%>">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-md-4 col-lg-4">
+                        <div class="form-group w3-center">
+                            <label class="control-label">Descripción:</label>
+                            <input class="form-control" type="text" id="id_desc" name="txtdesc" placeholder="Ingrese una descripcion" value="<%=request.getParameter("desc")%>">
+                        </div>
+                    </div>
+                    <div class="col-xs-2 col-md-2 col-lg-2"></div>
                 </div>
-                <div>
-                    <label>Descripción:</label>
-                    <input type="text" id="id_desc" name="txtdesc" placeholder="Ingrese una descripcion" value="<%=request.getParameter("desc")%>">
-                </div>
-                <div>
-                    <label>Categoria:</label>
-                    <select>
-                        <%
-                            categoriaDao x = new categoriaDao();
-                            for (categoria es : x.readAll()) {
-                                out.print("<option value=" + es.getCat_cod() + ">"
-                                        + es.getDescripcion() + "");
-                            }
-                        %>
-                    </select>
+                <div class="w3-row">      
+                    <div class="col-xs-4 col-md-4 col-lg-4"></div>
+                    <div class="col-xs-4 col-md-4 col-lg-4">
+                        <div class="form-group w3-center">  
+                            <label class="control-label">Categoria:</label>
+                            <select class="selected">
+                                <%
+                                    categoriaDao x = new categoriaDao();
+                                    for (categoria es : x.readAll()) {
+                                        out.print("<option value=" + es.getCat_cod() + ">"
+                                                + es.getDescripcion() + "");
+                                    }
+                                %>
+                            </select>
+                        </div>
+                        <div class="col-xs-4 col-md-4 col-lg-4"></div>
+                    </div>                      
                 </div>
                 <div class="form-group col-xs-12 col-md-12">
                     <div class="form-group">
-                        <button type="submit" class="btn btn-warning center-block" >Actualizar</button>
+                        <button type="submit" class="btn btn-success center-block" >Actualizar</button>
                     </div>
                 </div>
                 <div class="form-group col-xs-12 col-md-12">
@@ -60,5 +67,6 @@
                 </div>
             </form>
         </div>
-    </body>
+    </div>
+</body>
 </html>

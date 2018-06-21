@@ -106,7 +106,7 @@ public class ServletSubCategoria extends HttpServlet {
         response.setContentType("application/json;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            String cod = request.getParameter("cod");
+            String cod = request.getParameter("cod_sub");
             subcategoriaDao modlis = new subcategoriaDao();
             modlis.delete(cod);
             out.println(modlis.delete(cod));

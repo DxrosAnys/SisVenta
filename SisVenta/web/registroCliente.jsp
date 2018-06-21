@@ -25,7 +25,7 @@
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                     <label class="control-label w3-text-white" for="id_nombre">Nombres</label>
-                    <input class="form-control " type="text" id="id_nombre" name="txtnom" placeholder="Ingrese el nombre">
+                    <input class="form-control" type="text" id="id_nombre" name="txtnom" placeholder="Ingrese el nombre">
                 </div>
             </div>
             <div class="col-xs-12 col-md-6">
