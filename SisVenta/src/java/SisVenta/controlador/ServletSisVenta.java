@@ -41,7 +41,7 @@ public class ServletSisVenta extends HttpServlet {
             case "/ConsultarModelo": {
                 try {
                     ConsultarModelo(request, response);
-                }catch (Exception ex) {
+                } catch (Exception ex) {
                     Logger.getLogger(ServletSisVenta.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
@@ -50,14 +50,16 @@ public class ServletSisVenta extends HttpServlet {
 
     private void ConsultarModelo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
         String destino;
-
+        modeloDao modlis = new modeloDao();
+        categoriaDao catlis = new categoriaDao();
+        marcaDao marlis = new marcaDao();
         try {
-            modeloDao modlis = new modeloDao();
+
             request.setAttribute("Listar", modlis.readAll());
-            categoriaDao catlis = new categoriaDao();
-            request.setAttribute("ListarCat", catlis.readAll());
-            marcaDao marlis = new marcaDao();
-            request.setAttribute("ListaMar", marlis.readAll());
+
+//            request.setAttribute("ListarCat", catlis.readAll());
+//
+//            request.setAttribute("ListaMar", marlis.readAll());
             destino = "Catalogo.jsp";
         } catch (ClassNotFoundException | SQLException e) {
             request.setAttribute("Mensaje", e.getMessage());

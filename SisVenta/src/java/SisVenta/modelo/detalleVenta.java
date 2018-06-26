@@ -20,7 +20,7 @@ public class detalleVenta {
     private Double descuento;
     private Double importe;
     private Date buydate;
-
+    
     public detalleVenta() {
     }
 

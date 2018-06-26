@@ -84,107 +84,108 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-        $('#id_form').bootstrapValidator({
-        message: 'This value is not valid',
+            $('#id_form').bootstrapValidator({
+                message: 'This value is not valid',
                 feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                        invalid: 'glyphicon glyphicon-remove',
-                        validating: 'glyphicon glyphicon-refresh'
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
                 },
                 fields: {
-                //valida registros
-                txtnom: {
-                validators: {
-                notEmpty: {
-                message: 'El nombre es un campo obligatorio'
-                },
-                        regexp: {
-                        regexp: /^[A-Za-z ñÑ]+$/,
-                                message: 'Solo letras o espacios'
-                        }
-                }
-                },
-                        txtape: {
+                    //valida registros
+                    txtnom: {
                         validators: {
-                        notEmpty: {
-                        message: 'El apellido es un campo obligatorio'
-                        },
-                                regexp: {
+                            notEmpty: {
+                                message: 'El nombre es un campo obligatorio'
+                            },
+                            regexp: {
                                 regexp: /^[A-Za-z ñÑ]+$/,
-                                        message: 'Solo letras o espacios'
-                                }
+                                message: 'Solo letras o espacios'
+                            }
                         }
-                        },
-                        txtusu: {
+                    },
+                    txtape: {
                         validators: {
-                        notEmpty: {
-                        message: 'El usuario es un campo obligatorio'
-                        },
-                                regexp: {
+                            notEmpty: {
+                                message: 'El apellido es un campo obligatorio'
+                            },
+                            regexp: {
+                                regexp: /^[A-Za-z ñÑ]+$/,
+                                message: 'Solo letras o espacios'
+                            }
+                        }
+                    },
+                    txtusu: {
+                        validators: {
+                            notEmpty: {
+                                message: 'El usuario es un campo obligatorio'
+                            },
+                            regexp: {
                                 regexp: /^[A-Za-z ñÑ 0-9]+$/,
-                                        message: 'Solo letras, espacios o numeros, no caracteres'
-                                }
+                                message: 'Solo letras, espacios o numeros, no caracteres'
+                            }
                         }
-                        },
-                        //en proceso
-                        txtcon: {
+                    },
+                    //en proceso
+                    txtcon: {
                         validators: {
-                        notEmpty: {
-                        message: 'La contraseña es un campo obligatorio'
-                        },
-                                regexp: {
+                            notEmpty: {
+                                message: 'La contraseña es un campo obligatorio'
+                            },
+                            regexp: {
                                 regexp: /^[A-Za-z ñÑ 0-9]+$/,
-                                        message: 'La contraseña debe tener como minimo 7 digitos'
-                                }
+                                message: 'La contraseña debe tener como minimo 7 digitos'
+                            }
                         }
-                        },
-                        //en proceso
-                        txtcor: {
+                    },
+                    //en proceso
+                    txtcor: {
                         validators: {
-                        notEmpty: {
-                        message: 'El correo es un campo obligatorio'
-                        },
-                                regexp: {
+                            notEmpty: {
+                                message: 'El correo es un campo obligatorio'
+                            },
+                            regexp: {
                                 regexp: /^[A-Za-z ñÑ 0-9 @ . ]+$/,
-                                        message: 'El correo debe tener como minimo el simbolo @'
-                                }
+                                message: 'El correo debe tener como minimo el simbolo @'
+                            }
                         }
-                        },
-                        txtdir: {
+                    },
+                    txtdir: {
                         validators: {
-                        notEmpty: {
-                        message: 'La direccion es un campo obligatorio'
-                        },
-                                regexp: {
+                            notEmpty: {
+                                message: 'La direccion es un campo obligatorio'
+                            },
+                            regexp: {
                                 regexp: /^[A-Za-z ñÑ 0-9 . ,]+$/,
-                                        message: 'La direccion no debe tener caracteres'
-                                }
+                                message: 'La direccion no debe tener caracteres'
+                            }
                         }
-                        },
-                        txtcel: {
+                    },
+                    txtcel: {
                         validators: {
-                        notEmpty: {
-                        message: 'El numero es un campo obligatorio'
-                        },
-                                regexp: {
+                            notEmpty: {
+                                message: 'El numero es un campo obligatorio'
+                            },
+                            regexp: {
                                 regexp: /^[+ 0-9]+$/,
-                                        message: 'El numero no debe tener caracteres o letras'
-                                }
+                                message: 'El numero no debe tener caracteres o letras'
+                            }
                         }
-                        },
-                        txtdni: {
+                    },
+                    txtdni: {
                         validators: {
-                        notEmpty: {
-                        message: 'El numero de DNI es un campo obligatorio'
-                        },
-                                regexp: {
+                            notEmpty: {
+                                message: 'El numero de DNI es un campo obligatorio'
+                            },
+                            regexp: {
                                 regexp: /^[ 0-9]+$/,
-                                        message: 'El DNI no debe tener letras o caracteres'
-                                }
+                                message: 'El DNI no debe tener letras o caracteres'
+                            }
                         }
-                        }
-                })
-                ;
+                    }
+                }
+            });
+        });
     </script>
 </div>
 <jsp:include page="includes/footer.jsp"></jsp:include>

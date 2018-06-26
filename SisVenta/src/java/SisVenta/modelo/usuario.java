@@ -5,7 +5,7 @@
  */
 package SisVenta.modelo;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  *
@@ -41,10 +41,6 @@ public class usuario {
         this.dateregister = dateregister;
         this.DNI = DNI;
         this.ustatus = ustatus;
-    }
-
-    public usuario(String string, String string0, String string1, String string2, String string3, String string4, String string5, java.sql.Date date, String string6, String string7, String string8) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getNick() {

@@ -9,11 +9,15 @@ import SisVenta.dao.usuarioDao;
 import SisVenta.modelo.usuario;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -33,48 +37,103 @@ public class ServletUser extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       String path=request.getServletPath();
-       switch(path){
-           case "/RegistrarUsuario":
-               RegistrarUsuario(request,response);
-               break;
-           case "/IniciarSession":
-               IniciarSession(request,response);
-       }
+        String path = request.getServletPath();
+        switch (path) {
+            case "/RegistrarUsuario":
+                RegistrarUsuario(request, response);
+                break;
+            case "/IniciarSession": {
+            try {
+                IniciarSession(request, response);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(ServletUser.class.getName()).log(Level.SEVERE, null, ex);
+            }break;
+            }
+            case "/LogearAdmin":{
+            try {
+                LogearAdmin(request, response);
+            } catch (ClassNotFoundException | SQLException ex) {
+                Logger.getLogger(ServletUser.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            }
+        }
     }
 
     private void RegistrarUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       usuario usu=new usuario();
-       String destino;
-       usu.setNombre(request.getParameter("txtnom"));
-       usu.setApellido(request.getParameter("txtape"));      
-       usu.setNick(request.getParameter("txtusu"));
-       usu.setPass(request.getParameter("txtcon"));
-       usu.setEmail(request.getParameter("txtcor"));
-       usu.setDireccion(request.getParameter("txtdir"));
-       usu.setCelular(request.getParameter("txtcel"));
-       usu.setDNI(request.getParameter("txtdni"));
-       String DNI =request.getParameter("txtdni");
-       
-       try {
-           if (DNI==null){
-               request.setAttribute("mensaje", "Debe ingresar valores");
-           }else{
-               usuarioDao usudao=new usuarioDao();   
-               String msg=usudao.create(usu);
-               request.setAttribute("mensaje", msg);
-           }
-       destino= "registroCliente.jsp";
-       
-       } catch (ClassNotFoundException | SQLException e) {
+        usuario usu = new usuario();
+        String destino;
+        usu.setNombre(request.getParameter("txtnom"));
+        usu.setApellido(request.getParameter("txtape"));
+        usu.setNick(request.getParameter("txtusu"));
+        usu.setPass(request.getParameter("txtcon"));
+        usu.setEmail(request.getParameter("txtcor"));
+        usu.setDireccion(request.getParameter("txtdir"));
+        usu.setCelular(request.getParameter("txtcel"));
+        usu.setDNI(request.getParameter("txtdni"));
+        String DNI = request.getParameter("txtdni");
+
+        try {
+            if (DNI == null) {
+                request.setAttribute("mensaje", "Debe ingresar valores");
+            } else {
+                usuarioDao usudao = new usuarioDao();
+                String msg = usudao.create(usu);
+                request.setAttribute("mensaje", msg);
+            }
+            destino = "registroCliente.jsp";
+
+        } catch (ClassNotFoundException | SQLException e) {
             request.setAttribute("mensaje", e.getMessage());
             destino = "registroCliente.jsp";
         }
-       RequestDispatcher rd = request.getRequestDispatcher(destino);
+        RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);
     }
 
-    private void IniciarSession(HttpServletRequest request, HttpServletResponse response) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void IniciarSession(HttpServletRequest request, HttpServletResponse response) throws  ClassNotFoundException, ServletException, IOException {
+        String destino = "index.jsp";
+        String user = request.getParameter("usrname");
+        String pass = request.getParameter("psw");
+            try {
+                usuarioDao dao = new usuarioDao();
+                ArrayList<usuario> al = dao.UserValidate(user, pass);
+                for (usuario x : al) {
+                    System.out.print(x.getNick());
+                    if (x.getNick().equals(user) && x.getPass().equals(pass)) {
+                        HttpSession sesion = request.getSession(true);
+                        sesion.setAttribute("nombre", x.getNombre());
+                        sesion.setAttribute("apellido", x.getApellido());
+                        request.setAttribute("mensaje", "Bienvenido");
+                        RequestDispatcher rd = request.getRequestDispatcher(destino);
+                        rd.forward(request, response);
+                    }
+                }
+                request.setAttribute("mensaje", "Contraseña o Usuario incorrectos");
+                RequestDispatcher rd = request.getRequestDispatcher(destino);
+                rd.forward(request, response);
+            } catch (ClassNotFoundException | SQLException e) {
+                e.getMessage();
+            }    
+    }
+
+    private void LogearAdmin(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, ServletException, IOException {
+       String destino = "login.jsp";
+        String user = request.getParameter("usrname");
+        String pass = request.getParameter("psw");           
+                usuarioDao dao = new usuarioDao();
+                ArrayList<usuario> al = dao.UserAdmin(user, pass);
+                for (usuario x : al) {
+                    if (x.getNick().equals(user) && x.getPass().equals(pass)) {
+                        HttpSession sesion = request.getSession(true);
+                        sesion.setAttribute("nombre", x.getNombre());
+                        sesion.setAttribute("apellido", x.getApellido());
+                        RequestDispatcher rd = request.getRequestDispatcher(destino);
+                        rd.forward(request, response);
+                        break;
+                    }
+                }
+                request.setAttribute("mensaje", "Contraseña o Usuario incorrectos");
+                RequestDispatcher rd = request.getRequestDispatcher(destino);
+                rd.forward(request, response);   
     }
 }

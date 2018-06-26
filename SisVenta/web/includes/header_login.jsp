@@ -1,14 +1,11 @@
 <%-- 
-    Document   : header
-    Created on : 28-abr-2018, 22:05:24
+    Document   : header_login
+    Created on : 24-jun-2018, 22:17:22
     Author     : Dxros
 --%>
 
-<%@page import="SisVenta.dao.usuarioDao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -44,40 +41,13 @@
                     <a href="promo.jsp"class="w3-bar-item w3-button"><i class="fa fa-gift"></i>PROMOCIONES</a>
                     <a href="oferta.jsp"class="w3-bar-item w3-button"><i class="fa fa-cart-plus"></i>OFERTAS</a>
                     <a href="novedades.jsp"class="w3-bar-item w3-button"><i class="fa fa-area-chart"></i>NOVEDADES</a>
-                    <a href="nosotros.jsp"class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>NOSOTROS</a>             
-                    <div class="w3-dropdown-hover w3-hide-small">
-                        <button class="w3-button" title="Notifications">INICIAR SESION<i class="fa fa-caret-down"></i></button>     
-                        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-                            <button href="login.jsp"class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display = 'block'"><i class="fa fa-user"></i>USUARIO</button>
-                            <a href="registroCliente.jsp" class="w3-bar-item w3-button">REGISTRO</a>
-                        </div>
-                    </div>                   
+                    <a href="nosotros.jsp"class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>NOSOTROS</a>   
+                    <%HttpSession sesion = request.getSession();  %>
+                    <li class="w3-bar-item"><%=sesion.getAttribute("apellido)"%>,<%=sesion.getAttribute("nombre")%> </li>                 
                 </div>
             </div>           
         </div>
         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
             <i class="fa fa-bars"></i>
         </a>
-
-        <div id="id01" class="w3-modal">
-            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
-                <div class="w3-center"><br>
-                    <span onclick="document.getElementById('id01').style.display = 'none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
-                    <img src="resources/img/general/e1.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
-                </div>
-                <form class="w3-container" action="IniciarSession">
-                    <div class="w3-section">
-                        <label><b>Usuario</b></label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Ingresa tu usuario" name="usrname" required>
-                        <label><b>Contraseña</b></label>
-                        <input class="w3-input w3-border" type="text" placeholder="Ingresa tu contraseña" name="psw" required>
-                        <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit">Ingresar</button>
-                        <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Recuerdame
-                    </div>
-                </form>
-                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                    <button onclick="document.getElementById('id01').style.display = 'none'" type="button" class="w3-button w3-red">Cancelar</button>
-                    <span class="w3-right w3-padding w3-hide-small">Olvidaste la <a href="#">contraseña?</a></span>
-                </div>
-            </div>
         </div>

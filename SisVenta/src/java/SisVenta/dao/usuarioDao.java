@@ -34,14 +34,14 @@ public class usuarioDao implements CrudInterface<usuario> {
 
     @Override
     public List<usuario> readAll() throws Exception {
-       List<usuario> lisusu = new ArrayList<>();
-        try {         
+        List<usuario> lisusu = new ArrayList<>();
+        try {
             cn = conexion.getConnection();
-            sql = "select user_cod, user_nombre, user_apellido, user_nick, user_pass, user_email,user_direccion, user_phone, user_foto,fec_registro, user_dni, user_status from usuario order by user_nombre";
+            sql = "select user_cod, user_nick, user_nombre, user_apellido, user_pass, user_email,user_direccion, user_phone, user_foto,fec_registro, user_dni, user_status from usuario order by user_nombre";
             ps = cn.prepareStatement(sql);
             st = ps.executeQuery();
-           while (st.next()) {
-                usu = new usuario(st.getString(1),st.getString(2),st.getString(3),st.getString(4),st.getString(5),st.getString(6),st.getString(7),st.getDate(8),st.getString(9),st.getString(10),st.getString(11));
+            while (st.next()) {
+                usu = new usuario(st.getString(1), st.getString(2), st.getString(3), st.getString(4), st.getString(5), st.getString(6), st.getString(7), st.getString(8), st.getString(9), st.getDate(10), st.getString(11), st.getString(12));
                 lisusu.add(usu);
             }
             ps.close();
@@ -88,6 +88,70 @@ public class usuarioDao implements CrudInterface<usuario> {
     @Override
     public String delete(String id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public ArrayList<usuario> UserValidate(String id, String pass) throws ClassNotFoundException, SQLException {
+        ArrayList<usuario> u = new ArrayList<>();
+        usuario log;
+        try {
+            cn = conexion.getConnection();
+            sql = "select user_cod,user_nick,user_nombre,user_apellido,user_pass,user_email,user_direccion, "
+                    + "user_phone,user_foto,fec_registro,user_dni,user_status from  usuario where user_nick = ? and user_pass = ?";
+            ps = cn.prepareStatement(sql);
+            ps.setString(1, id);
+            ps.setString(2, pass);
+            st = ps.executeQuery();
+            while (st.next()) {
+                log = new usuario(st.getString(1),
+                        st.getString(2),
+                        st.getString(3),
+                        st.getString(4),
+                        st.getString(5),
+                        st.getString(6),
+                        st.getString(7),
+                        st.getString(8),
+                        st.getString(9),
+                        st.getDate(10),
+                        st.getString(11),
+                        st.getString(12));
+                u.add(log);
+            }
+            st.close();
+            ps.close();
+            cn.close();
+        } catch (SQLException e) {
+            throw e;// Conexion.cerrarConexion(cn);
+        }
+        return u;
+    }
+
+    public ArrayList<usuario> UserAdmin(String id, String pass) throws ClassNotFoundException, SQLException {
+        ArrayList<usuario> u = new ArrayList<>();
+        usuario log;
+        try {
+            cn = conexion.getConnection();
+            sql = "select user_cod,user_nick,user_nombre,user_apellido,user_pass from usuario where user_nick = ? and user_pass = ? and user_status = 'D'";
+            ps = cn.prepareStatement(sql);
+            ps.setString(1, id);
+            ps.setString(2, pass);
+            st = ps.executeQuery();
+            while (st.next()) {
+                log = new usuario();
+                log.setUser_cod(st.getString(1));
+                log.setNick(st.getString(2));
+                log.setNombre(st.getString(3));
+                log.setApellido(st.getString(4));
+                log.setPass(st.getString(5));
+                log.setEmail(st.getString(6));
+                u.add(log);
+            }
+            st.close();
+            ps.close();
+            cn.close();
+        } catch (SQLException e) {
+            throw e;// Conexion.cerrarConexion(cn);
+        }
+        return u;
     }
 
 }
