@@ -45,6 +45,7 @@
         <servlet-name>ServletUser</servlet-name>
         <url-pattern>/RegistrarUsuario</url-pattern>
         <url-pattern>/IniciarSession</url-pattern>
+        <url-pattern>/administration/LogearAdmin</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletAdministrador</servlet-name>

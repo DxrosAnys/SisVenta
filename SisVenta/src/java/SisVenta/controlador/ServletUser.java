@@ -7,6 +7,7 @@ package SisVenta.controlador;
 
 import SisVenta.dao.usuarioDao;
 import SisVenta.modelo.usuario;
+import SisVenta.modelo.usuariopec;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -43,18 +44,15 @@ public class ServletUser extends HttpServlet {
                 RegistrarUsuario(request, response);
                 break;
             case "/IniciarSession": {
-            try {
-                IniciarSession(request, response);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ServletUser.class.getName()).log(Level.SEVERE, null, ex);
-            }break;
+                try {
+                    IniciarSession(request, response);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(ServletUser.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                break;
             }
-            case "/LogearAdmin":{
-            try {
+            case "/administration/LogearAdmin": {
                 LogearAdmin(request, response);
-            } catch (ClassNotFoundException | SQLException ex) {
-                Logger.getLogger(ServletUser.class.getName()).log(Level.SEVERE, null, ex);
-            }
             }
         }
     }
@@ -90,50 +88,54 @@ public class ServletUser extends HttpServlet {
         rd.forward(request, response);
     }
 
-    private void IniciarSession(HttpServletRequest request, HttpServletResponse response) throws  ClassNotFoundException, ServletException, IOException {
+    private void IniciarSession(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, ServletException, IOException {
         String destino = "index.jsp";
         String user = request.getParameter("usrname");
         String pass = request.getParameter("psw");
-            try {
-                usuarioDao dao = new usuarioDao();
-                ArrayList<usuario> al = dao.UserValidate(user, pass);
-                for (usuario x : al) {
-                    System.out.print(x.getNick());
-                    if (x.getNick().equals(user) && x.getPass().equals(pass)) {
-                        HttpSession sesion = request.getSession(true);
-                        sesion.setAttribute("nombre", x.getNombre());
-                        sesion.setAttribute("apellido", x.getApellido());
-                        request.setAttribute("mensaje", "Bienvenido");
-                        RequestDispatcher rd = request.getRequestDispatcher(destino);
-                        rd.forward(request, response);
-                    }
+        try {
+            usuarioDao dao = new usuarioDao();
+            ArrayList<usuario> al = dao.UserValidate(user, pass);
+            for (usuario x : al) {
+                System.out.print(x.getNick());
+                if (x.getNick().equals(user) && x.getPass().equals(pass)) {
+                    HttpSession sesion = request.getSession(true);
+                    sesion.setAttribute("nombre", x.getNombre());
+                    sesion.setAttribute("apellido", x.getApellido());
+                    request.setAttribute("mensaje", "Bienvenido");
+                    RequestDispatcher rd = request.getRequestDispatcher(destino);
+                    rd.forward(request, response);
                 }
-                request.setAttribute("mensaje", "Contraseña o Usuario incorrectos");
-                RequestDispatcher rd = request.getRequestDispatcher(destino);
-                rd.forward(request, response);
-            } catch (ClassNotFoundException | SQLException e) {
-                e.getMessage();
-            }    
+            }
+            request.setAttribute("mensaje", "Contraseña o Usuario incorrectos");
+            RequestDispatcher rd = request.getRequestDispatcher(destino);
+            rd.forward(request, response);
+        } catch (ClassNotFoundException | SQLException e) {
+            e.getMessage();
+        }
     }
 
-    private void LogearAdmin(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, ServletException, IOException {
-       String destino = "login.jsp";
+    private void LogearAdmin(HttpServletRequest request, HttpServletResponse response) {
+        String destino = "index.jsp";
         String user = request.getParameter("usrname");
-        String pass = request.getParameter("psw");           
-                usuarioDao dao = new usuarioDao();
-                ArrayList<usuario> al = dao.UserAdmin(user, pass);
-                for (usuario x : al) {
-                    if (x.getNick().equals(user) && x.getPass().equals(pass)) {
-                        HttpSession sesion = request.getSession(true);
-                        sesion.setAttribute("nombre", x.getNombre());
-                        sesion.setAttribute("apellido", x.getApellido());
-                        RequestDispatcher rd = request.getRequestDispatcher(destino);
-                        rd.forward(request, response);
-                        break;
-                    }
-                }
+        String pass = request.getParameter("psw");
+        try {
+            usuarioDao dao = new usuarioDao();
+            ArrayList<usuariopec> al = dao.UserAdmin(user, pass);
+            for (usuariopec x : al) {
+                if (x.getNick().equals(user) && x.getPass().equals(pass)) {
+                    HttpSession sesion = request.getSession(true);
+                    sesion.setAttribute("nombre", x.getNombre());
+                    sesion.setAttribute("apellido", x.getApellido());
+                    destino = "principal.jsp";
+                }else {
                 request.setAttribute("mensaje", "Contraseña o Usuario incorrectos");
-                RequestDispatcher rd = request.getRequestDispatcher(destino);
-                rd.forward(request, response);   
+                }
+            }       
+            RequestDispatcher rd = request.getRequestDispatcher(destino);
+            rd.forward(request, response);
+        } catch (IOException | ClassNotFoundException | SQLException | ServletException e) {
+            e.getMessage();
+        }
+
     }
 }

@@ -52,11 +52,8 @@
             </div>  --%>  
     <br>
     <br>
-            <div class="w3-padding-16 w3-bar-block w3-bottom w3-collapse col-xs-8 col-lg-8">      
-                   <iframe name="VENTA"></iframe> 
-                 
-            </div>
-        </div>
+
+        <!--</div>-->
         <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>   
     
 <script>

@@ -35,42 +35,50 @@
 
 <body background="">
     <div class="w3-top">
+        <%
+            response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
+
+            HttpSession obj = request.getSession(true);
+            if (obj.getAttribute("nombre") == null && obj.getAttribute("apellido") == null) {
+                response.sendRedirect("index.jsp");
+            }
+        %>
         <div class="w3-bar w3-white w3-card" id="myNavbar">
             <a href="principal.jsp" class="w3-bar-item w3-button w3-white">YPOWER</a>
             <div class="w3-right w3-hide-medium w3-hide-small">
-            <div class="w3-dropdown-hover w3-hide-small">
-                <button class="w3-button" title="Notifications">Productos <i class="fa fa-caret-down"></i></button>     
-                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-                    <a href="ConsultarProducto" class="w3-bar-item w3-button" target="VENTA"><i class="fa fa-list"></i> LISTAR</a>
-                    <a href="AddProducto.jsp" class="w3-bar-item w3-button" target="VENTA"><i class="fa fa-plus-circle"></i> INSERTAR</a> 
-                </div>
-            </div> 
-            <div class="w3-dropdown-hover w3-hide-small">
-                <button class="w3-button" title="Notifications">Categoria <i class="fa fa-caret-down"></i></button>     
-                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-                    <a href="ConsultarCategoria" class="w3-bar-item w3-button"><i class="fa fa-list"></i> LISTAR</a>
-                    <a href="AddCategoria.jsp" class="w3-bar-item w3-button"><i class="fa fa-plus-circle"></i> INSERTAR</a> 
-                </div>
-            </div> 
-            <div class="w3-dropdown-hover w3-hide-small">
-                <button class="w3-button" title="Notifications">Marca <i class="fa fa-caret-down"></i></button>     
-                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-                    <a href="ConsultarMarca" class="w3-bar-item w3-button" ><i class="fa fa-list"></i> LISTAR</a>
-                    <a href="AddMarca.jsp" class="w3-bar-item w3-button" ><i class="fa fa-plus-circle"></i> INSERTAR</a> 
-                </div>
-            </div> 
-            <div class="w3-dropdown-hover w3-hide-small">
-                <button class="w3-button" title="Notifications">SubCategoria <i class="fa fa-caret-down"></i></button>     
-                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-                    <a href="ConsultarSubCategoria" class="w3-bar-item w3-button" ><i class="fa fa-list"></i> LISTAR</a>
-                    <a href="AddSubcategoria.jsp" class="w3-bar-item w3-button" ><i class="fa fa-plus-circle"></i> INSERTAR</a> 
-                </div>
-            </div >
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <button class="w3-button" title="Notifications">Productos <i class="fa fa-caret-down"></i></button>     
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                        <a href="ConsultarProducto" class="w3-bar-item w3-button" target="VENTA"><i class="fa fa-list"></i> LISTAR</a>
+                        <a href="AddProducto.jsp" class="w3-bar-item w3-button" target="VENTA"><i class="fa fa-plus-circle"></i> INSERTAR</a> 
+                    </div>
+                </div> 
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <button class="w3-button" title="Notifications">Categoria <i class="fa fa-caret-down"></i></button>     
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                        <a href="ConsultarCategoria" class="w3-bar-item w3-button"><i class="fa fa-list"></i> LISTAR</a>
+                        <a href="AddCategoria.jsp" class="w3-bar-item w3-button"><i class="fa fa-plus-circle"></i> INSERTAR</a> 
+                    </div>
+                </div> 
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <button class="w3-button" title="Notifications">Marca <i class="fa fa-caret-down"></i></button>     
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                        <a href="ConsultarMarca" class="w3-bar-item w3-button" ><i class="fa fa-list"></i> LISTAR</a>
+                        <a href="AddMarca.jsp" class="w3-bar-item w3-button" ><i class="fa fa-plus-circle"></i> INSERTAR</a> 
+                    </div>
+                </div> 
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <button class="w3-button" title="Notifications">SubCategoria <i class="fa fa-caret-down"></i></button>     
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                        <a href="ConsultarSubCategoria" class="w3-bar-item w3-button" ><i class="fa fa-list"></i> LISTAR</a>
+                        <a href="AddSubcategoria.jsp" class="w3-bar-item w3-button" ><i class="fa fa-plus-circle"></i> INSERTAR</a> 
+                    </div>
+                </div >
                 <div class="w3-dropdown-hover w3-hide-small">
                     <a href="../index.jsp"class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>Logout</a>
                 </div>
-        </div>
-    </div>           
+            </div>
+        </div>           
     </div>
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-hide-small" onclick="w3_open()">
         <i class="fa fa-bars"></i>
