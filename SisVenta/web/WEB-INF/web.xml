@@ -82,7 +82,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletGrafico</servlet-name>
-        <url-pattern>/ServletGrafico</url-pattern>
+        <url-pattern>/administration/ServletGrafico</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

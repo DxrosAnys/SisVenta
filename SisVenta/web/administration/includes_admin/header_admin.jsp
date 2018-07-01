@@ -1,15 +1,8 @@
-<%-- 
-    Document   : header_admin
-    Created on : 20-jun-2018, 13:13:25
-    Author     : Dxros
---%>
-
 <%@page import="SisVenta.modelo.usuariopec"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="SisVenta.modelo.usuario"%>
 <%@page import="SisVenta.dao.usuarioDao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -91,8 +84,3 @@
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-hide-small" onclick="w3_open()">
         <i class="fa fa-bars"></i>
     </a>
-
-
-
-
-

@@ -5,43 +5,47 @@
  */
 package SisVenta.controlador;
 
+import SisVenta.dao.categoriaDao;
+import SisVenta.modelo.graficos;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartUtilities;
+import org.jfree.chart.*;
+import org.jfree.data.general.DefaultPieDataset;
 
 /**
  *
  * @author Dxros
  */
 public class ServletGrafico extends HttpServlet {
+//import org.jfree.data
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    JFreeChart grafica() {
+        categoriaDao obj = new categoriaDao();
+        DefaultPieDataset ds = new DefaultPieDataset();
+        //leer datos de la lista generica y pasarlo a la data grafica
+        for (graficos x : obj.ListBestCategory()) {
+            ds.setValue(x.getDescripcion(), x.getCount());
+        }
+        JFreeChart graf = ChartFactory.createPieChart3D("Listado de productos", ds, true, true,
+                true);
+        return graf;
+    }
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ServletGrafico</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ServletGrafico at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        response.setContentType("image/jpeg");
+        OutputStream salida = response.getOutputStream(); //paraimprimir
+        ChartUtilities.writeChartAsJPEG(salida, grafica(), 400, 400);
+        //traerel grafico
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
