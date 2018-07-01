@@ -7,7 +7,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-
+<html>
+  
 <%@include file="includes_admin/header_admin.jsp"%>
 <title>Agregar Producto</title>
 <br/>

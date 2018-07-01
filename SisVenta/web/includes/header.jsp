@@ -44,13 +44,8 @@
                     <a href="promo.jsp"class="w3-bar-item w3-button"><i class="fa fa-gift"></i>PROMOCIONES</a>
                     <a href="oferta.jsp"class="w3-bar-item w3-button"><i class="fa fa-cart-plus"></i>OFERTAS</a>
                     <a href="novedades.jsp"class="w3-bar-item w3-button"><i class="fa fa-area-chart"></i>NOVEDADES</a>
-                    <a href="nosotros.jsp"class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>NOSOTROS</a>             
-                    <div class="w3-dropdown-hover w3-hide-small">
-                        <button class="w3-button" title="Notifications">INICIAR SESION<i class="fa fa-caret-down"></i></button>     
-                        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-                            <button href="login.jsp"class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display = 'block'"><i class="fa fa-user"></i>USUARIO</button>
-                            <a href="registroCliente.jsp" class="w3-bar-item w3-button">REGISTRO</a>
-                        </div>
+                    <a href="nosotros.jsp"class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>NOSOTROS</a>                          
+                    <button href="login.jsp"class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display = 'block'"><i class="fa fa-user"></i>USUARIO</button>            
                     </div>                   
                 </div>
             </div>           
@@ -63,7 +58,7 @@
             <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
                 <div class="w3-center"><br>
                     <span onclick="document.getElementById('id01').style.display = 'none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
-                    <img src="resources/img/general/e1.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+                    <img src="resources/img/general/usuario.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
                 </div>
                 <form class="w3-container" action="IniciarSession">
                     <div class="w3-section">
@@ -77,7 +72,7 @@
                 </form>
                 <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
                     <button onclick="document.getElementById('id01').style.display = 'none'" type="button" class="w3-button w3-red">Cancelar</button>
-                    <span class="w3-right w3-padding w3-hide-small">Olvidaste la <a href="#">contraseña?</a></span>
+                    <span class="w3-right w3-padding w3-hide-small">¿Aún no te registras?. <a href="registroCliente.jsp">Registrate Aquí</a> </span>
                 </div>
             </div>
         </div>

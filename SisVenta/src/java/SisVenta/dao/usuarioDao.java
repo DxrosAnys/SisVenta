@@ -126,9 +126,8 @@ public class usuarioDao implements CrudInterface<usuario> {
         return u;
     }
 
-    public ArrayList<usuariopec> UserAdmin(String id, String pass) throws ClassNotFoundException, SQLException {
-        ArrayList<usuariopec> user = new ArrayList<>();
-        usuariopec log;
+    public usuariopec UserAdmin(String id, String pass) throws ClassNotFoundException, SQLException {
+        usuariopec log = null;
         try {
             cn = conexion.getConnection();
             sql = "select user_cod,user_nick,user_nombre,user_apellido,user_pass,user_email from usuario where user_nick = ? and user_pass = ? and user_status = 'D'";
@@ -138,7 +137,6 @@ public class usuarioDao implements CrudInterface<usuario> {
             st = ps.executeQuery();
             if (st.next()) {
                 log = new usuariopec(st.getString(1),st.getString(2),st.getString(3),st.getString(4),st.getString(5),st.getString(6));
-                user.add(log);
             }
             st.close();
             ps.close();
@@ -146,7 +144,7 @@ public class usuarioDao implements CrudInterface<usuario> {
         } catch (SQLException e) {
             throw e;// Conexion.cerrarConexion(cn);
         }
-        return user;
+        return log;
     }
 
 }

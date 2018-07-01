@@ -4,6 +4,10 @@
     Author     : Dxros
 --%>
 
+<%@page import="SisVenta.modelo.usuariopec"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="SisVenta.modelo.usuario"%>
+<%@page import="SisVenta.dao.usuarioDao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -32,25 +36,29 @@
     <script src="../resources/js/jquery-1.10.2.min.js"></script>
 
 </head>
-
+<%
+    response.setHeader("Cache-Control", "no-cache,must-revalidate");
+    HttpSession obj = request.getSession(false);
+    usuarioDao dao = new usuarioDao();
+    if (obj.getAttribute("user") == null && obj.getAttribute("getPass") == null) {
+        String pag = "login.jsp";
+        request.getRequestDispatcher(pag).forward(request, response);
+    }
+    String correo = (String) obj.getAttribute("user");
+    String contra = (String) obj.getAttribute("pass");
+    usuariopec al = dao.UserAdmin(correo, contra);
+%>
 <body background="">
     <div class="w3-top">
-        <%
-            response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
-
-            HttpSession obj = request.getSession(true);
-            if (obj.getAttribute("nombre") == null && obj.getAttribute("apellido") == null) {
-                response.sendRedirect("index.jsp");
-            }
-        %>
         <div class="w3-bar w3-white w3-card" id="myNavbar">
             <a href="principal.jsp" class="w3-bar-item w3-button w3-white">YPOWER</a>
+            <li class="w3-bar-item w3-button w3-white">${sessionScope['apellido']},${sessionScope['nombre']}</li>
             <div class="w3-right w3-hide-medium w3-hide-small">
                 <div class="w3-dropdown-hover w3-hide-small">
                     <button class="w3-button" title="Notifications">Productos <i class="fa fa-caret-down"></i></button>     
                     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-                        <a href="ConsultarProducto" class="w3-bar-item w3-button" target="VENTA"><i class="fa fa-list"></i> LISTAR</a>
-                        <a href="AddProducto.jsp" class="w3-bar-item w3-button" target="VENTA"><i class="fa fa-plus-circle"></i> INSERTAR</a> 
+                        <a href="ConsultarProducto" class="w3-bar-item w3-button" ><i class="fa fa-list"></i> LISTAR</a>
+                        <a href="AddProducto.jsp" class="w3-bar-item w3-button" ><i class="fa fa-plus-circle"></i> INSERTAR</a> 
                     </div>
                 </div> 
                 <div class="w3-dropdown-hover w3-hide-small">
@@ -75,7 +83,7 @@
                     </div>
                 </div >
                 <div class="w3-dropdown-hover w3-hide-small">
-                    <a href="../index.jsp"class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>Logout</a>
+                    <a href="DeslogearAdmin" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>Logout</a>
                 </div>
             </div>
         </div>           

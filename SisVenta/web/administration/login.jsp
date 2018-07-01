@@ -29,10 +29,13 @@
         <script src="../resources/js/jquery-1.10.2.min.js"></script>
 
     </head>
-    <body background="../resources/img/general/adminfondo.jpg" style="max-" >
+    <body background="../resources/img/general/adminfondo.jpg" >
         <br>
         <br>
         <br>
+        <%
+            response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
+        %>
         <div class="w3-container w3-animate-left" >
             <div id="id01" class="w3-content w3-center w3-border  backcolorl3" style="max-width:500px ; background-color: #FFFFFF">
                 <div class="w3-center">
@@ -40,16 +43,16 @@
                     <img src="../resources/img/general/e1.png" alt="Avatar" style="width:25%; height: 30%" class="w3-circle w3-margin-top">
                 </div>
                 <div class="w3-container">
-                <form   method="POST" action="LogearAdmin">
-                    <div class="w3-section">
-                        <label class="colorl3"><b>Usuario</b></label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Ingresa tu usuario" name="usrname" required>
-                        <label class="colorl3"><b>Contraseña</b></label>
-                        <input class="w3-input w3-border" type="text" placeholder="Ingresa tu contraseña" name="psw" required>
-                        <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit">Ingresar</button>
-                    </div>
-                </form>
-                    </div>
+                    <form   method="POST" action="LogearAdmin">
+                        <div class="w3-section">
+                            <label class="colorl3"><b>Usuario</b></label>
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Ingresa tu usuario" name="usrname" required>
+                            <label class="colorl3"><b>Contraseña</b></label>
+                            <input class="w3-input w3-border" type="text" placeholder="Ingresa tu contraseña" name="psw" required>
+                            <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit">Ingresar</button>
+                        </div>
+                    </form>
+                </div>
                 <div class="w3-container w3-border-top w3-padding-small w3-light-grey">
                     <div class="col-xs-12 col-md-6 col-lg-6">
                         <p id="mensaje" class="w3-red" >${requestScope.mensaje}</p>

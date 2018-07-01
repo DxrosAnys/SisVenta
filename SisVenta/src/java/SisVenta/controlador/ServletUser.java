@@ -52,8 +52,14 @@ public class ServletUser extends HttpServlet {
                 break;
             }
             case "/administration/LogearAdmin": {
-                LogearAdmin(request, response);
+                LogearAdmin(request, response);              
             }
+           break;
+            case "/administration/DeslogearAdmin": {
+                DeslogearAdmin(request, response);
+                 
+            }
+           break;
         }
     }
 
@@ -120,22 +126,28 @@ public class ServletUser extends HttpServlet {
         String pass = request.getParameter("psw");
         try {
             usuarioDao dao = new usuarioDao();
-            ArrayList<usuariopec> al = dao.UserAdmin(user, pass);
-            for (usuariopec x : al) {
-                if (x.getNick().equals(user) && x.getPass().equals(pass)) {
-                    HttpSession sesion = request.getSession(true);
-                    sesion.setAttribute("nombre", x.getNombre());
-                    sesion.setAttribute("apellido", x.getApellido());
-                    destino = "principal.jsp";
-                }else {
+            usuariopec al = dao.UserAdmin(user, pass);
+            if (al.getNick().equals(user) && al.getPass().equals(pass)) {
+                HttpSession sesion = request.getSession(true);
+                sesion.setAttribute("user", al.getNick());
+                sesion.setAttribute("pass", al.getPass());
+                sesion.setAttribute("nombre", al.getNombre());
+                sesion.setAttribute("apellido", al.getApellido());
+                destino = "principal.jsp";
+            } else {
                 request.setAttribute("mensaje", "Contraseña o Usuario incorrectos");
-                }
-            }       
+            }
             RequestDispatcher rd = request.getRequestDispatcher(destino);
             rd.forward(request, response);
         } catch (IOException | ClassNotFoundException | SQLException | ServletException e) {
             e.getMessage();
         }
 
+    }
+
+    private void DeslogearAdmin(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        HttpSession session = request.getSession();
+        session.invalidate();// Se invalida la sesion (Logout)
+        response.sendRedirect("index.jsp");
     }
 }

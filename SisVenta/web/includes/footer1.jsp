@@ -1,4 +1,4 @@
-<footer class="w3-center w3-black w3-padding">
+<footer class="w3-center w3-black w3-padding w3-bottom">
     <a href="#" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
     <div class="w3-xlarge w3-section">
         <i class="fa fa-facebook-official w3-hover-opacity"></i>

@@ -42,7 +42,7 @@
                                 <%
                                     categoriaDao x = new categoriaDao();
                                     for (categoria es : x.readAll()) {
-                                        out.print("<option value=" + es.getCat_cod() + ">"
+                                        out.print("<option value='" + es.getCat_cod() + "'>"
                                                 + es.getDescripcion() + "</option>");
                                     }
                                 %>
