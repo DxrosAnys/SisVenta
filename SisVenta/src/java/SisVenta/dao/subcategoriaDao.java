@@ -6,7 +6,6 @@
 package SisVenta.dao;
 
 import SisVenta.database.conexion;
-import SisVenta.modelo.categoria;
 import SisVenta.modelo.subcategoria;
 import SisVenta.service.CrudInterface;
 import com.google.gson.Gson;
@@ -60,10 +59,11 @@ public class subcategoriaDao implements CrudInterface<subcategoria>{
         try {
             cn = conexion.getConnection();
             cs = cn.prepareCall("{call PKG_SECUENCIAL.SP_INSSUB(?,?,?)}");
-            cs.setString(1, l.getDescripcion());
-            cs.registerOutParameter(2, Types.VARCHAR);
+            cs.setString(1, l.getCat_cod());
+            cs.setString(2, l.getDescripcion());
+            cs.registerOutParameter(3, Types.VARCHAR);
             cs.execute();
-            Res = cs.getString(2);
+            Res = cs.getString(3);
         } catch (ClassNotFoundException | SQLException e) {
             throw e;
         }

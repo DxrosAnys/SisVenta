@@ -22,7 +22,7 @@
         </div>
         <div class="w3-row w3-center">
             <h2 class="tit2">Registrar SubCategoria</h2>             
-            <form method="POST" action="InsertarProducto" id="idformprod">
+            <form method="POST" action="InsertarSubCategoria" id="idformprod">
                 <div class="w3-row">
                     <div class="col-xs-4 col-md-4 col-lg-4"></div>
                     <div class="col-xs-4 col-md-4 col-lg-4">
@@ -38,7 +38,7 @@
                     <div class="col-xs-4 col-md-4 col-lg-4">
                         <div class="form-group w3-center">                 
                             <label class="control-label" for="categoria">CATEGORIA:</label>
-                            <select class="selected">
+                            <select class="selected" name="cbocat">
                                 <%
                                     categoriaDao x = new categoriaDao();
                                     for (categoria es : x.readAll()) {

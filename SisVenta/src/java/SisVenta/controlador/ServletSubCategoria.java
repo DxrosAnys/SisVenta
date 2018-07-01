@@ -38,41 +38,26 @@ public class ServletSubCategoria extends HttpServlet {
         String path = request.getServletPath();
         switch (path) {
             case "/administration/ConsultarSubCategoria": {
-                try {
-                    ConsultarSubCategoria(request, response);
-                } catch (IOException | ServletException ex) {
-                    Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                    ConsultarSubCategoria(request, response);              
+                break;
             }
-            break;
             case "/administration/InsertarSubCategoria": {
-                try {
                     InsertarSubCategoria(request, response);
-                } catch (Exception ex) {
-                    Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                break;
             }
-            break;
+
             case "/administration/BorrarSubCategoria": {
-                try {
                     BorrarSubCategoria(request, response);
-                } catch (Exception ex) {
-                    Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                break;
             }
-            break;
-            case "/administration/ModificarSubCategoria": {
-                try {
-                    ModificarSubCategoria(request, response);
-                } catch (Exception ex) {
-                    Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
-                }
+            case "/administration/ModificarSubCategoria": {    
+                    ModificarSubCategoria(request, response);          
             }
         }
     }
 
     private void ConsultarSubCategoria(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-     String destino;
+        String destino;
         try {
             subcategoriaDao subdao = new subcategoriaDao();
             request.setAttribute("Listar", subdao.readAll());
@@ -85,16 +70,16 @@ public class ServletSubCategoria extends HttpServlet {
         rd.forward(request, response);
     }
 
-    private void InsertarSubCategoria(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
-       String destino;
+    private void InsertarSubCategoria(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String destino ;
         subcategoria sub = new subcategoria();
         sub.setDescripcion(request.getParameter("txtdesc"));
-        sub.setCat_cod(request.getParameter("txtcat"));
+        sub.setCat_cod(request.getParameter("cbocat"));
         try {
             subcategoriaDao catlis = new subcategoriaDao();
             request.setAttribute("Insertar", catlis.create(sub));
             destino = "AddSubCategoria.jsp";
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             request.setAttribute("Mensaje", e.getMessage());
             destino = "AddSubCategoria.jsp";
         }
@@ -102,7 +87,7 @@ public class ServletSubCategoria extends HttpServlet {
         rd.forward(request, response);
     }
 
-    private void BorrarSubCategoria(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    private void BorrarSubCategoria(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
@@ -110,7 +95,7 @@ public class ServletSubCategoria extends HttpServlet {
             subcategoriaDao modlis = new subcategoriaDao();
             modlis.delete(cod);
             out.println(modlis.delete(cod));
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             out.println("ERROR: " + e.getMessage());
         } finally {
             out.flush();
@@ -118,18 +103,18 @@ public class ServletSubCategoria extends HttpServlet {
         }
     }
 
-    private void ModificarSubCategoria(HttpServletRequest request, HttpServletResponse response) throws Exception {
-       String destino;
+    private void ModificarSubCategoria(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException   {
+        String destino;
         subcategoria mod = new subcategoria();
         mod.setSub_cod(request.getParameter("txtsub"));
-        mod.setDescripcion(request.getParameter("txtdesc"));
+        mod.setDescripcion(request.getParameter("cbocat"));
         mod.setCat_cod(request.getParameter("txtcod"));
 
         try {
             subcategoriaDao modlis = new subcategoriaDao();
             request.setAttribute("mensaje", modlis.update(mod));
             destino = "ConsultarSubCategoria";
-        } catch (ServletException e) {
+        } catch (Exception e) {
             request.setAttribute("Mensaje", e.getMessage());
             destino = "UpdSubCategoria.jsp";
         }

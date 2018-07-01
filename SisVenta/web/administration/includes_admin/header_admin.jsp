@@ -37,7 +37,7 @@
 
 </head>
 <%
-    response.setHeader("Cache-Control", "no-cache,must-revalidate");
+    response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
     HttpSession obj = request.getSession(false);
     usuarioDao dao = new usuarioDao();
     if (obj.getAttribute("user") == null && obj.getAttribute("getPass") == null) {
@@ -52,7 +52,7 @@
     <div class="w3-top">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
             <a href="principal.jsp" class="w3-bar-item w3-button w3-white">YPOWER</a>
-            <li class="w3-bar-item w3-button w3-white">${sessionScope['apellido']},${sessionScope['nombre']}</li>
+            <li class="w3-bar-item w3-white">Bienvenido, ${sessionScope['nombre']} ${sessionScope['apellido']}</li>
             <div class="w3-right w3-hide-medium w3-hide-small">
                 <div class="w3-dropdown-hover w3-hide-small">
                     <button class="w3-button" title="Notifications">Productos <i class="fa fa-caret-down"></i></button>     
@@ -79,11 +79,11 @@
                     <button class="w3-button" title="Notifications">SubCategoria <i class="fa fa-caret-down"></i></button>     
                     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
                         <a href="ConsultarSubCategoria" class="w3-bar-item w3-button" ><i class="fa fa-list"></i> LISTAR</a>
-                        <a href="AddSubcategoria.jsp" class="w3-bar-item w3-button" ><i class="fa fa-plus-circle"></i> INSERTAR</a> 
+                        <a href="AddSubCategoria.jsp" class="w3-bar-item w3-button" ><i class="fa fa-plus-circle"></i> INSERTAR</a> 
                     </div>
                 </div >
                 <div class="w3-dropdown-hover w3-hide-small">
-                    <a href="DeslogearAdmin" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>Logout</a>
+                    <a href="DeslogearAdmin" class="w3-bar-item w3-button"><i class="glyphicon glyphicon-log-out"></i> Logout</a>
                 </div>
             </div>
         </div>           

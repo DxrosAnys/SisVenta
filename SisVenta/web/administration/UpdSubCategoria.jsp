@@ -44,7 +44,7 @@
                     <div class="col-xs-4 col-md-4 col-lg-4">
                         <div class="form-group w3-center">  
                             <label class="control-label">Categoria:</label>
-                            <select class="selected">
+                            <select class="selected" name="cbocat">
                                 <%
                                     categoriaDao x = new categoriaDao();
                                     for (categoria es : x.readAll()) {
