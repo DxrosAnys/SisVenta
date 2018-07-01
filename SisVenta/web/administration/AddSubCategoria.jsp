@@ -13,6 +13,7 @@
     <title>Agregar SubCategoria</title>
     <br/>
     <br/>
+    
     <div class="w3-container">
         <div class="w3-row" style="width: 98%;">      
             <ol class="migmov breadcrumb col-xs-12 col-sm-12 col-md-12 col-lg-12">
