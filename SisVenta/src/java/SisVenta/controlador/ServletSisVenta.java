@@ -6,9 +6,12 @@
 package SisVenta.controlador;
 
 import SisVenta.dao.categoriaDao;
+import SisVenta.dao.especificacionDao;
 import SisVenta.dao.marcaDao;
 import SisVenta.dao.modeloDao;
+import SisVenta.dao.subcategoriaDao;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -33,33 +36,42 @@ public class ServletSisVenta extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
+   @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String path = request.getServletPath();
         switch (path) {
-            case "/ConsultarModelo": {
+            case "/ConsultarProductos": {
                 try {
-                    ConsultarModelo(request, response);
+                    ConsultarProductos(request, response);
                 } catch (Exception ex) {
                     Logger.getLogger(ServletSisVenta.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
+            break;
+            case "/ConsultarSubCategoriaAjax":
+                ConsultarSubCategoriaAjax(request, response);
+                break;
+            case "/ConsultarMarcaAjax":
+                ConsultarMarcaAjax(request, response);
+                break;
+            case "/ConsultarModeloAjax":
+                ConsultarModeloAjax(request, response);
+                break;
+                case "/ConsultarCategoria":
+                ConsultarCategoria(request, response);
+                break;
+                case "/ConsultarEspecificacion":
+        ConsultarEspecificacion(request,response);
+        break;
         }
     }
 
-    private void ConsultarModelo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
+    private void ConsultarProductos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
         String destino;
-        modeloDao modlis = new modeloDao();
-        categoriaDao catlis = new categoriaDao();
-        marcaDao marlis = new marcaDao();
         try {
-
+            modeloDao modlis = new modeloDao();
             request.setAttribute("Listar", modlis.readAll());
-
-//            request.setAttribute("ListarCat", catlis.readAll());
-//
-//            request.setAttribute("ListaMar", marlis.readAll());
             destino = "Catalogo.jsp";
         } catch (ClassNotFoundException | SQLException e) {
             request.setAttribute("Mensaje", e.getMessage());
@@ -68,4 +80,86 @@ public class ServletSisVenta extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher(destino);
         rd.forward(request, response);
     }
-}
+
+    private void ConsultarSubCategoriaAjax(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("application/json;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        try {
+            String cod = request.getParameter("cod");
+            subcategoriaDao sublis = new subcategoriaDao();
+            // mostrar datos de empleado en la pagina
+            out.println(sublis.readAllSub(cod));
+            out.println();
+        } catch (Exception e) {
+            out.println("ERROR: " + e.getMessage());
+        } finally {
+            out.flush();
+            out.close();
+        }
+    }
+
+    private void ConsultarMarcaAjax(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("application/json;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        try {
+            String id = request.getParameter("sub_cod");
+            marcaDao dao = new marcaDao();
+            // mostrar datos de empleado en la pagina
+            out.println(dao.readAll(id));
+        } catch (Exception e) {
+            out.println("ERROR: " + e.getMessage());
+        } finally {
+            out.flush();
+            out.close();
+        }
+    }
+
+    private void ConsultarModeloAjax(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("application/json;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        try {
+            modeloDao modlis = new modeloDao();
+            // mostrar datos de empleado en la pagina
+            out.println(modlis.Modelo());
+            out.println();
+        } catch (ClassNotFoundException | SQLException e) {
+            out.println("ERROR: " + e.getMessage());
+        } finally {
+            out.flush();
+            out.close();
+        }
+    }
+
+    private void ConsultarCategoria(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+       String destino;
+        try {
+            categoriaDao catdao = new categoriaDao();
+            request.setAttribute("ListarCat", catdao.readAll());
+            modeloDao moddao= new modeloDao();
+            request.setAttribute("Listar", moddao.readAll());
+            destino = "Catalogo.jsp";
+        } catch (Exception e) {
+            request.setAttribute("Mensaje", e.getMessage());
+            destino = "Catalogo.jsp";
+        }
+        RequestDispatcher rd = request.getRequestDispatcher(destino);
+        rd.forward(request, response);
+    }
+
+    private void ConsultarEspecificacion(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String destino;
+        String id =request.getParameter("codigo");
+        try{
+            modeloDao moddao = new modeloDao();
+            request.setAttribute("BuscarMod", moddao.Buscar(id));
+            especificacionDao espdao= new especificacionDao();
+            request.setAttribute("BuscarEsp", espdao.Buscar(id));
+            destino = "DetalleProducto.jsp";
+        }catch(Exception e){
+         request.setAttribute("Mensaje", e.getMessage());
+            destino = "DetalleProducto.jsp";
+        }
+         RequestDispatcher rd = request.getRequestDispatcher(destino);
+        rd.forward(request, response);
+        }
+    }

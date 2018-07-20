@@ -16,9 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import SisVenta.service.CrudInterface;
 import com.google.gson.Gson;
-import java.sql.Date;
 import java.sql.Types;
-import java.text.SimpleDateFormat;
 
 /**
  *
@@ -146,4 +144,77 @@ public class modeloDao implements CrudInterface<modelo> {
         }
     }
     
+     public String Modelo() throws SQLException, ClassNotFoundException {
+         List<modelo> lismod = new ArrayList<>();
+        try {
+            cn = conexion.getConnection();
+            sql = "select mod_cod,precio,stock,descripcion,descuento,deadline,fec_registro from modelo order by mod_cod";
+            ps = cn.prepareStatement(sql);
+            st = ps.executeQuery();
+            while (st.next()) {
+                mod = new modelo(st.getString(1), st.getDouble(2), st.getInt(3), st.getString(4), st.getDouble(5), st.getString(6), st.getString(7));
+                lismod.add(mod);
+            }
+            ps.close();
+            st.close();
+        } catch (SQLException e) {
+            throw e;
+        } finally {
+            cn.close();
+        }
+        return new Gson().toJson(lismod);
+    }
+     
+     public List<modelo> Buscar(String id) throws Exception {
+         List<modelo> lismod = new ArrayList<>();
+       try {
+            cn = conexion.getConnection();
+            sql = "select mod_cod,precio,stock,descripcion from modelo WHERE MOD_COD = ?";
+            ps = cn.prepareStatement(sql);
+            ps.setString(1, id);
+            st = ps.executeQuery();
+            while (st.next()) {
+                mod = new modelo();
+                mod.setMod_cod(st.getString(1));
+                mod.setPrecio(st.getDouble(2));
+                mod.setStock(st.getInt(3));
+                mod.setDescripcion(st.getString(4));
+                lismod.add(mod);
+            }
+            ps.close();
+        } catch (SQLException | ClassNotFoundException e) {
+            throw e;
+        } finally {
+            cn.close();
+        }
+        return lismod;
+    }
+     
+     public static synchronized modelo obtenerProducto(String codigo) throws SQLException, ClassNotFoundException {
+        modelo p = new modelo();
+        Connection cn ;
+        PreparedStatement pstm;
+        ResultSet rs;
+        try {
+            String query = "select mod_cod,precio,stock,descripcion from modelo WHERE mod_cod = ?";
+            cn = conexion.getConnection(); 
+            pstm = cn.prepareStatement(query);
+            pstm.setString(1, codigo);
+            rs = pstm.executeQuery();
+            if (rs.next()) {
+                p.setMod_cod(rs.getString(1));
+                p.setPrecio(rs.getDouble(2));
+                p.setStock(rs.getInt(3));
+                p.setDescripcion(rs.getString(4));
+                
+            }
+            rs.close();
+            pstm.close();
+            cn.close();
+            //Conexion.cerrarConexion(cn);
+        } catch (SQLException e) {
+            throw e;// Conexion.cerrarConexion(cn);
+        } 
+        return p;
+    }
 }

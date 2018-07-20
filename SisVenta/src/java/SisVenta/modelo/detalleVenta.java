@@ -5,8 +5,6 @@
  */
 package SisVenta.modelo;
 
-import java.util.Date;
-
 /**
  *
  * @author Dxros
@@ -16,15 +14,16 @@ public class detalleVenta {
     private String mod_cod;
     private String user_cod;
     private Double precio;
-    private Double cantidad;
+    private int cantidad;
     private Double descuento;
     private Double importe;
-    private Date buydate;
+    private String buydate;
+    private modelo modelo;
     
     public detalleVenta() {
     }
 
-    public detalleVenta(String detvencod, String mod_cod, String user_cod, Double precio, Double cantidad, Double descuento, Double importe, Date buydate) {
+    public detalleVenta(String detvencod, String mod_cod, String user_cod, Double precio, int cantidad, Double descuento, Double importe, String buydate, modelo modelo) {
         this.detvencod = detvencod;
         this.mod_cod = mod_cod;
         this.user_cod = user_cod;
@@ -33,6 +32,7 @@ public class detalleVenta {
         this.descuento = descuento;
         this.importe = importe;
         this.buydate = buydate;
+        this.modelo = modelo;
     }
 
     public String getDetvencod() {
@@ -67,11 +67,11 @@ public class detalleVenta {
         this.precio = precio;
     }
 
-    public Double getCantidad() {
+    public int getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(Double cantidad) {
+    public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 
@@ -91,13 +91,21 @@ public class detalleVenta {
         this.importe = importe;
     }
 
-    public Date getBuydate() {
+    public String getBuydate() {
         return buydate;
     }
 
-    public void setBuydate(Date buydate) {
+    public void setBuydate(String buydate) {
         this.buydate = buydate;
     }
 
-              
+    public modelo getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(modelo modelo) {
+        this.modelo = modelo;
+    }
+
+    
 }

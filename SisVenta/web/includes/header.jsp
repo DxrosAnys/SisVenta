@@ -27,11 +27,9 @@
 
         <link href="resources/css/tablestyle.css" rel="stylesheet" type="text/css"/>
 
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="../resources/js/jquery-1.12.4.js" type="text/javascript"></script>
     </head>
     
     <body background="resources/img/general/bg-powerful.jpg">
@@ -39,11 +37,7 @@
             <div class="w3-bar w3-white w3-card" id="myNavbar">
                 <a href="index.jsp" class="w3-bar-item w3-button w3-white">YPOWER</a>
                 <div class="w3-right w3-hide-medium">
-                    <a href="ConsultarModelo" class="w3-bar-item w3-button"><i class="fa fa-bookmark"></i>CATAGOLO</a>
-                    <a href="producto.jsp"class="w3-bar-item w3-button"><i class="fa fa-product-hunt"></i>PRODUCTOS</a>
-                    <a href="promo.jsp"class="w3-bar-item w3-button"><i class="fa fa-gift"></i>PROMOCIONES</a>
-                    <a href="oferta.jsp"class="w3-bar-item w3-button"><i class="fa fa-cart-plus"></i>OFERTAS</a>
-                    <a href="novedades.jsp"class="w3-bar-item w3-button"><i class="fa fa-area-chart"></i>NOVEDADES</a>
+                    <a href="ConsultarCategoria" class="w3-bar-item w3-button"><i class="fa fa-bookmark"></i>CATAGOLO</a>
                     <a href="nosotros.jsp"class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>NOSOTROS</a>                          
                     <button href="login.jsp"class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display = 'block'"><i class="fa fa-user"></i>USUARIO</button>            
                     </div>                   

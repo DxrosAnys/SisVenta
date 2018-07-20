@@ -37,9 +37,18 @@
         <servlet-name>ServletGrafico</servlet-name>
         <servlet-class>SisVenta.controlador.ServletGrafico</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletCarrito</servlet-name>
+        <servlet-class>SisVenta.controlador.ServletCarrito</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletSisVenta</servlet-name>
-        <url-pattern>/ConsultarModelo</url-pattern>
+        <url-pattern>/ConsultarProductos</url-pattern>
+        <url-pattern>/ConsultarSubCategoriaAjax</url-pattern>
+        <url-pattern>/ConsultarMarcaAjax</url-pattern>
+        <url-pattern>/ConsultarModeloAjax</url-pattern>
+        <url-pattern>/ConsultarCategoria</url-pattern>
+        <url-pattern>/ConsultarEspecificacion</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletUser</servlet-name>
@@ -83,6 +92,10 @@
     <servlet-mapping>
         <servlet-name>ServletGrafico</servlet-name>
         <url-pattern>/administration/ServletGrafico</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletCarrito</servlet-name>
+        <url-pattern>/AñadirCarrito</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

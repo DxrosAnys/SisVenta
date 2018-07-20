@@ -35,15 +35,15 @@ public class ServletCategoria extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    String path = request.getServletPath();
+        String path = request.getServletPath();
         switch (path) {
             case "/administration/ConsultarCategoria": {
                 try {
                     ConsultarCategoria(request, response);
-                } catch (Exception ex) {
+                } catch (IOException | ServletException ex) {
                     Logger.getLogger(ServletModelo.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            }
+            }          
             break;
             case "/administration/InsertarCategoria": {
                 try {
@@ -86,7 +86,7 @@ public class ServletCategoria extends HttpServlet {
     }
 
     private void InsertarCategoria(HttpServletRequest request, HttpServletResponse response) throws Exception {
-         String destino;
+        String destino;
         categoria cat = new categoria();
         cat.setDescripcion(request.getParameter("txtdesc"));
         try {
@@ -102,7 +102,7 @@ public class ServletCategoria extends HttpServlet {
     }
 
     private void BorrarCategoria(HttpServletRequest request, HttpServletResponse response) throws Exception {
-      response.setContentType("application/json;charset=UTF-8");
+        response.setContentType("application/json;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
             String cod = request.getParameter("cod_cat");
@@ -118,7 +118,7 @@ public class ServletCategoria extends HttpServlet {
     }
 
     private void ModificarCategoria(HttpServletRequest request, HttpServletResponse response) throws Exception {
-         String destino;
+        String destino;
         categoria mod = new categoria();
         mod.setCat_cod(request.getParameter("txtcod"));
         mod.setDescripcion(request.getParameter("txtdesc"));

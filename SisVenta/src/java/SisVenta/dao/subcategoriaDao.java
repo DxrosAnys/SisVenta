@@ -54,6 +54,28 @@ public class subcategoriaDao implements CrudInterface<subcategoria>{
         return listsub;
     }
 
+    public String readAllSub(String id) throws Exception {
+        List<subcategoria> listsub = new ArrayList<>();
+        try {
+            cn = conexion.getConnection();
+            sql = "select a.sub_cod,a.descripcion,b.cat_cod,b.descripcion  as cat_descripcion from subcategoria a "
+                    + "inner join categoria b on a.CAT_COD=b.CAT_COD where b.cat_cod = ? ";
+            ps = cn.prepareStatement(sql);
+            ps.setString(1,id);          
+            st = ps.executeQuery();
+            while (st.next()) {
+                sub = new subcategoria(st.getString(1),st.getString(2),st.getString(3),st.getString(4));
+                listsub.add(sub);          
+            }
+            ps.close();
+            st.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            throw e;
+        } finally {
+            cn.close();
+        }
+        return new Gson().toJson(listsub);
+    }
     @Override
     public String create(subcategoria l) throws Exception {
         try {

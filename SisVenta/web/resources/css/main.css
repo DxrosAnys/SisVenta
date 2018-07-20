@@ -580,6 +580,19 @@ background-color: transparent;border-color: transparent;padding: 6px 0px 6px 0px
 .caja_con_bod_menu_opc_select.sele_multiple option{ font-weight: normal !important;/*bold*/
 margin: 6px 0px 6px 0px;font-size: 13px;font-family: 'KlavikaRegularCondensedItalic', Calibri, Arial, sans-serif; }
 .caja_con_bod_menu_opc_select.sele_multiple option:hover{ text-decoration: underline;cursor: pointer; }
+
+.caja_con_bod_menu_opc_select.sele_multiple1{ height: 275px !important;color: #000;overflow: hidden;
+background-color: transparent;border-color: transparent;padding: 6px 0px 6px 0px; }
+.caja_con_bod_menu_opc_select.sele_multiple1 option{ font-weight: normal !important;/*bold*/
+margin: 6px 0px 6px 0px;font-size: 13px;font-family: 'KlavikaRegularCondensedItalic', Calibri, Arial, sans-serif; }
+.caja_con_bod_menu_opc_select.sele_multiple1 option:hover{ text-decoration: underline;cursor: pointer; }
+
+.caja_con_bod_menu_opc_select.sele_multiple2{ height: 150px !important;color: #000;overflow: hidden;
+background-color: transparent;border-color: transparent;padding: 6px 0px 6px 0px; }
+.caja_con_bod_menu_opc_select.sele_multiple2 option{ font-weight: normal !important;/*bold*/
+margin: 6px 0px 6px 0px;font-size: 13px;font-family: 'KlavikaRegularCondensedItalic', Calibri, Arial, sans-serif; }
+.caja_con_bod_menu_opc_select.sele_multiple2 option:hover{ text-decoration: underline;cursor: pointer; }
+
 .multiselect {  }
 .multiselect label { font-family: 'KlavikaRegularCondensedItalic', Calibri, Arial, sans-serif;
 font-size: 13px;/*11*/display: block;margin-bottom: 0px;color: #000000;font-weight: normal;margin: 6px 0px 6px 0px; }

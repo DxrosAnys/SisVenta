@@ -54,6 +54,29 @@ public class marcaDao implements CrudInterface<marca> {
         return listmar;
     }
 
+        public String readAll(String id) throws Exception {
+        List<marca> lismar = new ArrayList<>();
+        try {
+            cn = conexion.getConnection();
+            sql = "select distinct c.mar_cod, c.descripcion from subcategoria a inner join CATEGORIA_MARCA b " +
+                     " on a.SUB_COD=b.SUB_COD inner join marca c on c.MAR_COD=b.MAR_COD where a.SUB_COD=  ? ";
+            ps = cn.prepareStatement(sql);
+            ps.setString(1,id);          
+            st = ps.executeQuery();
+            while (st.next()) {
+                mar = new marca(st.getString(1),st.getString(2));
+                lismar.add(mar);          
+            }
+            ps.close();
+            st.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            throw e;
+        } finally {
+            cn.close();
+        }
+        return new Gson().toJson(lismar);
+    }
+    
     @Override
     public String create(marca l) throws Exception {
         try {
