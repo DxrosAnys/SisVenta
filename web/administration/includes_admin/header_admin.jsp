@@ -17,16 +17,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link href="../resources/css/w3.css" rel="stylesheet" type="text/css"/>
-    <link href="../resources/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="../../resources/css/w3.css" rel="stylesheet" type="text/css"/>
+    <link href="../../resources/css/main.css" rel="stylesheet" type="text/css"/>
 
-    <link href="../resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="../resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+    <link href="../../resources/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="../../resources/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
 
-    <link href="../resources/css/tablestyle.css" rel="stylesheet" type="text/css"/>
+    <link href="../../resources/css/tablestyle.css" rel="stylesheet" type="text/css"/>
 
-    <script src="../resources/js/bootstrap.min.js"></script>
-    <script src="../resources/js/jquery-1.10.2.min.js"></script>
+    <script src="../../resources/js/bootstrap.min.js"></script>
+    <script src="../../resources/js/jquery-1.10.2.min.js"></script>
 
 </head>
 <%
@@ -44,28 +44,28 @@
 <body background="">
     <div class="w3-top">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
-            <a href="principal.jsp" class="w3-bar-item w3-button w3-white">YPOWER</a>
+            <a href="../principal.jsp" class="w3-bar-item w3-button w3-white">YPOWER</a>
             <li class="w3-bar-item w3-white">Bienvenido, ${sessionScope['nombre']} ${sessionScope['apellido']}</li>
             <div class="w3-right w3-hide-medium w3-hide-small">
                 <div class="w3-dropdown-hover w3-hide-small">
                     <button class="w3-button" title="Notifications">Productos <i class="fa fa-caret-down"></i></button>     
                     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
                         <a href="ConsultarProducto" class="w3-bar-item w3-button" ><i class="fa fa-list"></i> LISTAR</a>
-                        <a href="AddProducto.jsp" class="w3-bar-item w3-button" ><i class="fa fa-plus-circle"></i> INSERTAR</a> 
+                        <a href="../AddProducto.jsp" class="w3-bar-item w3-button" ><i class="fa fa-plus-circle"></i> INSERTAR</a>
                     </div>
                 </div> 
                 <div class="w3-dropdown-hover w3-hide-small">
                     <button class="w3-button" title="Notifications">Categoria <i class="fa fa-caret-down"></i></button>     
                     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
                         <a href="ConsultarCategoria" class="w3-bar-item w3-button"><i class="fa fa-list"></i> LISTAR</a>
-                        <a href="AddCategoria.jsp" class="w3-bar-item w3-button"><i class="fa fa-plus-circle"></i> INSERTAR</a> 
+                        <a href="../AddCategoria.jsp" class="w3-bar-item w3-button"><i class="fa fa-plus-circle"></i> INSERTAR</a>
                     </div>
                 </div> 
                 <div class="w3-dropdown-hover w3-hide-small">
                     <button class="w3-button" title="Notifications">Marca <i class="fa fa-caret-down"></i></button>     
                     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
                         <a href="ConsultarMarca" class="w3-bar-item w3-button" ><i class="fa fa-list"></i> LISTAR</a>
-                        <a href="AddMarca.jsp" class="w3-bar-item w3-button" ><i class="fa fa-plus-circle"></i> INSERTAR</a> 
+                        <a href="../AddMarca.jsp" class="w3-bar-item w3-button" ><i class="fa fa-plus-circle"></i> INSERTAR</a>
                     </div>
                 </div> 
                 <div class="w3-dropdown-hover w3-hide-small">
